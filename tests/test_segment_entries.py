@@ -68,4 +68,4 @@ class TestSplitEntries:
         """序号跳号产出 warnings。"""
         lines = _lines("265.*chance n.机会", "267.***changeable adj.易变的")
         entries = split_entries(lines, section="words", start_page=1)
-        assert any("266" in w for w in entries[1]["warnings"])
+        assert any("265 -> 267" in w for w in entries[1]["warnings"])
