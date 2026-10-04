@@ -1,0 +1,147 @@
+{
+ "total": 2940,
+ "duplicate_words": [
+  {
+   "word": "be",
+   "count": 3,
+   "ids": [
+    "V00301",
+    "V00302",
+    "V00303"
+   ]
+  },
+  {
+   "word": "at",
+   "count": 2,
+   "ids": [
+    "V00231",
+    "V00232"
+   ]
+  },
+  {
+   "word": "catch",
+   "count": 2,
+   "ids": [
+    "V00503",
+    "V00504"
+   ]
+  },
+  {
+   "word": "check out",
+   "count": 2,
+   "ids": [
+    "V00538",
+    "V00539"
+   ]
+  },
+  {
+   "word": "have",
+   "count": 2,
+   "ids": [
+    "V01240",
+    "V01241"
+   ]
+  },
+  {
+   "word": "leave",
+   "count": 2,
+   "ids": [
+    "V01534",
+    "V01535"
+   ]
+  },
+  {
+   "word": "less",
+   "count": 2,
+   "ids": [
+    "V01544",
+    "V01545"
+   ]
+  },
+  {
+   "word": "not",
+   "count": 2,
+   "ids": [
+    "V01794",
+    "V01795"
+   ]
+  },
+  {
+   "word": "poster",
+   "count": 2,
+   "ids": [
+    "V02026",
+    "V02027"
+   ]
+  }
+ ],
+ "seq_gaps": [
+  {
+   "id": "V00081",
+   "word": "a great deal of",
+   "seq": 1,
+   "section": "textbook",
+   "page": 379,
+   "original_phonetic": "",
+   "warnings": [
+    "序号不连续: 85 -> 1"
+   ]
+  },
+  {
+   "id": "V00094",
+   "word": "accent",
+   "seq": 1,
+   "section": "textbook",
+   "page": 363,
+   "original_phonetic": "/'?ksont/",
+   "warnings": [
+    "序号不连续: 66 -> 1"
+   ]
+  },
+  {
+   "id": "V00150",
+   "word": "alarm clock",
+   "seq": 1,
+   "section": "textbook",
+   "page": 359,
+   "original_phonetic": "",
+   "warnings": [
+    "序号不连续: 60 -> 1"
+   ]
+  },
+  {
+   "id": "V00152",
+   "word": "alien",
+   "seq": 1,
+   "section": "textbook",
+   "page": 372,
+   "original_phonetic": "/erlion/",
+   "warnings": [
+    "序号不连续: 81 -> 1"
+   ]
+  },
+  {
+   "id": "V00185",
+   "word": "announcement",
+   "seq": 1,
+   "section": "textbook",
+   "page": 352,
+   "original_phonetic": "/?'naunsm?nt/",
+   "warnings": [
+    "序号不连续: 39 -> 1"
+   ]
+  }
+ ],
+ "examples_total": 3977,
+ "examples_empty_zh": 0,
+ "examples_pair_rate": 1.0,
+ "no_meanings": [],
+ "by_section": {
+  "level3": 272,
+  "textbook": 408,
+  "words": 1785,
+  "jxjy": 128,
+  "phrases": 347
+ },
+ "schema_errors": []
+}
