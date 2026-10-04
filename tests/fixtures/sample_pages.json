@@ -1,0 +1,3466 @@
+[
+ {
+  "page": 1,
+  "text": "",
+  "lines": []
+ },
+ {
+  "page": 2,
+  "text": "2027年\n上海市初中英语\n考纲词汇\n用法手册\n◆可与综合练习配套使用◆\n本书编写组 编著\n上海译文出版社\n",
+  "lines": [
+   {
+    "y": 159.4,
+    "text": "2027年"
+   },
+   {
+    "y": 227.8,
+    "text": "上海市初中英语"
+   },
+   {
+    "y": 295.3,
+    "text": "考纲词汇"
+   },
+   {
+    "y": 378.3,
+    "text": "用法手册"
+   },
+   {
+    "y": 468.3,
+    "text": "◆可与综合练习配套使用◆"
+   },
+   {
+    "y": 506.0,
+    "text": "本书编写组 编著"
+   },
+   {
+    "y": 663.5,
+    "text": "上海译文出版社"
+   }
+  ]
+ },
+ {
+  "page": 3,
+  "text": "图书在版编目(CIP)数据\n2027年上海市初中英语考纲词汇用法手册/《2027\n年上海市初中英语考纲词汇用法手册》编写组编著,\n上海：上海译文出版社，2026.6.--ISBN 978-7-5807-\n0245-6\nI.G634.413\n中国国家版本馆CIP数据核字第2026JG9097号\n2027年上海市初中英语考纲词汇用法手册\n本书编写组 编著\n策划编辑/顾阿林 谭春惠 责任编辑/陆亚平\n装帧设计/柴昊洲\n技术编辑/孙侃\n上海译文出版社有限公司出版、发行\n网址：www.yiwen.com.cn\n201101 上海市闵行区号景路159弄B座\n上海景条印刷有限公司印刷\n开本787×1092 1/16 印张25 字数557,000\n2026年6月第1版 2026年6月第1次印刷\n印数：00,001—40,000册\nISBN 978-7-5807-0245-6\n定价：62.00元\n本书专有出版权为本社独家所有，非经本社同意不得转载、摘编或复制\n如有质量问题，请与承印厂质量科联系。T:021-59815621\nISBN 978-7-88841-555-3\n9 l787888415553l>\n",
+  "lines": [
+   {
+    "y": 85.5,
+    "text": "图书在版编目(CIP)数据"
+   },
+   {
+    "y": 99.6,
+    "text": "2027年上海市初中英语考纲词汇用法手册/《2027"
+   },
+   {
+    "y": 114.6,
+    "text": "年上海市初中英语考纲词汇用法手册》编写组编著,"
+   },
+   {
+    "y": 129.4,
+    "text": "上海：上海译文出版社，2026.6.--ISBN 978-7-5807-"
+   },
+   {
+    "y": 142.8,
+    "text": "0245-6"
+   },
+   {
+    "y": 157.7,
+    "text": "I.G634.413"
+   },
+   {
+    "y": 173.0,
+    "text": "中国国家版本馆CIP数据核字第2026JG9097号"
+   },
+   {
+    "y": 340.5,
+    "text": "2027年上海市初中英语考纲词汇用法手册"
+   },
+   {
+    "y": 354.3,
+    "text": "本书编写组 编著"
+   },
+   {
+    "y": 368.7,
+    "text": "策划编辑/顾阿林 谭春惠 责任编辑/陆亚平"
+   },
+   {
+    "y": 383.4,
+    "text": "装帧设计/柴昊洲"
+   },
+   {
+    "y": 384.0,
+    "text": "技术编辑/孙侃"
+   },
+   {
+    "y": 413.0,
+    "text": "上海译文出版社有限公司出版、发行"
+   },
+   {
+    "y": 428.4,
+    "text": "网址：www.yiwen.com.cn"
+   },
+   {
+    "y": 442.2,
+    "text": "201101 上海市闵行区号景路159弄B座"
+   },
+   {
+    "y": 457.6,
+    "text": "上海景条印刷有限公司印刷"
+   },
+   {
+    "y": 484.9,
+    "text": "开本787×1092 1/16 印张25 字数557,000"
+   },
+   {
+    "y": 499.1,
+    "text": "2026年6月第1版 2026年6月第1次印刷"
+   },
+   {
+    "y": 514.1,
+    "text": "印数：00,001—40,000册"
+   },
+   {
+    "y": 541.9,
+    "text": "ISBN 978-7-5807-0245-6"
+   },
+   {
+    "y": 559.3,
+    "text": "定价：62.00元"
+   },
+   {
+    "y": 587.2,
+    "text": "本书专有出版权为本社独家所有，非经本社同意不得转载、摘编或复制"
+   },
+   {
+    "y": 598.3,
+    "text": "如有质量问题，请与承印厂质量科联系。T:021-59815621"
+   },
+   {
+    "y": 613.7,
+    "text": "ISBN 978-7-88841-555-3"
+   },
+   {
+    "y": 646.5,
+    "text": "9 l787888415553l>"
+   }
+  ]
+ },
+ {
+  "page": 4,
+  "text": "前 言\n每年的中考英语试题都严格按照《上海市初中毕业统一学业考试考试手册》(以下\n简称《考试手册》)进行命题。因此初三学生不仅要研读《考试手册》,了解中考英语\n考试的性质、要求、内容，还必须熟练掌握《考试手册》中所列出的单词和词组。为\n此我们约请了长期从事初三英语教学和中考命题研究的高级教师和学科带头人，集体\n编写了这本《上海市初中英语考纲词汇用法手册》。本书具有以下几个鲜明的特点。\n1.先进性：内容新颖，具有前瞻性\n英语单词的记忆不能光靠死记硬背，应该将单词置于情境中，利用上下文的意思\n来学习单词。鉴于此，我们为《考试手册》中的英语考纲单词和词组配备了例句，并\n增加了有关这个单词的词形拓展、常用词组、近义词、反义词和相关谚语。这些例句\n基本都是近几年出现在上海市中考卷和各区质量抽查卷中的句子。目的是使考生了解\n考纲单词和词组的用法，正确使用所学的词汇和句型，掌握习惯用语和固定搭配，由\n此构建完整的知识体系。同时，考生在写作时能使用谚语，增加作文文采分。\n2.科学性：内容编排，循序渐进\n英语单词的记忆还应该从音、形、义各方面发现其内在的联系或规律，加以归纳\n整理会大大提高我们记忆英语单词的效果。本书在前四个单元中为要求掌握的单词和\n词组配上了例句；对历年来中考试卷中常遇到的句子进行解析，使学生了解其基本用\n法；对学生在学习过程中常遇到的知识难点及教学盲点进行名师点拨，强化学生对重\n点知识的理解和记忆。同时，我们还为此书精心编写了配套的练习册，供学生系统性\n地重点复习，通过举一反三的训练，能熟练掌握并正确使用中考所需的单词和词组。\n本书在附录中将不规则动词等基础知识，根据结构法加以归纳整理，列出表格，便于\n学生掌握。\n3.通用性：重点突出，难度适中\n近几年在各类试卷中多次出现的考纲词汇，在书中用★标出，目的是让学生了解\n此单词是常考词(也就是老师口中常说的核心词汇):通常一颗星(★)表示在各区\n统考试卷中出现；两颗星(★★)表示在区统考试卷和市毕业考试卷中都出现；三颗\n·1·\n",
+  "lines": [
+   {
+    "y": 93.6,
+    "text": "前 言"
+   },
+   {
+    "y": 183.5,
+    "text": "每年的中考英语试题都严格按照《上海市初中毕业统一学业考试考试手册》(以下"
+   },
+   {
+    "y": 204.0,
+    "text": "简称《考试手册》)进行命题。因此初三学生不仅要研读《考试手册》,了解中考英语"
+   },
+   {
+    "y": 224.0,
+    "text": "考试的性质、要求、内容，还必须熟练掌握《考试手册》中所列出的单词和词组。为"
+   },
+   {
+    "y": 244.0,
+    "text": "此我们约请了长期从事初三英语教学和中考命题研究的高级教师和学科带头人，集体"
+   },
+   {
+    "y": 264.3,
+    "text": "编写了这本《上海市初中英语考纲词汇用法手册》。本书具有以下几个鲜明的特点。"
+   },
+   {
+    "y": 285.0,
+    "text": "1.先进性：内容新颖，具有前瞻性"
+   },
+   {
+    "y": 305.0,
+    "text": "英语单词的记忆不能光靠死记硬背，应该将单词置于情境中，利用上下文的意思"
+   },
+   {
+    "y": 324.5,
+    "text": "来学习单词。鉴于此，我们为《考试手册》中的英语考纲单词和词组配备了例句，并"
+   },
+   {
+    "y": 344.5,
+    "text": "增加了有关这个单词的词形拓展、常用词组、近义词、反义词和相关谚语。这些例句"
+   },
+   {
+    "y": 364.4,
+    "text": "基本都是近几年出现在上海市中考卷和各区质量抽查卷中的句子。目的是使考生了解"
+   },
+   {
+    "y": 385.4,
+    "text": "考纲单词和词组的用法，正确使用所学的词汇和句型，掌握习惯用语和固定搭配，由"
+   },
+   {
+    "y": 405.7,
+    "text": "此构建完整的知识体系。同时，考生在写作时能使用谚语，增加作文文采分。"
+   },
+   {
+    "y": 425.5,
+    "text": "2.科学性：内容编排，循序渐进"
+   },
+   {
+    "y": 446.0,
+    "text": "英语单词的记忆还应该从音、形、义各方面发现其内在的联系或规律，加以归纳"
+   },
+   {
+    "y": 466.0,
+    "text": "整理会大大提高我们记忆英语单词的效果。本书在前四个单元中为要求掌握的单词和"
+   },
+   {
+    "y": 486.0,
+    "text": "词组配上了例句；对历年来中考试卷中常遇到的句子进行解析，使学生了解其基本用"
+   },
+   {
+    "y": 506.0,
+    "text": "法；对学生在学习过程中常遇到的知识难点及教学盲点进行名师点拨，强化学生对重"
+   },
+   {
+    "y": 525.5,
+    "text": "点知识的理解和记忆。同时，我们还为此书精心编写了配套的练习册，供学生系统性"
+   },
+   {
+    "y": 544.4,
+    "text": "地重点复习，通过举一反三的训练，能熟练掌握并正确使用中考所需的单词和词组。"
+   },
+   {
+    "y": 564.9,
+    "text": "本书在附录中将不规则动词等基础知识，根据结构法加以归纳整理，列出表格，便于"
+   },
+   {
+    "y": 585.6,
+    "text": "学生掌握。"
+   },
+   {
+    "y": 605.5,
+    "text": "3.通用性：重点突出，难度适中"
+   },
+   {
+    "y": 626.0,
+    "text": "近几年在各类试卷中多次出现的考纲词汇，在书中用★标出，目的是让学生了解"
+   },
+   {
+    "y": 645.6,
+    "text": "此单词是常考词(也就是老师口中常说的核心词汇):通常一颗星(★)表示在各区"
+   },
+   {
+    "y": 665.8,
+    "text": "统考试卷中出现；两颗星(★★)表示在区统考试卷和市毕业考试卷中都出现；三颗"
+   },
+   {
+    "y": 702.2,
+    "text": "·1·"
+   }
+  ]
+ },
+ {
+  "page": 5,
+  "text": "星(★★★)表示在市毕业考试卷中多次出现。同时，我们更新了近几年的真题例句，\n以贴近2027年中考考纲方向。此外，根据教学需要增加了“英语课程标准三级词汇”\n(2022年版)(考纲词汇除外，考纲中的三级词汇则用?标出)、“上海市初中英语学科\n教学基本要求词汇”(试验本),以及沪教版上海市初中英语新教材(六、七、八年级)\n中的单词和词组(考纲词汇、三级词汇和学科教学基本要求词汇中的教材单词和词组\n已按相应年级、单元标出，如6648.friendly表示该单词在六年级上册的Unit 5中出\n现)。本书还配有线上MP3音频和词汇学习资料(持续更新),可扫码获取。\n此外，我们还以新课程标准为依据，精心编写了《2027年上海市初中英语考纲\n词汇用法手册配套综合练习》《2027年上海市初中英语考纲词汇天天练》,与本书及\n《2027年上海市初中英语考纲词汇手册(便携版)》配套使用。通过两本练习册的训练\n能培养学生的语言能力、文化意识、思维品质和学习能力。如此，就能在中考中获得\n高分。\n衷心希望广大考生在全面复习迎考的同时使用本书，以期达到巩固和提高的目的，\n争取在中考中取得良好成绩。\n受时间所限，书中若有疏漏不妥之处，希望老师和学生在使用后提出宝贵意见，\n以便今后修订并改进。\n编者\n2026年5月\n·2·\n",
+  "lines": [
+   {
+    "y": 60.0,
+    "text": "星(★★★)表示在市毕业考试卷中多次出现。同时，我们更新了近几年的真题例句，"
+   },
+   {
+    "y": 80.0,
+    "text": "以贴近2027年中考考纲方向。此外，根据教学需要增加了“英语课程标准三级词汇”"
+   },
+   {
+    "y": 99.9,
+    "text": "(2022年版)(考纲词汇除外，考纲中的三级词汇则用?标出)、“上海市初中英语学科"
+   },
+   {
+    "y": 119.9,
+    "text": "教学基本要求词汇”(试验本),以及沪教版上海市初中英语新教材(六、七、八年级)"
+   },
+   {
+    "y": 139.9,
+    "text": "中的单词和词组(考纲词汇、三级词汇和学科教学基本要求词汇中的教材单词和词组"
+   },
+   {
+    "y": 157.8,
+    "text": "已按相应年级、单元标出，如6648.friendly表示该单词在六年级上册的Unit 5中出"
+   },
+   {
+    "y": 180.9,
+    "text": "现)。本书还配有线上MP3音频和词汇学习资料(持续更新),可扫码获取。"
+   },
+   {
+    "y": 200.8,
+    "text": "此外，我们还以新课程标准为依据，精心编写了《2027年上海市初中英语考纲"
+   },
+   {
+    "y": 221.9,
+    "text": "词汇用法手册配套综合练习》《2027年上海市初中英语考纲词汇天天练》,与本书及"
+   },
+   {
+    "y": 242.0,
+    "text": "《2027年上海市初中英语考纲词汇手册(便携版)》配套使用。通过两本练习册的训练"
+   },
+   {
+    "y": 261.4,
+    "text": "能培养学生的语言能力、文化意识、思维品质和学习能力。如此，就能在中考中获得"
+   },
+   {
+    "y": 282.6,
+    "text": "高分。"
+   },
+   {
+    "y": 301.6,
+    "text": "衷心希望广大考生在全面复习迎考的同时使用本书，以期达到巩固和提高的目的，"
+   },
+   {
+    "y": 321.8,
+    "text": "争取在中考中取得良好成绩。"
+   },
+   {
+    "y": 341.9,
+    "text": "受时间所限，书中若有疏漏不妥之处，希望老师和学生在使用后提出宝贵意见，"
+   },
+   {
+    "y": 362.4,
+    "text": "以便今后修订并改进。"
+   },
+   {
+    "y": 401.1,
+    "text": "编者"
+   },
+   {
+    "y": 421.6,
+    "text": "2026年5月"
+   },
+   {
+    "y": 703.6,
+    "text": "·2·"
+   }
+  ]
+ },
+ {
+  "page": 6,
+  "text": "目 录\n第一单元《上海市初中毕业统一学业考试考试手册》中的英语考纲单词和词组⋯⋯1\n一、考纲单词的基本用法⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯1\n二、考纲词组的基本用法⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯264\n第二单元 英语课程标准三级词汇(2022年版)⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯03\n第三单元《上海市初中英语学科教学基本要求(试验本)》中的单词⋯⋯⋯⋯⋯327\n第四单元 沪教版上海市初中英语新教材(六、七、八年级)单词、词组⋯⋯⋯343\n附 录 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯383\n一、不规则动词表⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯383\n二、人称代词、物主代词、反身代词表⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯387\n三、基数词和序数词表⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯388\n四、月份和星期⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯390\n五、部分地理名称及相关信息⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯390\n六、常用学科⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯392\n七、部分国家、重要组织机构名称缩写及相关例句⋯⋯⋯⋯⋯⋯⋯⋯392\n八、部分重要节日名称、中国文化专有名词及相关例句⋯⋯⋯⋯⋯⋯392\n",
+  "lines": [
+   {
+    "y": 95.7,
+    "text": "目 录"
+   },
+   {
+    "y": 176.9,
+    "text": "第一单元《上海市初中毕业统一学业考试考试手册》中的英语考纲单词和词组⋯⋯1"
+   },
+   {
+    "y": 195.6,
+    "text": "一、考纲单词的基本用法⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯1"
+   },
+   {
+    "y": 214.1,
+    "text": "二、考纲词组的基本用法⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯264"
+   },
+   {
+    "y": 233.2,
+    "text": "第二单元 英语课程标准三级词汇(2022年版)⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯03"
+   },
+   {
+    "y": 251.2,
+    "text": "第三单元《上海市初中英语学科教学基本要求(试验本)》中的单词⋯⋯⋯⋯⋯327"
+   },
+   {
+    "y": 269.1,
+    "text": "第四单元 沪教版上海市初中英语新教材(六、七、八年级)单词、词组⋯⋯⋯343"
+   },
+   {
+    "y": 288.6,
+    "text": "附 录 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯383"
+   },
+   {
+    "y": 306.9,
+    "text": "一、不规则动词表⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯383"
+   },
+   {
+    "y": 325.4,
+    "text": "二、人称代词、物主代词、反身代词表⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯387"
+   },
+   {
+    "y": 344.0,
+    "text": "三、基数词和序数词表⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯388"
+   },
+   {
+    "y": 362.5,
+    "text": "四、月份和星期⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯390"
+   },
+   {
+    "y": 382.1,
+    "text": "五、部分地理名称及相关信息⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯390"
+   },
+   {
+    "y": 400.0,
+    "text": "六、常用学科⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯392"
+   },
+   {
+    "y": 419.0,
+    "text": "七、部分国家、重要组织机构名称缩写及相关例句⋯⋯⋯⋯⋯⋯⋯⋯392"
+   },
+   {
+    "y": 438.0,
+    "text": "八、部分重要节日名称、中国文化专有名词及相关例句⋯⋯⋯⋯⋯⋯392"
+   }
+  ]
+ },
+ {
+  "page": 7,
+  "text": "⋯⋯\n微信扫码获取\n单词朗读音频\n词汇学习资料\n1.常考的词义辨析\n2.词形转换表\n3.沪教版新教材单词、词组索引表\n持续更新中⋯⋯\n",
+  "lines": [
+   {
+    "y": 410.3,
+    "text": "⋯⋯"
+   },
+   {
+    "y": 438.1,
+    "text": "微信扫码获取"
+   },
+   {
+    "y": 458.8,
+    "text": "单词朗读音频"
+   },
+   {
+    "y": 480.4,
+    "text": "词汇学习资料"
+   },
+   {
+    "y": 527.3,
+    "text": "1.常考的词义辨析"
+   },
+   {
+    "y": 542.0,
+    "text": "2.词形转换表"
+   },
+   {
+    "y": 557.1,
+    "text": "3.沪教版新教材单词、词组索引表"
+   },
+   {
+    "y": 572.0,
+    "text": "持续更新中⋯⋯"
+   }
+  ]
+ },
+ {
+  "page": 8,
+  "text": "第一单元\n《上海市初中毕业统一学业考试考试手册》\n中的英语考纲单词和词组\n一、考纲单词的基本用法\nA\n? 1.*ability①/'brl?ti/(复abilities) n.能力，才能，本领\nG6下U1Sue has the ability to succeed in business.苏有能力在商业上取得成功。\n词形拓展\nable adj.能够的；有能力的\nenable v.使⋯⋯能够，使⋯⋯有能力\ndisable v.使伤残；使丧失能力\ndisabled adj.丧失能力的；有残疾的；无能力的\nunable adj.不能的；不会的\n常用词组\nhave the ability to do sth.具备做某事的能力\n? 2.*able/erbl/ adj.能够的；有能力的\nG8上U6Leave the reference books behind,or you won't be able to think by yourself.\n把参考书放一边，否则你将无法独立思考。\n常用词组\nsb.be able to do sth.某人能够做某事\n反义 unable\n微信扫码\n听音频，背单词\nA\n1\n①?表示该单词为英语课程标准三级词汇；G6下U1表示该单词在沪教版上海市初中英语新教材六年级下册的\nUnit 1中出现；*为各类试卷中多次出现的高频词汇(*表示在各区统考试卷中出现；**表示在区统考试卷和市毕业\n考试卷中都出现；***表示在市毕业考试卷中多次出现)。\n",
+  "lines": [
+   {
+    "y": 52.3,
+    "text": "A"
+   },
+   {
+    "y": 74.0,
+    "text": "第一单元"
+   },
+   {
+    "y": 189.6,
+    "text": "《上海市初中毕业统一学业考试考试手册》"
+   },
+   {
+    "y": 222.8,
+    "text": "中的英语考纲单词和词组"
+   },
+   {
+    "y": 263.4,
+    "text": "一、考纲单词的基本用法"
+   },
+   {
+    "y": 305.8,
+    "text": "A"
+   },
+   {
+    "y": 307.3,
+    "text": "微信扫码"
+   },
+   {
+    "y": 317.5,
+    "text": "听音频，背单词"
+   },
+   {
+    "y": 336.5,
+    "text": "? 1.*ability①/'brl?ti/(复abilities) n.能力，才能，本领"
+   },
+   {
+    "y": 348.9,
+    "text": "G6下U1Sue has the ability to succeed in business.苏有能力在商业上取得成功。"
+   },
+   {
+    "y": 370.0,
+    "text": "词形拓展"
+   },
+   {
+    "y": 388.9,
+    "text": "able adj.能够的；有能力的"
+   },
+   {
+    "y": 406.4,
+    "text": "enable v.使⋯⋯能够，使⋯⋯有能力"
+   },
+   {
+    "y": 422.5,
+    "text": "disable v.使伤残；使丧失能力"
+   },
+   {
+    "y": 440.4,
+    "text": "disabled adj.丧失能力的；有残疾的；无能力的"
+   },
+   {
+    "y": 456.9,
+    "text": "unable adj.不能的；不会的"
+   },
+   {
+    "y": 471.7,
+    "text": "常用词组"
+   },
+   {
+    "y": 492.3,
+    "text": "have the ability to do sth.具备做某事的能力"
+   },
+   {
+    "y": 508.2,
+    "text": "? 2.*able/erbl/ adj.能够的；有能力的"
+   },
+   {
+    "y": 519.1,
+    "text": "G8上U6Leave the reference books behind,or you won't be able to think by yourself."
+   },
+   {
+    "y": 541.7,
+    "text": "把参考书放一边，否则你将无法独立思考。"
+   },
+   {
+    "y": 556.7,
+    "text": "常用词组"
+   },
+   {
+    "y": 576.1,
+    "text": "sb.be able to do sth.某人能够做某事"
+   },
+   {
+    "y": 591.3,
+    "text": "反义 unable"
+   },
+   {
+    "y": 653.3,
+    "text": "①?表示该单词为英语课程标准三级词汇；G6下U1表示该单词在沪教版上海市初中英语新教材六年级下册的"
+   },
+   {
+    "y": 665.6,
+    "text": "Unit 1中出现；*为各类试卷中多次出现的高频词汇(*表示在各区统考试卷中出现；**表示在区统考试卷和市毕业"
+   },
+   {
+    "y": 677.7,
+    "text": "考试卷中都出现；***表示在市毕业考试卷中多次出现)。"
+   },
+   {
+    "y": 698.0,
+    "text": "1"
+   }
+  ]
+ },
+ {
+  "page": 10,
+  "text": "词形拓展\nacceptable adj.可接受的\n近义 agree to have\n反义 refuse\n? 7.accident/?ksidont/ n.事故；意外；偶然的事\nG7下U4 He was injured in a traffic accident.他在一次交通事故中受伤。\n词形拓展\naccidental adj.意外的\naccidentally adv.意外地；偶然地\n常用词组\nby accident 偶然地\n8.accurate /'?kj?r?t/ adj.准确的\nThe manager impressed on his office staff the importance of keeping accurate records.\n经理让办公室职员认识到做精确记录的重要性。\n词形拓展\naccuracy n.准确性\naccurately adv.准确地；精确地\n?9.ache /erk/ n.(身体某部位的)疼；痛\nG8下U6\nv.疼痛\nShe could feel an ache in her back.她能感觉到背部的疼痛。\nMy head aches after studying for a long time.长时间学习后，我的头很疼。\n?10.achieve/'tfi:v/v.达到，获得\nAs an English learner,the larger vocabulary you have,the more success you may achieve.\n作为一名英语学习者，你的词汇量越大，你最终获得的成功也就越大。\n词形拓展\nachievement n.成就；达成\n?11.*across /'krps/ prep.& adv.横过，穿过\nG6下U3 She ran across the field to catch up with her friends.她跑过田野赶上朋友们。\nThe river measures about 30 metres across.这条河宽约30米。\n词形拓展\ncross n.十字形的东西\nv.越过，穿过\n常用词组\ncome across(偶然)遇见，碰见，发现\n?12.*act /?kt/ v.表演，扮演(角色);行动\nG6下U6\nn.行动\nA\n3\n",
+  "lines": [
+   {
+    "y": 52.6,
+    "text": "A"
+   },
+   {
+    "y": 58.6,
+    "text": "词形拓展"
+   },
+   {
+    "y": 78.1,
+    "text": "acceptable adj.可接受的"
+   },
+   {
+    "y": 94.4,
+    "text": "近义 agree to have"
+   },
+   {
+    "y": 110.9,
+    "text": "反义 refuse"
+   },
+   {
+    "y": 128.2,
+    "text": "? 7.accident/?ksidont/ n.事故；意外；偶然的事"
+   },
+   {
+    "y": 138.2,
+    "text": "G7下U4 He was injured in a traffic accident.他在一次交通事故中受伤。"
+   },
+   {
+    "y": 159.9,
+    "text": "词形拓展"
+   },
+   {
+    "y": 180.1,
+    "text": "accidental adj.意外的"
+   },
+   {
+    "y": 196.6,
+    "text": "accidentally adv.意外地；偶然地"
+   },
+   {
+    "y": 212.7,
+    "text": "常用词组"
+   },
+   {
+    "y": 231.2,
+    "text": "by accident 偶然地"
+   },
+   {
+    "y": 248.2,
+    "text": "8.accurate /'?kj?r?t/ adj.准确的"
+   },
+   {
+    "y": 265.2,
+    "text": "The manager impressed on his office staff the importance of keeping accurate records."
+   },
+   {
+    "y": 281.7,
+    "text": "经理让办公室职员认识到做精确记录的重要性。"
+   },
+   {
+    "y": 297.6,
+    "text": "词形拓展"
+   },
+   {
+    "y": 315.9,
+    "text": "accuracy n.准确性"
+   },
+   {
+    "y": 333.5,
+    "text": "accurately adv.准确地；精确地"
+   },
+   {
+    "y": 350.1,
+    "text": "?9.ache /erk/ n.(身体某部位的)疼；痛"
+   },
+   {
+    "y": 360.9,
+    "text": "G8下U6"
+   },
+   {
+    "y": 366.8,
+    "text": "v.疼痛"
+   },
+   {
+    "y": 384.7,
+    "text": "She could feel an ache in her back.她能感觉到背部的疼痛。"
+   },
+   {
+    "y": 402.2,
+    "text": "My head aches after studying for a long time.长时间学习后，我的头很疼。"
+   },
+   {
+    "y": 418.7,
+    "text": "?10.achieve/'tfi:v/v.达到，获得"
+   },
+   {
+    "y": 435.5,
+    "text": "As an English learner,the larger vocabulary you have,the more success you may achieve."
+   },
+   {
+    "y": 452.1,
+    "text": "作为一名英语学习者，你的词汇量越大，你最终获得的成功也就越大。"
+   },
+   {
+    "y": 467.6,
+    "text": "词形拓展"
+   },
+   {
+    "y": 486.7,
+    "text": "achievement n.成就；达成"
+   },
+   {
+    "y": 502.8,
+    "text": "?11.*across /'krps/ prep.& adv.横过，穿过"
+   },
+   {
+    "y": 513.0,
+    "text": "G6下U3 She ran across the field to catch up with her friends.她跑过田野赶上朋友们。"
+   },
+   {
+    "y": 538.2,
+    "text": "The river measures about 30 metres across.这条河宽约30米。"
+   },
+   {
+    "y": 551.6,
+    "text": "词形拓展"
+   },
+   {
+    "y": 570.8,
+    "text": "cross n.十字形的东西"
+   },
+   {
+    "y": 587.9,
+    "text": "v.越过，穿过"
+   },
+   {
+    "y": 602.7,
+    "text": "常用词组"
+   },
+   {
+    "y": 621.6,
+    "text": "come across(偶然)遇见，碰见，发现"
+   },
+   {
+    "y": 638.0,
+    "text": "?12.*act /?kt/ v.表演，扮演(角色);行动"
+   },
+   {
+    "y": 651.4,
+    "text": "G6下U6"
+   },
+   {
+    "y": 655.4,
+    "text": "n.行动"
+   },
+   {
+    "y": 697.1,
+    "text": "3"
+   }
+  ]
+ },
+ {
+  "page": 50,
+  "text": "?255.*cause/k?:z/ n.原因，起因；事业\nG6下U4\nv.促使，引起，使发生\nThese causes led to a bad result.这些原因导致了不良后果。\nMany people are passionate about environmental causes.许多人对环境事业充满热情。\nThe child's headache may be caused by stress.那孩子的头疼可能是紧张引起的。\n近义 reason\n256.cave/kerv/ n.洞，穴；地窖\nThey put the food at the entrance to the cave.他们把食物放在洞口。\n?257.*celebrate /'selibrert/ v.庆祝；庆贺\nG6下U3 How did you celebrate your fourteenth birthday?你是怎么庆祝你的十四岁生日的?\n词形拓展\ncelebration n.庆典；庆祝活动\ncelebratory adj.庆祝的；庆贺的\n?258.cent/sent/ n.美分(100 cents=1 dollar)\nIt costs 10 cents.它值10美分。\n?259.*centre /'senta(r)/(<美>center)n.中心；中央\nG7上U3 He is the centre of this event.他是这次事件的核心人物。\n词形拓展\ncentral adj.在中心的；中央的\n?260.*century/'sent??ri/ n.世纪，百年\nG8上U4 At the beginning of last century,people in China lived in darkness.\n在上个世纪初，中国人民生活在黑暗中。\n261.*certainly /'s:tnli/ adv.当然，是的；一定，无疑地\nWe can certainly have the job finished on time.我们肯定能按时完成任务。\n词形拓展\ncertain adj.无疑的；肯定的\n262.chain /tfen/n.链；链条；连锁店\nHe now owns a chain of970 food stores.他现在拥有970家连锁食品店。\n?263.chair /tfe?(r)/n.椅子\nA chair consists of a seat with a back.椅子是由椅座和椅背组成的。\n?264.challenge/'t??l?nd?/ n.&v.挑战；质疑\nG7上U1 He accepted his friend's challenge to swim across the river.\n他接受朋友提出的挑战，游过这条河。\nI did not think he was right,so I challenged him.\n我认为他是不对的，因此向他提出质疑。\n词形拓展\nchallenging adj.有挑战性的\n43\n",
+  "lines": [
+   {
+    "y": 58.6,
+    "text": "?255.*cause/k?:z/ n.原因，起因；事业"
+   },
+   {
+    "y": 70.4,
+    "text": "G6下U4"
+   },
+   {
+    "y": 75.1,
+    "text": "v.促使，引起，使发生"
+   },
+   {
+    "y": 93.2,
+    "text": "These causes led to a bad result.这些原因导致了不良后果。"
+   },
+   {
+    "y": 110.6,
+    "text": "Many people are passionate about environmental causes.许多人对环境事业充满热情。"
+   },
+   {
+    "y": 127.1,
+    "text": "The child's headache may be caused by stress.那孩子的头疼可能是紧张引起的。"
+   },
+   {
+    "y": 143.5,
+    "text": "近义 reason"
+   },
+   {
+    "y": 160.7,
+    "text": "256.cave/kerv/ n.洞，穴；地窖"
+   },
+   {
+    "y": 178.9,
+    "text": "They put the food at the entrance to the cave.他们把食物放在洞口。"
+   },
+   {
+    "y": 195.2,
+    "text": "?257.*celebrate /'selibrert/ v.庆祝；庆贺"
+   },
+   {
+    "y": 204.2,
+    "text": "G6下U3How did you celebrate your fourteenth birthday?你是怎么庆祝你的十四岁生日的?"
+   },
+   {
+    "y": 227.9,
+    "text": "词形拓展"
+   },
+   {
+    "y": 246.0,
+    "text": "celebration n.庆典；庆祝活动"
+   },
+   {
+    "y": 264.0,
+    "text": "celebratory adj.庆祝的；庆贺的"
+   },
+   {
+    "y": 280.9,
+    "text": "?258.cent/sent/ n.美分(100 cents=1 dollar)"
+   },
+   {
+    "y": 297.8,
+    "text": "It costs 10 cents.它值10美分。"
+   },
+   {
+    "y": 314.2,
+    "text": "?259.*centre /'senta(r)/(<美>center)n.中心；中央"
+   },
+   {
+    "y": 324.0,
+    "text": "G7上U3He is the centre of this event.他是这次事件的核心人物。"
+   },
+   {
+    "y": 346.5,
+    "text": "词形拓展"
+   },
+   {
+    "y": 365.5,
+    "text": "central adj.在中心的；中央的"
+   },
+   {
+    "y": 382.9,
+    "text": "?260.*century/'sent??ri/ n.世纪，百年"
+   },
+   {
+    "y": 390.6,
+    "text": "G8上U4At the beginning of last century,people in China lived in darkness."
+   },
+   {
+    "y": 416.7,
+    "text": "在上个世纪初，中国人民生活在黑暗中。"
+   },
+   {
+    "y": 434.0,
+    "text": "261.*certainly /'s:tnli/ adv.当然，是的；一定，无疑地"
+   },
+   {
+    "y": 451.8,
+    "text": "We can certainly have the job finished on time.我们肯定能按时完成任务。"
+   },
+   {
+    "y": 465.5,
+    "text": "词形拓展"
+   },
+   {
+    "y": 486.0,
+    "text": "certain adj.无疑的；肯定的"
+   },
+   {
+    "y": 502.7,
+    "text": "262.chain /tfen/n.链；链条；连锁店"
+   },
+   {
+    "y": 519.9,
+    "text": "He now owns a chain of970 food stores.他现在拥有970家连锁食品店。"
+   },
+   {
+    "y": 535.9,
+    "text": "?263.chair /tfe?(r)/n.椅子"
+   },
+   {
+    "y": 554.3,
+    "text": "A chair consists of a seat with a back.椅子是由椅座和椅背组成的。"
+   },
+   {
+    "y": 569.2,
+    "text": "?264.challenge/'t??l?nd?/ n.&v.挑战；质疑"
+   },
+   {
+    "y": 577.9,
+    "text": "G7上U1He accepted his friend's challenge to swim across the river."
+   },
+   {
+    "y": 603.7,
+    "text": "他接受朋友提出的挑战，游过这条河。"
+   },
+   {
+    "y": 620.8,
+    "text": "I did not think he was right,so I challenged him."
+   },
+   {
+    "y": 637.7,
+    "text": "我认为他是不对的，因此向他提出质疑。"
+   },
+   {
+    "y": 652.5,
+    "text": "词形拓展"
+   },
+   {
+    "y": 673.0,
+    "text": "challenging adj.有挑战性的"
+   },
+   {
+    "y": 698.4,
+    "text": "43"
+   }
+  ]
+ },
+ {
+  "page": 51,
+  "text": "C\n常用词组\nmeet/face a new challenge面临一个新挑战\n?265.*chance /t?a:ns/ n.机会\nG7上U2 We should improve ourselves by taking every chance to try more new things.\n我们应该抓住每一个机会去尝试更多新事物，以此提升自我。\n近义 opportunity\n?266.***change /tfernd?/v.改变，变化；更换；兑换(零钱)\nG6下U6\nn.零钱；找头；改变，变化\nAt that time, the event seemed unimportant,but it changed history.\n在那个时候，这件事看似无关紧要，却改写了历史。\nMany old people find it difficult to cope with changes.许多老人难以适应变化。\nKeep the change.不用找零了。\n词形拓展\nchangeable adj.易变的；变化无常的\nchanger n.改变者；改进者\nexchange n.&v.交换；互换；交流\n常用词组\nchange one's mind改变主意\n267.***changeable /tfe?nd?obl/ adj.易变的，变化无常的\nG8下U4 The weather was changeable last month and many people fell ill with cold and flu.\n上个月天气多变，很多人患了感冒和流感。\n268.channel/'tf?nl/n.(电视)频道\nHe changed many channels but still couldn't find any interesting programmes.\n他调了许多频道，但是仍然找不到任何有趣的节目。\n?269.character/k?r?kt?(r)/ n.性格；特性；特征，特点；角色\nG6下U6 What kind of character do you think you have?你认为自己具有什么样的性格?\nShe played the character of a brave warrior in the movie.\n她在电影中扮演的角色是一位勇敢的战士。\n270.charge /'tfa:d3/n.主管，掌管\nThe ward of the hospital is in the charge of Dr. Green.医院的这间病房由格林医生负责。\n常用词组\nin charge of 主管，负责\ntake charge of负责，管理\n?271.charity /tf?r?ti/ n.慈善\nG7下U1 We have decided to try our best to raise more money for the local charity.\n我们已经决定尽力为当地慈善机构筹集更多的钱。\n?272.*chat /t??t/ n.&v.聊天，闲谈\nG7下U2 She said she would like to have a chat with me.她说她想跟我聊一聊。\n44\n",
+  "lines": [
+   {
+    "y": 51.1,
+    "text": "常用词组"
+   },
+   {
+    "y": 71.0,
+    "text": "meet/face a new challenge面临一个新挑战"
+   },
+   {
+    "y": 87.9,
+    "text": "?265.*chance /t?a:ns/ n.机会"
+   },
+   {
+    "y": 96.0,
+    "text": "G7上U2We should improve ourselves by taking every chance to try more new things."
+   },
+   {
+    "y": 121.7,
+    "text": "我们应该抓住每一个机会去尝试更多新事物，以此提升自我。"
+   },
+   {
+    "y": 139.4,
+    "text": "近义 opportunity"
+   },
+   {
+    "y": 155.7,
+    "text": "?266.***change /tfernd?/v.改变，变化；更换；兑换(零钱)"
+   },
+   {
+    "y": 160.8,
+    "text": "C"
+   },
+   {
+    "y": 167.5,
+    "text": "G6下U6"
+   },
+   {
+    "y": 173.4,
+    "text": "n.零钱；找头；改变，变化"
+   },
+   {
+    "y": 190.7,
+    "text": "At that time, the event seemed unimportant,but it changed history."
+   },
+   {
+    "y": 207.7,
+    "text": "在那个时候，这件事看似无关紧要，却改写了历史。"
+   },
+   {
+    "y": 225.4,
+    "text": "Many old people find it difficult to cope with changes.许多老人难以适应变化。"
+   },
+   {
+    "y": 242.9,
+    "text": "Keep the change.不用找零了。"
+   },
+   {
+    "y": 256.6,
+    "text": "词形拓展"
+   },
+   {
+    "y": 275.8,
+    "text": "changeable adj.易变的；变化无常的"
+   },
+   {
+    "y": 292.7,
+    "text": "changer n.改变者；改进者"
+   },
+   {
+    "y": 310.5,
+    "text": "exchange n.&v.交换；互换；交流"
+   },
+   {
+    "y": 325.7,
+    "text": "常用词组"
+   },
+   {
+    "y": 344.3,
+    "text": "change one's mind改变主意"
+   },
+   {
+    "y": 361.4,
+    "text": "267.***changeable /tfe?nd?obl/ adj.易变的，变化无常的"
+   },
+   {
+    "y": 369.9,
+    "text": "G8下U4The weather was changeable last month and many people fell ill with cold and flu."
+   },
+   {
+    "y": 395.1,
+    "text": "上个月天气多变，很多人患了感冒和流感。"
+   },
+   {
+    "y": 412.7,
+    "text": "268.channel/'tf?nl/n.(电视)频道"
+   },
+   {
+    "y": 430.1,
+    "text": "He changed many channels but still couldn't find any interesting programmes."
+   },
+   {
+    "y": 446.2,
+    "text": "他调了许多频道，但是仍然找不到任何有趣的节目。"
+   },
+   {
+    "y": 463.7,
+    "text": "?269.character/k?r?kt?(r)/ n.性格；特性；特征，特点；角色"
+   },
+   {
+    "y": 472.8,
+    "text": "G6下U6What kind of character do you think you have?你认为自己具有什么样的性格?"
+   },
+   {
+    "y": 497.3,
+    "text": "She played the character of a brave warrior in the movie."
+   },
+   {
+    "y": 514.8,
+    "text": "她在电影中扮演的角色是一位勇敢的战士。"
+   },
+   {
+    "y": 532.0,
+    "text": "270.charge /'tfa:d3/n.主管，掌管"
+   },
+   {
+    "y": 549.4,
+    "text": "The ward of the hospital is in the charge of Dr. Green.医院的这间病房由格林医生负责。"
+   },
+   {
+    "y": 564.2,
+    "text": "常用词组"
+   },
+   {
+    "y": 583.2,
+    "text": "in charge of 主管，负责"
+   },
+   {
+    "y": 600.4,
+    "text": "take charge of负责，管理"
+   },
+   {
+    "y": 618.0,
+    "text": "?271.charity /tf?r?ti/ n.慈善"
+   },
+   {
+    "y": 626.5,
+    "text": "G7下U1We have decided to try our best to raise more money for the local charity."
+   },
+   {
+    "y": 650.7,
+    "text": "我们已经决定尽力为当地慈善机构筹集更多的钱。"
+   },
+   {
+    "y": 668.1,
+    "text": "?272.*chat /t??t/ n.&v.聊天，闲谈"
+   },
+   {
+    "y": 677.6,
+    "text": "G7下U2She said she would like to have a chat with me.她说她想跟我聊一聊。"
+   },
+   {
+    "y": 701.0,
+    "text": "44"
+   }
+  ]
+ },
+ {
+  "page": 52,
+  "text": "It's too noisy here.Let's find a quieter place to chat.\n这里太吵闹，让我们找个安静点的地方谈谈。\n?273.*cheap /t?i:p/ adj.便宜的；廉价的\nG8下U3 The pad made last year is a lot cheaper than the one made this year.\n去年生产的垫子比今年生产的便宜很多。\n反义 dear; expensive\n?274.check /tfek/ n.检查；批改；支票；方格图案；格子\nG6下U3\nv.核对；检查；查明；查看；核实\nCan I pay by check or credit card?我能用支票或信用卡支付吗?\nThe boy checked his test paper carefully enough in order to get full marks.\n为了获得满分，这个男孩仔细检查了他的试卷。\n常用词组\ncheck in办理登机；登记(入住等)\ncheck out 察看，观察(有趣或有吸引力的人或事物);借阅；借出；退房\n?275.cheer /tfr?(r)/n.&v.欢呼；喝彩；加油\nG7下U2 He's always full of cheer at Christmas.圣诞节时，他总是兴致勃勃。\nThe leading actor felt happy when he saw a lot of people cheering him.\n看到很多人为他喝彩，这位男主角感到很高兴。\n词形拓展\ncheerful adj.开朗的；乐观的\ncheerfully adv.开朗地；乐观地\n常用词组\ncheer for 鼓励；支持\n?276.cheese /tji:z/ n.奶酪；干酪\nG6上U3 The cheese cake tasted so delicious that the kids asked for more.\n这奶酪蛋糕真好吃，孩子们还想要。\n277.*chemical/kemikl/ n.化学品；化学物质\nG8上U1\nadj.化学的\nThe students are doing experiments in the lab with some new chemicals.\n学生正在实验室里用一些新的化学品做实验。\nQi Yu hopes to do some chemical research in the near future.\n齐宇希望在不久的将来做一些化学研究。\n词形拓展\nchemist n.化学家\nchemistry n.化学\n?278.*chemistry/kemistri/n.化学\nWe make experiments in chemistry every day.我们每天都做化学实验。\nC\n45\n",
+  "lines": [
+   {
+    "y": 61.6,
+    "text": "It's too noisy here.Let's find a quieter place to chat."
+   },
+   {
+    "y": 77.8,
+    "text": "这里太吵闹，让我们找个安静点的地方谈谈。"
+   },
+   {
+    "y": 94.9,
+    "text": "?273.*cheap /t?i:p/ adj.便宜的；廉价的"
+   },
+   {
+    "y": 103.0,
+    "text": "G8下U3The pad made last year is a lot cheaper than the one made this year."
+   },
+   {
+    "y": 128.3,
+    "text": "去年生产的垫子比今年生产的便宜很多。"
+   },
+   {
+    "y": 145.9,
+    "text": "反义 dear; expensive"
+   },
+   {
+    "y": 157.4,
+    "text": "C"
+   },
+   {
+    "y": 162.7,
+    "text": "?274.check /tfek/ n.检查；批改；支票；方格图案；格子"
+   },
+   {
+    "y": 174.4,
+    "text": "G6下U3"
+   },
+   {
+    "y": 180.6,
+    "text": "v.核对；检查；查明；查看；核实"
+   },
+   {
+    "y": 198.1,
+    "text": "Can I pay by check or credit card?我能用支票或信用卡支付吗?"
+   },
+   {
+    "y": 213.9,
+    "text": "The boy checked his test paper carefully enough in order to get full marks."
+   },
+   {
+    "y": 231.7,
+    "text": "为了获得满分，这个男孩仔细检查了他的试卷。"
+   },
+   {
+    "y": 246.7,
+    "text": "常用词组"
+   },
+   {
+    "y": 265.3,
+    "text": "check in办理登机；登记(入住等)"
+   },
+   {
+    "y": 282.1,
+    "text": "check out 察看，观察(有趣或有吸引力的人或事物);借阅；借出；退房"
+   },
+   {
+    "y": 298.6,
+    "text": "?275.cheer /tfr?(r)/n.&v.欢呼；喝彩；加油"
+   },
+   {
+    "y": 309.7,
+    "text": "G7下U2He's always full of cheer at Christmas.圣诞节时，他总是兴致勃勃。"
+   },
+   {
+    "y": 333.6,
+    "text": "The leading actor felt happy when he saw a lot of people cheering him."
+   },
+   {
+    "y": 350.7,
+    "text": "看到很多人为他喝彩，这位男主角感到很高兴。"
+   },
+   {
+    "y": 365.6,
+    "text": "词形拓展"
+   },
+   {
+    "y": 384.9,
+    "text": "cheerful adj.开朗的；乐观的"
+   },
+   {
+    "y": 402.4,
+    "text": "cheerfully adv.开朗地；乐观地"
+   },
+   {
+    "y": 417.7,
+    "text": "常用词组"
+   },
+   {
+    "y": 436.1,
+    "text": "cheer for 鼓励；支持"
+   },
+   {
+    "y": 452.9,
+    "text": "?276.cheese /tji:z/ n.奶酪；干酪"
+   },
+   {
+    "y": 460.6,
+    "text": "G6上U3The cheese cake tasted so delicious that the kids asked for more."
+   },
+   {
+    "y": 486.7,
+    "text": "这奶酪蛋糕真好吃，孩子们还想要。"
+   },
+   {
+    "y": 503.6,
+    "text": "277.*chemical/kemikl/ n.化学品；化学物质"
+   },
+   {
+    "y": 515.1,
+    "text": "G8上U1"
+   },
+   {
+    "y": 521.5,
+    "text": "adj.化学的"
+   },
+   {
+    "y": 538.0,
+    "text": "The students are doing experiments in the lab with some new chemicals."
+   },
+   {
+    "y": 554.7,
+    "text": "学生正在实验室里用一些新的化学品做实验。"
+   },
+   {
+    "y": 571.6,
+    "text": "Qi Yu hopes to do some chemical research in the near future."
+   },
+   {
+    "y": 589.2,
+    "text": "齐宇希望在不久的将来做一些化学研究。"
+   },
+   {
+    "y": 604.6,
+    "text": "词形拓展"
+   },
+   {
+    "y": 623.8,
+    "text": "chemist n.化学家"
+   },
+   {
+    "y": 640.9,
+    "text": "chemistry n.化学"
+   },
+   {
+    "y": 656.4,
+    "text": "?278.*chemistry/kemistri/n.化学"
+   },
+   {
+    "y": 675.6,
+    "text": "We make experiments in chemistry every day.我们每天都做化学实验。"
+   },
+   {
+    "y": 700.3,
+    "text": "45"
+   }
+  ]
+ },
+ {
+  "page": 100,
+  "text": "Without fires, the oldest and largest trees would stop sunlight from reaching the forest\nfloor. Fires can get rid of some of these old trees.没有火，那些古老而高大的树会阻挡\n阳光透入森林，而火恰恰能烧掉这些老树。\nThe officer ordered his men to fire at the enemy.军官命令士兵向敌人开火。\n词形拓展\nfireman n.消防队员\nfirework n.烟火；烟花\n常用词组\nmake a fire生火\n谚语 There is no smoke without fire.无风不起浪。\n?598.fireman/'far?m?n/(复firemen/farom?n/) n.消防队员\nG7上U3 A fireman usually helps people put out the fire.消防员通常帮助人们把火扑灭。\n?599.firework /'far?ws:k/ n.烟火；烟花\nG6下U3\nThere are also fabulous fireworks displays.还有精彩的烟火表演。\n600.**first/fs:st/ adj.第一的；最初的\nadv.第一；首先；最初\nn.开始；开端\nThat band was the first rock band to perform at the Bird's Nest.\n那支乐队是第一支在鸟巢演出的摇滚乐队。\nThe Battle of Shanghai was first performed by Shanghai Acrobatic Troupe and Shanghai\nCircus School in 2019.2019年，《战上海》首次由上海杂技团和上海马戏学校演出。\nFrom the very first,we knew the project would be a success.\n从一开始，我们就知道这个项目会成功。\n常用词组\nat first起先；开始的时候\n反义last\n?601.*fish/fif/ n.鱼；鱼肉\nv.钓鱼；捕鱼\nDamin taught his grandsons how they could catch more fish.\n=Damin taught his grandsons how to catch more fish.\n达明教他的孙子如何能捕到更多的鱼。\nIt is better to teach a man to fish than to give him fish.\n授人以鱼，不如授人以渔。\n词形拓展\nfisherman n.渔夫，渔民；钓鱼的人\n93\n",
+  "lines": [
+   {
+    "y": 59.2,
+    "text": "Without fires, the oldest and largest trees would stop sunlight from reaching the forest"
+   },
+   {
+    "y": 77.4,
+    "text": "floor. Fires can get rid of some of these old trees.没有火，那些古老而高大的树会阻挡"
+   },
+   {
+    "y": 92.7,
+    "text": "阳光透入森林，而火恰恰能烧掉这些老树。"
+   },
+   {
+    "y": 111.4,
+    "text": "The officer ordered his men to fire at the enemy.军官命令士兵向敌人开火。"
+   },
+   {
+    "y": 124.9,
+    "text": "词形拓展"
+   },
+   {
+    "y": 144.4,
+    "text": "fireman n.消防队员"
+   },
+   {
+    "y": 161.4,
+    "text": "firework n.烟火；烟花"
+   },
+   {
+    "y": 176.0,
+    "text": "常用词组"
+   },
+   {
+    "y": 195.6,
+    "text": "make a fire生火"
+   },
+   {
+    "y": 212.2,
+    "text": "谚语 There is no smoke without fire.无风不起浪。"
+   },
+   {
+    "y": 229.6,
+    "text": "?598.fireman/'far?m?n/(复firemen/farom?n/) n.消防队员"
+   },
+   {
+    "y": 238.9,
+    "text": "G7上U3A fireman usually helps people put out the fire.消防员通常帮助人们把火扑灭。"
+   },
+   {
+    "y": 263.9,
+    "text": "?599.firework /'far?ws:k/ n.烟火；烟花"
+   },
+   {
+    "y": 274.8,
+    "text": "G6下U3"
+   },
+   {
+    "y": 280.9,
+    "text": "There are also fabulous fireworks displays.还有精彩的烟火表演。"
+   },
+   {
+    "y": 297.7,
+    "text": "600.**first/fs:st/ adj.第一的；最初的"
+   },
+   {
+    "y": 314.0,
+    "text": "adv.第一；首先；最初"
+   },
+   {
+    "y": 330.9,
+    "text": "n.开始；开端"
+   },
+   {
+    "y": 348.3,
+    "text": "That band was the first rock band to perform at the Bird's Nest."
+   },
+   {
+    "y": 365.7,
+    "text": "那支乐队是第一支在鸟巢演出的摇滚乐队。"
+   },
+   {
+    "y": 382.4,
+    "text": "The Battle of Shanghai was first performed by Shanghai Acrobatic Troupe and Shanghai"
+   },
+   {
+    "y": 399.9,
+    "text": "Circus School in 2019.2019年，《战上海》首次由上海杂技团和上海马戏学校演出。"
+   },
+   {
+    "y": 417.9,
+    "text": "From the very first,we knew the project would be a success."
+   },
+   {
+    "y": 434.3,
+    "text": "从一开始，我们就知道这个项目会成功。"
+   },
+   {
+    "y": 448.7,
+    "text": "常用词组"
+   },
+   {
+    "y": 467.4,
+    "text": "at first起先；开始的时候"
+   },
+   {
+    "y": 483.6,
+    "text": "反义last"
+   },
+   {
+    "y": 502.2,
+    "text": "?601.*fish/fif/ n.鱼；鱼肉"
+   },
+   {
+    "y": 519.0,
+    "text": "v.钓鱼；捕鱼"
+   },
+   {
+    "y": 534.9,
+    "text": "Damin taught his grandsons how they could catch more fish."
+   },
+   {
+    "y": 552.4,
+    "text": "=Damin taught his grandsons how to catch more fish."
+   },
+   {
+    "y": 568.7,
+    "text": "达明教他的孙子如何能捕到更多的鱼。"
+   },
+   {
+    "y": 587.1,
+    "text": "It is better to teach a man to fish than to give him fish."
+   },
+   {
+    "y": 603.7,
+    "text": "授人以鱼，不如授人以渔。"
+   },
+   {
+    "y": 619.0,
+    "text": "词形拓展"
+   },
+   {
+    "y": 638.2,
+    "text": "fisherman n.渔夫，渔民；钓鱼的人"
+   },
+   {
+    "y": 698.8,
+    "text": "93"
+   }
+  ]
+ },
+ {
+  "page": 101,
+  "text": "E\n名师点拔 fish是常考单词，学生一定要掌握其用法。当指许多鱼时，其复数一般用\nfish,但当指不同品种的鱼类时，用fishes。作“鱼肉”解时，fish是不可数名词。\n602.*fisherman/'fi?om?n/(复fishermen/fif?m?n/) n.渔夫，渔民；钓鱼的人\nG7下U4 Did you see several fishermen sitting on the beach, repairing their nets?\n你看到几个渔夫坐在海滩上修补渔网了吗?\n?603.fit/fit/(fit/fit/,fit或fitted/fitud/,fitted)v.(形状和尺寸)适合，合身；与⋯⋯相配\nG8下U4\nadj.健康的；合适的\nDo you have any ready-made clothes that will fit me?你们这儿有适合我穿的成衣吗?\nYou look very fit.你看上去很健康。\n词形拓展\nunfit adj.不适合的\n常用词组\nkeep fit保持健康\n?604.fix/fiks/v.修理；安装；确定；安排；解决\nG7下U2 Perhaps Sam can fix your TV set.或许萨姆能修好你的电视机。\nWe mixed up our basket with theirs, but we soon fixed it.\n我们把自己的篮子和他们的弄混了，但很快就分清了。\n?605.flag/fl?g/ n.旗；(体育运动的)信号旗；标志旗\nG8上U5 Our flag is red and yellow.我们的旗帜是红黄两色的。\n606.flash/flef/ n.闪；闪光；转瞬间；动画\nEverything will be all right in a flash.转瞬间什么事情都会好的。\n?607.flat/fl?t/ n.一套房间；公寓\nG6上U2\nadj.平坦的；瘪的\nMy uncle lives on the twentieth floor. The flat has a nice view of the Huangpu River.\n我叔叔住在20楼。这套房间能看到黄浦江的美景。\nThe road was flat and easy to drive on.道路平坦且易于驾驶。\n608.flexible /'fleks?bl/ adj.能适应新情况的；灵活的；可变动的；柔韧的；有弹性的\nOur plans need to be flexible enough to cater(满足)for the needs of everyone.\n我们的计划必须能够变通，以满足每个人的需要。\n词形拓展\nflexibility n.灵活性\n609.*flight/flart/ n.航班；飞行\nG8上U6 Would you please find out the time of my flight for me?\n请帮我查一下这个航班的起飞时间，好吗?\n词形拓展\nfly v.飞，飞行；乘飞机旅行；(旗帜等)飘动；放(风筝、飞机模型等)\nn.飞行；苍蝇\n94\n",
+  "lines": [
+   {
+    "y": 59.9,
+    "text": "名师点拔 fish是常考单词，学生一定要掌握其用法。当指许多鱼时，其复数一般用"
+   },
+   {
+    "y": 77.8,
+    "text": "fish,但当指不同品种的鱼类时，用fishes。作“鱼肉”解时，fish是不可数名词。"
+   },
+   {
+    "y": 107.2,
+    "text": "602.*fisherman/'fi?om?n/(复fishermen/fif?m?n/) n.渔夫，渔民；钓鱼的人"
+   },
+   {
+    "y": 117.4,
+    "text": "G7下U4Did you see several fishermen sitting on the beach, repairing their nets?"
+   },
+   {
+    "y": 141.5,
+    "text": "你看到几个渔夫坐在海滩上修补渔网了吗?"
+   },
+   {
+    "y": 160.1,
+    "text": "?603.fit/fit/(fit/fit/,fit或fitted/fitud/,fitted)v.(形状和尺寸)适合，合身；与⋯⋯相配"
+   },
+   {
+    "y": 171.2,
+    "text": "G8下U4"
+   },
+   {
+    "y": 176.2,
+    "text": "adj.健康的；合适的"
+   },
+   {
+    "y": 194.1,
+    "text": "Do you have any ready-made clothes that will fit me?你们这儿有适合我穿的成衣吗?"
+   },
+   {
+    "y": 211.2,
+    "text": "You look very fit.你看上去很健康。"
+   },
+   {
+    "y": 224.9,
+    "text": "词形拓展"
+   },
+   {
+    "y": 244.4,
+    "text": "unfit adj.不适合的"
+   },
+   {
+    "y": 259.0,
+    "text": "常用词组"
+   },
+   {
+    "y": 278.3,
+    "text": "keep fit保持健康"
+   },
+   {
+    "y": 294.8,
+    "text": "?604.fix/fiks/v.修理；安装；确定；安排；解决"
+   },
+   {
+    "y": 304.8,
+    "text": "G7下U2Perhaps Sam can fix your TV set.或许萨姆能修好你的电视机。"
+   },
+   {
+    "y": 307.7,
+    "text": "E"
+   },
+   {
+    "y": 329.2,
+    "text": "We mixed up our basket with theirs, but we soon fixed it."
+   },
+   {
+    "y": 345.7,
+    "text": "我们把自己的篮子和他们的弄混了，但很快就分清了。"
+   },
+   {
+    "y": 363.6,
+    "text": "?605.flag/fl?g/ n.旗；(体育运动的)信号旗；标志旗"
+   },
+   {
+    "y": 372.5,
+    "text": "G8上U5Our flag is red and yellow.我们的旗帜是红黄两色的。"
+   },
+   {
+    "y": 399.3,
+    "text": "606.flash/flef/ n.闪；闪光；转瞬间；动画"
+   },
+   {
+    "y": 416.0,
+    "text": "Everything will be all right in a flash.转瞬间什么事情都会好的。"
+   },
+   {
+    "y": 432.3,
+    "text": "?607.flat/fl?t/ n.一套房间；公寓"
+   },
+   {
+    "y": 443.2,
+    "text": "G6上U2"
+   },
+   {
+    "y": 449.0,
+    "text": "adj.平坦的；瘪的"
+   },
+   {
+    "y": 466.3,
+    "text": "My uncle lives on the twentieth floor. The flat has a nice view of the Huangpu River."
+   },
+   {
+    "y": 482.1,
+    "text": "我叔叔住在20楼。这套房间能看到黄浦江的美景。"
+   },
+   {
+    "y": 500.8,
+    "text": "The road was flat and easy to drive on.道路平坦且易于驾驶。"
+   },
+   {
+    "y": 517.0,
+    "text": "608.flexible /'fleks?bl/ adj.能适应新情况的；灵活的；可变动的；柔韧的；有弹性的"
+   },
+   {
+    "y": 535.5,
+    "text": "Our plans need to be flexible enough to cater(满足)for the needs of everyone."
+   },
+   {
+    "y": 551.2,
+    "text": "我们的计划必须能够变通，以满足每个人的需要。"
+   },
+   {
+    "y": 566.5,
+    "text": "词形拓展"
+   },
+   {
+    "y": 586.5,
+    "text": "flexibility n.灵活性"
+   },
+   {
+    "y": 603.2,
+    "text": "609.*flight/flart/ n.航班；飞行"
+   },
+   {
+    "y": 612.6,
+    "text": "G8上U6Would you please find out the time of my flight for me?"
+   },
+   {
+    "y": 636.1,
+    "text": "请帮我查一下这个航班的起飞时间，好吗?"
+   },
+   {
+    "y": 651.5,
+    "text": "词形拓展"
+   },
+   {
+    "y": 671.2,
+    "text": "fly v.飞，飞行；乘飞机旅行；(旗帜等)飘动；放(风筝、飞机模型等)"
+   },
+   {
+    "y": 687.7,
+    "text": "n.飞行；苍蝇"
+   },
+   {
+    "y": 700.6,
+    "text": "94"
+   }
+  ]
+ },
+ {
+  "page": 200,
+  "text": "?1259.quarter/kw?:t?(r)/ n.四分之一；一刻钟\nIt's a quarter to seven.现在是6点45分。\n?1260.queen/kwi:n/ n.皇后；女王\nThe queen was sad.皇后很伤心。\n?1261.*question/'kwest??n/n.向题\nWell done! You have answered all the questions correctly.\n干得好!你已正确回答了所有的问题。\n?1262.*quick /kwik/ adj.快的；敏捷的；迅速的\nG6上U2\nAmong the boys, Tom is the quickest to learn new things.\n在男孩中，学习新事物学得最快的是汤姆。\n词形拓展\nquickly adv.很快地；迅速地\n1263.*quickly/'kwikli/ adv.很快地；迅速地\nG7下U3\nWhen he heard a cry for help, he ran out as quickly as he could.\n一听到呼救声，他就尽快跑了出来。\nOnline team-buying services are developing quickly in China,aren't they?\n在中国，网上团购服务正在迅速发展，不是吗?\n?1264.*quiet/'kwar?t adj.安静的\nI'm going to move somewhere quiet.It's too noisy in our neighbourhood.\n我打算搬到一个安静的地方。我们的小区太吵了。\n词形拓展\nquietly adv.安静地\n常用词组\nkeep quiet保持安静\n近义 silent\n反义 noisy\n1265.***quietly /'kwarstli/ adv.安静地\nThe patient lay on his bed quietly when the doctor came to examine him.\n当医生来给这位病人检查时，他静静地躺在床上。\n?1266.*quite/kwait/ adv.完全；十分；相当；非常\nG6下U4\nThis arrangement is quite satisfactory,so far as I am concerned.\n就我来说，这样的安排相当好。\n1267.quiz/kwiz/(复quizzes) n.测验\nWe'll have a quiz at the end of class.下课前我们将进行一次测试。\nQ\n193\n",
+  "lines": [
+   {
+    "y": 59.6,
+    "text": "?1259.quarter/kw?:t?(r)/ n.四分之一；一刻钟"
+   },
+   {
+    "y": 77.5,
+    "text": "It's a quarter to seven.现在是6点45分。"
+   },
+   {
+    "y": 93.9,
+    "text": "?1260.queen/kwi:n/ n.皇后；女王"
+   },
+   {
+    "y": 112.1,
+    "text": "The queen was sad.皇后很伤心。"
+   },
+   {
+    "y": 127.4,
+    "text": "?1261.*question/'kwest??n/n.向题"
+   },
+   {
+    "y": 145.6,
+    "text": "Well done! You have answered all the questions correctly."
+   },
+   {
+    "y": 161.5,
+    "text": "干得好!你已正确回答了所有的问题。"
+   },
+   {
+    "y": 179.6,
+    "text": "?1262.*quick /kwik/ adj.快的；敏捷的；迅速的"
+   },
+   {
+    "y": 190.5,
+    "text": "G6上U2"
+   },
+   {
+    "y": 197.1,
+    "text": "Among the boys, Tom is the quickest to learn new things."
+   },
+   {
+    "y": 202.6,
+    "text": "Q"
+   },
+   {
+    "y": 213.2,
+    "text": "在男孩中，学习新事物学得最快的是汤姆。"
+   },
+   {
+    "y": 228.6,
+    "text": "词形拓展"
+   },
+   {
+    "y": 248.8,
+    "text": "quickly adv.很快地；迅速地"
+   },
+   {
+    "y": 264.9,
+    "text": "1263.*quickly/'kwikli/ adv.很快地；迅速地"
+   },
+   {
+    "y": 276.4,
+    "text": "G7下U3"
+   },
+   {
+    "y": 282.3,
+    "text": "When he heard a cry for help, he ran out as quickly as he could."
+   },
+   {
+    "y": 298.3,
+    "text": "一听到呼救声，他就尽快跑了出来。"
+   },
+   {
+    "y": 316.1,
+    "text": "Online team-buying services are developing quickly in China,aren't they?"
+   },
+   {
+    "y": 332.5,
+    "text": "在中国，网上团购服务正在迅速发展，不是吗?"
+   },
+   {
+    "y": 350.7,
+    "text": "?1264.*quiet/'kwar?t adj.安静的"
+   },
+   {
+    "y": 367.0,
+    "text": "I'm going to move somewhere quiet.It's too noisy in our neighbourhood."
+   },
+   {
+    "y": 383.7,
+    "text": "我打算搬到一个安静的地方。我们的小区太吵了。"
+   },
+   {
+    "y": 398.9,
+    "text": "词形拓展"
+   },
+   {
+    "y": 418.5,
+    "text": "quietly adv.安静地"
+   },
+   {
+    "y": 432.6,
+    "text": "常用词组"
+   },
+   {
+    "y": 452.3,
+    "text": "keep quiet保持安静"
+   },
+   {
+    "y": 468.4,
+    "text": "近义 silent"
+   },
+   {
+    "y": 485.8,
+    "text": "反义 noisy"
+   },
+   {
+    "y": 504.3,
+    "text": "1265.***quietly /'kwarstli/ adv.安静地"
+   },
+   {
+    "y": 520.6,
+    "text": "The patient lay on his bed quietly when the doctor came to examine him."
+   },
+   {
+    "y": 536.7,
+    "text": "当医生来给这位病人检查时，他静静地躺在床上。"
+   },
+   {
+    "y": 553.6,
+    "text": "?1266.*quite/kwait/ adv.完全；十分；相当；非常"
+   },
+   {
+    "y": 565.4,
+    "text": "G6下U4"
+   },
+   {
+    "y": 570.7,
+    "text": "This arrangement is quite satisfactory,so far as I am concerned."
+   },
+   {
+    "y": 587.7,
+    "text": "就我来说，这样的安排相当好。"
+   },
+   {
+    "y": 604.6,
+    "text": "1267.quiz/kwiz/(复quizzes) n.测验"
+   },
+   {
+    "y": 622.8,
+    "text": "We'll have a quiz at the end of class.下课前我们将进行一次测试。"
+   },
+   {
+    "y": 700.9,
+    "text": "193"
+   }
+  ]
+ },
+ {
+  "page": 201,
+  "text": "R\n微信扫码\n听音频，背单词\nR\n?1268.*race/rers/v.比赛；赛跑\nn.赛跑\nAre you going to race your horse at Newmarket next week?\n你准备让你的马参加下周在纽马克特的赛马会吗?\nPeter and Bill each say they came first in the race.彼得和比尔都说自己跑了第一。\n?1269.*radio/'rerdiou/(复radios) n.无线电(广播);收音机\nG7上U2\nFather bought her a stereo radio.父亲给她买了台立体声收音机。\n?1270.railway/'rerlwei/ n.铁路，铁道\nG7上U3\nThe railway is still under construction.这条铁路仍在建设之中。\n?1271.*rain /ren/n.雨，雨水\nv.下雨\nIn fact, there isn't so much rain in the city as they think.\n事实上，这座城市不像他们想的那样有这么多的雨水。\nWe will go to the Happy Valley tomorrow unless it rains.\n如果明天不下雨，我们会去欢乐谷。\n词形拓展\nrainy adj.有雨的；多雨的\n1272.*rainy /'reni/ adj.有雨的；多雨的\nMost tropical areas have rainy and dry seasons.大多数热带地区有雨季和旱季。\n?1273.*raise /rerz/v.举起，使升高，提升，增加；饲养，抚养；筹钱，筹集；提起\nG7下U1\nThe government plans to raise the living standard of citizens.\n政府计划提高市民的生活水平。\nIt is not easy to raise three children on a small income.\n靠微薄的收入抚养三个孩子并不容易。\nThe charity event successfully raised enough money to help the homeless.\n这场慈善活动成功筹集到了足够的资金来帮助无家可归的人。\nThe government's decision on building a factory in the city centre has raised many\nquestions among the local people.政府决定在城市中心建造一家工厂，这在当地人\n中已经引发了许多质疑。\n名师点拨 raise是常考单词，所以学生一定要比较 raise与rise的用法区别：\nraise是及物动词；rise是不及物动词。\n例如：raise your hand举起你的手\nHe raised his hat to me yesterday.昨天他向我举帽致意。\n194\n",
+  "lines": [
+   {
+    "y": 69.4,
+    "text": "R"
+   },
+   {
+    "y": 73.4,
+    "text": "微信扫码"
+   },
+   {
+    "y": 83.4,
+    "text": "听音频，背单词"
+   },
+   {
+    "y": 102.5,
+    "text": "?1268.*race/rers/v.比赛；赛跑"
+   },
+   {
+    "y": 119.5,
+    "text": "n.赛跑"
+   },
+   {
+    "y": 136.9,
+    "text": "Are you going to race your horse at Newmarket next week?"
+   },
+   {
+    "y": 154.6,
+    "text": "你准备让你的马参加下周在纽马克特的赛马会吗?"
+   },
+   {
+    "y": 172.4,
+    "text": "Peter and Bill each say they came first in the race.彼得和比尔都说自己跑了第一。"
+   },
+   {
+    "y": 188.6,
+    "text": "?1269.*radio/'rerdiou/(复radios) n.无线电(广播);收音机"
+   },
+   {
+    "y": 200.1,
+    "text": "G7上U2"
+   },
+   {
+    "y": 206.8,
+    "text": "Father bought her a stereo radio.父亲给她买了台立体声收音机。"
+   },
+   {
+    "y": 223.3,
+    "text": "?1270.railway/'rerlwei/ n.铁路，铁道"
+   },
+   {
+    "y": 234.8,
+    "text": "G7上U3"
+   },
+   {
+    "y": 241.4,
+    "text": "The railway is still under construction.这条铁路仍在建设之中。"
+   },
+   {
+    "y": 254.0,
+    "text": "R"
+   },
+   {
+    "y": 257.4,
+    "text": "?1271.*rain /ren/n.雨，雨水"
+   },
+   {
+    "y": 273.4,
+    "text": "v.下雨"
+   },
+   {
+    "y": 291.6,
+    "text": "In fact, there isn't so much rain in the city as they think."
+   },
+   {
+    "y": 308.7,
+    "text": "事实上，这座城市不像他们想的那样有这么多的雨水。"
+   },
+   {
+    "y": 326.1,
+    "text": "We will go to the Happy Valley tomorrow unless it rains."
+   },
+   {
+    "y": 342.9,
+    "text": "如果明天不下雨，我们会去欢乐谷。"
+   },
+   {
+    "y": 358.6,
+    "text": "词形拓展"
+   },
+   {
+    "y": 376.9,
+    "text": "rainy adj.有雨的；多雨的"
+   },
+   {
+    "y": 394.0,
+    "text": "1272.*rainy /'reni/ adj.有雨的；多雨的"
+   },
+   {
+    "y": 411.2,
+    "text": "Most tropical areas have rainy and dry seasons.大多数热带地区有雨季和旱季。"
+   },
+   {
+    "y": 427.7,
+    "text": "?1273.*raise /rerz/v.举起，使升高，提升，增加；饲养，抚养；筹钱，筹集；提起"
+   },
+   {
+    "y": 439.8,
+    "text": "G7下U1"
+   },
+   {
+    "y": 445.4,
+    "text": "The government plans to raise the living standard of citizens."
+   },
+   {
+    "y": 461.8,
+    "text": "政府计划提高市民的生活水平。"
+   },
+   {
+    "y": 479.5,
+    "text": "It is not easy to raise three children on a small income."
+   },
+   {
+    "y": 495.3,
+    "text": "靠微薄的收入抚养三个孩子并不容易。"
+   },
+   {
+    "y": 512.6,
+    "text": "The charity event successfully raised enough money to help the homeless."
+   },
+   {
+    "y": 529.2,
+    "text": "这场慈善活动成功筹集到了足够的资金来帮助无家可归的人。"
+   },
+   {
+    "y": 546.4,
+    "text": "The government's decision on building a factory in the city centre has raised many"
+   },
+   {
+    "y": 563.8,
+    "text": "questions among the local people.政府决定在城市中心建造一家工厂，这在当地人"
+   },
+   {
+    "y": 581.8,
+    "text": "中已经引发了许多质疑。"
+   },
+   {
+    "y": 610.8,
+    "text": "名师点拨 raise是常考单词，所以学生一定要比较 raise与rise的用法区别："
+   },
+   {
+    "y": 627.7,
+    "text": "raise是及物动词；rise是不及物动词。"
+   },
+   {
+    "y": 646.4,
+    "text": "例如：raise your hand举起你的手"
+   },
+   {
+    "y": 662.3,
+    "text": "He raised his hat to me yesterday.昨天他向我举帽致意。"
+   },
+   {
+    "y": 702.3,
+    "text": "194"
+   }
+  ]
+ },
+ {
+  "page": 271,
+  "text": "Z\n?1782.yogurt/'jpg?t/ n.(一份)酸奶\nG6上U3\nDo you have any low-fat yogurt?你有没有低脂的酸奶?\n?1783.*young /j?n/adj.年轻的\nShe must be at least forty, but she likes dressing up as a young girl.\n她至少有40岁了，但她喜欢打扮成年轻的姑娘。\n词形拓展\nyouth n.青年，年轻人\n谚语 A young idler,an old beggar.少壮不努力，老大徒伤悲。\n微信扫码\n听音频，背单词\nZ\n?1784.*zero/zi?r?u/n.& num.零；零度；零点\nIt's a sunny late winter day,just a few degrees above zero.\n这是晚冬晴朗的一天，只有零上几度。\nThere are two zeros in 1008.在1008中有两个零。\n?1785.zoo/zu:/(复zoos) n.动物园\nPlease take me to the zoo.请带我去动物园。\n二、考纲词组的基本用法\n1.*a bit(of)有一点儿；稍微\nG7下U2The patient became a bit better after taking some medicine.服药后，病人感觉好点了。\n2.*a couple of两个；几个\nDanny has worked as a newspaper reporter for a couple of years.\n丹尼担任报社记者已有几年了。\n3.a kind of一种；一类\nApple is a kind of fruit.苹果是一种水果。\nThis shop sells all kinds of watches from different countries.\n这家商店出售来自不同国家的各种手表。\n4.a lot of/lots of许多\nAlthough the World Expo was over, a lot of visitors still go to the China Pavilion to enjoy\nthemselves and take photos.虽然世博会结束了，但还是有很多游客去中国馆参观、\n拍照。\n5.*a pair of一双；一副\nThere is a pair of glasses on the desk.桌子上有一副眼镜。\n6.a piece of一(块、张、片、件)\nWhat an important piece of information it is!这是一个多么重要的信息!\n264\n",
+  "lines": [
+   {
+    "y": 59.7,
+    "text": "?1782.yogurt/'jpg?t/ n.(一份)酸奶"
+   },
+   {
+    "y": 71.3,
+    "text": "G6上U3"
+   },
+   {
+    "y": 77.9,
+    "text": "Do you have any low-fat yogurt?你有没有低脂的酸奶?"
+   },
+   {
+    "y": 94.0,
+    "text": "?1783.*young /j?n/adj.年轻的"
+   },
+   {
+    "y": 111.4,
+    "text": "She must be at least forty, but she likes dressing up as a young girl."
+   },
+   {
+    "y": 128.0,
+    "text": "她至少有40岁了，但她喜欢打扮成年轻的姑娘。"
+   },
+   {
+    "y": 143.6,
+    "text": "词形拓展"
+   },
+   {
+    "y": 162.7,
+    "text": "youth n.青年，年轻人"
+   },
+   {
+    "y": 180.0,
+    "text": "谚语 A young idler,an old beggar.少壮不努力，老大徒伤悲。"
+   },
+   {
+    "y": 206.7,
+    "text": "Z"
+   },
+   {
+    "y": 208.8,
+    "text": "微信扫码"
+   },
+   {
+    "y": 219.0,
+    "text": "听音频，背单词"
+   },
+   {
+    "y": 238.4,
+    "text": "?1784.*zero/zi?r?u/n.& num.零；零度；零点"
+   },
+   {
+    "y": 257.1,
+    "text": "It's a sunny late winter day,just a few degrees above zero."
+   },
+   {
+    "y": 272.7,
+    "text": "这是晚冬晴朗的一天，只有零上几度。"
+   },
+   {
+    "y": 290.6,
+    "text": "There are two zeros in 1008.在1008中有两个零。"
+   },
+   {
+    "y": 306.9,
+    "text": "?1785.zoo/zu:/(复zoos) n.动物园"
+   },
+   {
+    "y": 324.7,
+    "text": "Please take me to the zoo.请带我去动物园。"
+   },
+   {
+    "y": 359.0,
+    "text": "二、考纲词组的基本用法"
+   },
+   {
+    "y": 394.6,
+    "text": "1.*a bit(of)有一点儿；稍微"
+   },
+   {
+    "y": 407.7,
+    "text": "G7下U2The patient became a bit better after taking some medicine.服药后，病人感觉好点了。"
+   },
+   {
+    "y": 428.8,
+    "text": "2.*a couple of两个；几个"
+   },
+   {
+    "y": 446.1,
+    "text": "Danny has worked as a newspaper reporter for a couple of years."
+   },
+   {
+    "y": 462.7,
+    "text": "丹尼担任报社记者已有几年了。"
+   },
+   {
+    "y": 479.6,
+    "text": "3.a kind of一种；一类"
+   },
+   {
+    "y": 497.4,
+    "text": "Apple is a kind of fruit.苹果是一种水果。"
+   },
+   {
+    "y": 513.8,
+    "text": "This shop sells all kinds of watches from different countries."
+   },
+   {
+    "y": 530.7,
+    "text": "这家商店出售来自不同国家的各种手表。"
+   },
+   {
+    "y": 548.4,
+    "text": "4.a lot of/lots of许多"
+   },
+   {
+    "y": 565.6,
+    "text": "Although the World Expo was over, a lot of visitors still go to the China Pavilion to enjoy"
+   },
+   {
+    "y": 581.7,
+    "text": "themselves and take photos.虽然世博会结束了，但还是有很多游客去中国馆参观、"
+   },
+   {
+    "y": 599.8,
+    "text": "拍照。"
+   },
+   {
+    "y": 605.0,
+    "text": "Z"
+   },
+   {
+    "y": 616.7,
+    "text": "5.*a pair of一双；一副"
+   },
+   {
+    "y": 634.4,
+    "text": "There is a pair of glasses on the desk.桌子上有一副眼镜。"
+   },
+   {
+    "y": 650.7,
+    "text": "6.a piece of一(块、张、片、件)"
+   },
+   {
+    "y": 668.2,
+    "text": "What an important piece of information it is!这是一个多么重要的信息!"
+   },
+   {
+    "y": 699.3,
+    "text": "264"
+   }
+  ]
+ },
+ {
+  "page": 300,
+  "text": "262.*play a trick on捉弄\nWatching the old man, she was going to play a trick on him.\n观察了一下这个老人，她决定捉弄他一把。\n263.**play with玩耍，摆弄\nThe kid was playing with his ball.这个孩子在玩球。\n264.*plenty of大量的，充足的，很多的\nG6上U3 She had plenty of imagination.她有丰富的想象力。\n名师点拨 plenty of是常考词组，常出现在保持句意基本不变的句型转换练习中，所\n以学生一定要掌握以下固定搭配的用法：\n1)plenty of(很多),a lot of(lots of)(大量)后面可跟可数名词，也可跟不可数名词。\n2) a little(一些),much(许多),a great(good) deal of(大量),a large amount of(大量)\n后面跟不可数名词。\n3) a few(一些),many(许多),a large number of(大量)后面跟可数名词。\n265.point out指出\nHe pointed out that there was little chance of success.他指出成功的机会很少。\n266.praise sb.for sth.为某事表扬某人\nThe teacher praised him highly for his honesty.老师大大地表扬了他的诚实。\n267.*prefer...to(比起⋯⋯·来)更喜欢\nG8下U1I prefer chemistry to physics.我喜欢化学甚于物理。\nI prefer staying at home to going outside on a wet day.\n下雨天我宁愿待在家里，也不愿外出。\n名师点拨 prefer ...to是常考词组，常出现在保持句意基本不变的句型转换练习中，\n所以学生一定要知道：prefer ..to与like... better than或would rather do than do\n意思基本相同，在句中可以互换。\n例如：Tina preferred watching TV to reading comic books when she was young.\n=Tina liked watching TV better than reading comic books when she was young.\n=Tina would rather watch TV than read comic books when she was young.\n蒂娜小时候宁愿看电视，也不愿看漫画书。\nI prefer playing sports outdoors to watching TV at home.\n=I like playing sports outdoors better than watching TV at home.\n=I would rather play sports outdoors than watch TV at home.\n我宁愿去做户外运动，也不愿在家看电视。\n268.*prepare for 准备\nThe students in our school are busy preparing for our School Art Festival.\n我们学校的学生正忙着准备学校的艺术节。\n293\n",
+  "lines": [
+   {
+    "y": 60.4,
+    "text": "262.*play a trick on捉弄"
+   },
+   {
+    "y": 77.2,
+    "text": "Watching the old man, she was going to play a trick on him."
+   },
+   {
+    "y": 93.3,
+    "text": "观察了一下这个老人，她决定捉弄他一把。"
+   },
+   {
+    "y": 110.6,
+    "text": "263.**play with玩耍，摆弄"
+   },
+   {
+    "y": 128.4,
+    "text": "The kid was playing with his ball.这个孩子在玩球。"
+   },
+   {
+    "y": 144.6,
+    "text": "264.*plenty of大量的，充足的，很多的"
+   },
+   {
+    "y": 153.5,
+    "text": "G6上U3 She had plenty of imagination.她有丰富的想象力。"
+   },
+   {
+    "y": 191.6,
+    "text": "名师点拨 plenty of是常考词组，常出现在保持句意基本不变的句型转换练习中，所"
+   },
+   {
+    "y": 208.3,
+    "text": "以学生一定要掌握以下固定搭配的用法："
+   },
+   {
+    "y": 225.6,
+    "text": "1)plenty of(很多),a lot of(lots of)(大量)后面可跟可数名词，也可跟不可数名词。"
+   },
+   {
+    "y": 243.7,
+    "text": "2) a little(一些),much(许多),a great(good) deal of(大量),a large amount of(大量)"
+   },
+   {
+    "y": 259.9,
+    "text": "后面跟不可数名词。"
+   },
+   {
+    "y": 276.9,
+    "text": "3) a few(一些),many(许多),a large number of(大量)后面跟可数名词。"
+   },
+   {
+    "y": 306.6,
+    "text": "265.point out指出"
+   },
+   {
+    "y": 325.0,
+    "text": "He pointed out that there was little chance of success.他指出成功的机会很少。"
+   },
+   {
+    "y": 340.9,
+    "text": "266.praise sb.for sth.为某事表扬某人"
+   },
+   {
+    "y": 359.2,
+    "text": "The teacher praised him highly for his honesty.老师大大地表扬了他的诚实。"
+   },
+   {
+    "y": 375.4,
+    "text": "267.*prefer...to(比起⋯⋯·来)更喜欢"
+   },
+   {
+    "y": 386.6,
+    "text": "G8下U1I prefer chemistry to physics.我喜欢化学甚于物理。"
+   },
+   {
+    "y": 409.3,
+    "text": "I prefer staying at home to going outside on a wet day."
+   },
+   {
+    "y": 425.7,
+    "text": "下雨天我宁愿待在家里，也不愿外出。"
+   },
+   {
+    "y": 455.1,
+    "text": "名师点拨 prefer ...to是常考词组，常出现在保持句意基本不变的句型转换练习中，"
+   },
+   {
+    "y": 473.5,
+    "text": "所以学生一定要知道：prefer ..to与like... better than或would rather do than do"
+   },
+   {
+    "y": 489.8,
+    "text": "意思基本相同，在句中可以互换。"
+   },
+   {
+    "y": 508.6,
+    "text": "例如：Tina preferred watching TV to reading comic books when she was young."
+   },
+   {
+    "y": 524.4,
+    "text": "=Tina liked watching TV better than reading comic books when she was young."
+   },
+   {
+    "y": 541.1,
+    "text": "=Tina would rather watch TV than read comic books when she was young."
+   },
+   {
+    "y": 557.7,
+    "text": "蒂娜小时候宁愿看电视，也不愿看漫画书。"
+   },
+   {
+    "y": 576.2,
+    "text": "I prefer playing sports outdoors to watching TV at home."
+   },
+   {
+    "y": 592.6,
+    "text": "=I like playing sports outdoors better than watching TV at home."
+   },
+   {
+    "y": 609.6,
+    "text": "=I would rather play sports outdoors than watch TV at home."
+   },
+   {
+    "y": 626.2,
+    "text": "我宁愿去做户外运动，也不愿在家看电视。"
+   },
+   {
+    "y": 656.4,
+    "text": "268.*prepare for 准备"
+   },
+   {
+    "y": 673.9,
+    "text": "The students in our school are busy preparing for our School Art Festival."
+   },
+   {
+    "y": 690.7,
+    "text": "我们学校的学生正忙着准备学校的艺术节。"
+   },
+   {
+    "y": 699.3,
+    "text": "293"
+   }
+  ]
+ },
+ {
+  "page": 301,
+  "text": "269.prevent ...from阻止⋯⋯做\nAll of us should try to keep fit and prevent ourselves from eating too much.\n我们大家应该努力保持健康，避免吃得过多。\nNobody can prevent him from running the risk.没有人能够阻止他去冒险。\n270.protect...from保护⋯⋯免受\nTrees should be wellprotected from the cold during winter.\n冬天要保护好树木以防冻坏。\n271.*provide...with 向⋯⋯提供\nThis restaurant provides customers with various food choices.\n这家餐厅为顾客提供各种各样的美食选择。\n名师点拔 provide...with 是常考词组，常出现在保持句意基本不变的句型转换练习\n中，所以学生一定要知道：provide with food与get food ready(准备食物)意思相\n同，在句中可以互换。\n272.*put off 延期\nWe’ve decided to put off the spring outing till next week because of the bad weather.\n因为天气不好，我们已经决定将春游推迟到下周。\n谚语 Never put off till tomorrow what you can do today.今日事，今日毕。\n273.*put on穿上；戴上；上演\nPlease put on your jacket.请穿上夹克衫。\nA film will be put on.电影即将上映。\n274.*put out 扑灭\nThe firemen fought bravely and put out the forest fire in the end.\n消防队员英勇奋战，最终扑灭了森林大火。\n275.**put up举起；挂起\nPlease put up your hand if you have any questions.谁有问题，请举手。\nWe'd better put up a notice here.我们最好在这儿贴一张通知。\n276.refer to 参考；涉及；指的是\nWe often refer to these books in our work.我们工作中经常参考这些书。\n277.rely on依靠\nBeing independent means believing in yourself without relying on others.\n独立意味着相信自己，不依赖他人。\n278.*run away 逃跑\nWhen I saw a wolf, I ran away.当我看见狼时，拔腿就跑。\n279.*run out of用完；耗尽\nWe have run out of petrol.我们的汽油已用完。\n294\n",
+  "lines": [
+   {
+    "y": 59.6,
+    "text": "269.prevent ...from阻止⋯⋯做"
+   },
+   {
+    "y": 76.8,
+    "text": "All of us should try to keep fit and prevent ourselves from eating too much."
+   },
+   {
+    "y": 93.2,
+    "text": "我们大家应该努力保持健康，避免吃得过多。"
+   },
+   {
+    "y": 112.1,
+    "text": "Nobody can prevent him from running the risk.没有人能够阻止他去冒险。"
+   },
+   {
+    "y": 128.5,
+    "text": "270.protect...from保护⋯⋯免受"
+   },
+   {
+    "y": 144.6,
+    "text": "Trees should be wellprotected from the cold during winter."
+   },
+   {
+    "y": 161.8,
+    "text": "冬天要保护好树木以防冻坏。"
+   },
+   {
+    "y": 178.7,
+    "text": "271.*provide...with 向⋯⋯提供"
+   },
+   {
+    "y": 197.2,
+    "text": "This restaurant provides customers with various food choices."
+   },
+   {
+    "y": 213.2,
+    "text": "这家餐厅为顾客提供各种各样的美食选择。"
+   },
+   {
+    "y": 243.0,
+    "text": "名师点拔 provide...with 是常考词组，常出现在保持句意基本不变的句型转换练习"
+   },
+   {
+    "y": 260.3,
+    "text": "中，所以学生一定要知道：provide with food与get food ready(准备食物)意思相"
+   },
+   {
+    "y": 277.4,
+    "text": "同，在句中可以互换。"
+   },
+   {
+    "y": 307.4,
+    "text": "272.*put off 延期"
+   },
+   {
+    "y": 324.4,
+    "text": "We’ve decided to put off the spring outing till next week because of the bad weather."
+   },
+   {
+    "y": 341.2,
+    "text": "因为天气不好，我们已经决定将春游推迟到下周。"
+   },
+   {
+    "y": 358.7,
+    "text": "谚语 Never put off till tomorrow what you can do today.今日事，今日毕。"
+   },
+   {
+    "y": 375.4,
+    "text": "273.*put on穿上；戴上；上演"
+   },
+   {
+    "y": 394.3,
+    "text": "Please put on your jacket.请穿上夹克衫。"
+   },
+   {
+    "y": 410.3,
+    "text": "A film will be put on.电影即将上映。"
+   },
+   {
+    "y": 426.9,
+    "text": "274.*put out 扑灭"
+   },
+   {
+    "y": 443.8,
+    "text": "The firemen fought bravely and put out the forest fire in the end."
+   },
+   {
+    "y": 460.6,
+    "text": "消防队员英勇奋战，最终扑灭了森林大火。"
+   },
+   {
+    "y": 477.4,
+    "text": "275.**put up举起；挂起"
+   },
+   {
+    "y": 495.3,
+    "text": "Please put up your hand if you have any questions.谁有问题，请举手。"
+   },
+   {
+    "y": 512.2,
+    "text": "We'd better put up a notice here.我们最好在这儿贴一张通知。"
+   },
+   {
+    "y": 528.8,
+    "text": "276.refer to 参考；涉及；指的是"
+   },
+   {
+    "y": 545.7,
+    "text": "We often refer to these books in our work.我们工作中经常参考这些书。"
+   },
+   {
+    "y": 562.5,
+    "text": "277.rely on依靠"
+   },
+   {
+    "y": 580.6,
+    "text": "Being independent means believing in yourself without relying on others."
+   },
+   {
+    "y": 596.8,
+    "text": "独立意味着相信自己，不依赖他人。"
+   },
+   {
+    "y": 614.3,
+    "text": "278.*run away 逃跑"
+   },
+   {
+    "y": 631.5,
+    "text": "When I saw a wolf, I ran away.当我看见狼时，拔腿就跑。"
+   },
+   {
+    "y": 647.6,
+    "text": "279.*run out of用完；耗尽"
+   },
+   {
+    "y": 666.6,
+    "text": "We have run out of petrol.我们的汽油已用完。"
+   },
+   {
+    "y": 700.3,
+    "text": "294"
+   }
+  ]
+ },
+ {
+  "page": 310,
+  "text": "第二单元\n英语课程标准三级词汇(2022年版)⑨\nA\n1.a/er;a/ art.一(件；个；场⋯⋯)\nChina is a developing country.中国是一个发展中国家。\n2.an/?n/art.一(件；个；场⋯⋯)\nCan you give me an example of what you mean?你能给我举个实例来解释你的意思吗?\n3.absent/'?bs?nt/ adj.缺席的；不在的\nG8上U6He was absent from school yesterday.他昨天没上学。\n4.account/a'kaunt/ n.账户，账号；解释，说明\nG8下U3Using a password manager is a much safer way to protect your online accounts.\n使用密码管理器是保护你网络账户的一种安全得多的方法。\nThe witness provided a clear account of what happened that night.\n目击者对当晚发生的事情提供了清晰的说明。\n常用词组\naccount for(数量上、比例上)占\n5.action/?kfn/ n.行动；行为过程\nG6下U4 Each of us must take responsibility for our own actions.\n我们每个人都必须对自己的行为负责。\n6.admire /ad'mar?(r)/v.钦佩；赞赏；仰慕\nG6下U6Everyone admires her strength of character and determination.\n每一个人都钦佩她坚强的性格和决心。\n7.AI/er'a/(=artificial intelligence /a:trffl n'telid?ons/) n.&abbr:人工智能\nG8上U2We need more research to understand howAI can help us in language learning.\n我们需要更多研究，以了解人工智能如何在语言学习方面帮助我们。\n微信扫码\n听音频，背单词\n303\n①与考纲词汇重复的三级词汇不再列出。\n",
+  "lines": [
+   {
+    "y": 73.1,
+    "text": "第二单元"
+   },
+   {
+    "y": 188.1,
+    "text": "英语课程标准三级词汇(2022年版)⑨"
+   },
+   {
+    "y": 235.3,
+    "text": "A"
+   },
+   {
+    "y": 238.4,
+    "text": "微信扫码"
+   },
+   {
+    "y": 248.5,
+    "text": "听音频，背单词"
+   },
+   {
+    "y": 267.9,
+    "text": "1.a/er;a/ art.一(件；个；场⋯⋯)"
+   },
+   {
+    "y": 285.2,
+    "text": "China is a developing country.中国是一个发展中国家。"
+   },
+   {
+    "y": 301.6,
+    "text": "2.an/?n/art.一(件；个；场⋯⋯)"
+   },
+   {
+    "y": 319.4,
+    "text": "Can you give me an example of what you mean?你能给我举个实例来解释你的意思吗?"
+   },
+   {
+    "y": 335.8,
+    "text": "3.absent/'?bs?nt/ adj.缺席的；不在的"
+   },
+   {
+    "y": 346.8,
+    "text": "G8上U6He was absent from school yesterday.他昨天没上学。"
+   },
+   {
+    "y": 369.7,
+    "text": "4.account/a'kaunt/ n.账户，账号；解释，说明"
+   },
+   {
+    "y": 381.4,
+    "text": "G8下U3Using a password manager is a much safer way to protect your online accounts."
+   },
+   {
+    "y": 404.2,
+    "text": "使用密码管理器是保护你网络账户的一种安全得多的方法。"
+   },
+   {
+    "y": 420.6,
+    "text": "The witness provided a clear account of what happened that night."
+   },
+   {
+    "y": 438.2,
+    "text": "目击者对当晚发生的事情提供了清晰的说明。"
+   },
+   {
+    "y": 452.7,
+    "text": "常用词组"
+   },
+   {
+    "y": 472.8,
+    "text": "account for(数量上、比例上)占"
+   },
+   {
+    "y": 488.6,
+    "text": "5.action/?kfn/ n.行动；行为过程"
+   },
+   {
+    "y": 497.8,
+    "text": "G6下U4 Each of us must take responsibility for our own actions."
+   },
+   {
+    "y": 523.2,
+    "text": "我们每个人都必须对自己的行为负责。"
+   },
+   {
+    "y": 539.8,
+    "text": "6.admire /ad'mar?(r)/v.钦佩；赞赏；仰慕"
+   },
+   {
+    "y": 551.4,
+    "text": "G6下U6Everyone admires her strength of character and determination."
+   },
+   {
+    "y": 573.7,
+    "text": "每一个人都钦佩她坚强的性格和决心。"
+   },
+   {
+    "y": 591.7,
+    "text": "7.AI/er'a/(=artificial intelligence /a:trffl n'telid?ons/) n.&abbr:人工智能"
+   },
+   {
+    "y": 602.9,
+    "text": "G8上U2We need more research to understand howAI can help us in language learning."
+   },
+   {
+    "y": 625.1,
+    "text": "我们需要更多研究，以了解人工智能如何在语言学习方面帮助我们。"
+   },
+   {
+    "y": 676.7,
+    "text": "①与考纲词汇重复的三级词汇不再列出。"
+   },
+   {
+    "y": 699.6,
+    "text": "303"
+   }
+  ]
+ },
+ {
+  "page": 334,
+  "text": "第三单元\n《上海市初中英语学科教学基本要求(试验本)》\n中的单词\nA\n1.accountant/?'kaunt?nt/ n.会计人员\nMy father is an accountant. He works in a big company.\n我父亲是一名会计。他在一家大公司工作。\n2.admit /?d'mit/v.承认\nHe finally admitted that he had made a mistake.他最终承认自己犯了一个错误。\n常用词组\nadmit to承认\nadmit of容许\n名师点拨 admit 后可接名词、代词或动名词作宾语，不接不定式作宾语。\n例如：He admitted stealing the money.他承认偷了钱。\n3.adopt/a'dppt/ v.收养\nThe couple decided to adopt an orphan.这对夫妇决定收养一个孤儿。\n词形拓展\nadoption n.收养；采用\n4.agent/'ed3ont/ n.代办；代理人\nThe agent helped me buy a house.中介协助我买了一幢房子。\n常用词组\ntravel agent旅行社代理人\nestate agent 房地产经纪人\n微信扫码\n听音频，背单词\n327\n①与考纲词汇、三级词汇重复的学科教学基本要求词汇不再列出。\n",
+  "lines": [
+   {
+    "y": 73.8,
+    "text": "第三单元"
+   },
+   {
+    "y": 188.8,
+    "text": "《上海市初中英语学科教学基本要求(试验本)》"
+   },
+   {
+    "y": 211.5,
+    "text": "中的单词"
+   },
+   {
+    "y": 259.6,
+    "text": "A"
+   },
+   {
+    "y": 263.4,
+    "text": "微信扫码"
+   },
+   {
+    "y": 273.6,
+    "text": "听音频，背单词"
+   },
+   {
+    "y": 293.0,
+    "text": "1.accountant/?'kaunt?nt/ n.会计人员"
+   },
+   {
+    "y": 309.5,
+    "text": "My father is an accountant. He works in a big company."
+   },
+   {
+    "y": 326.3,
+    "text": "我父亲是一名会计。他在一家大公司工作。"
+   },
+   {
+    "y": 343.3,
+    "text": "2.admit /?d'mit/v.承认"
+   },
+   {
+    "y": 361.2,
+    "text": "He finally admitted that he had made a mistake.他最终承认自己犯了一个错误。"
+   },
+   {
+    "y": 376.1,
+    "text": "常用词组"
+   },
+   {
+    "y": 394.1,
+    "text": "admit to承认"
+   },
+   {
+    "y": 411.8,
+    "text": "admit of容许"
+   },
+   {
+    "y": 441.2,
+    "text": "名师点拨 admit 后可接名词、代词或动名词作宾语，不接不定式作宾语。"
+   },
+   {
+    "y": 460.1,
+    "text": "例如：He admitted stealing the money.他承认偷了钱。"
+   },
+   {
+    "y": 489.5,
+    "text": "3.adopt/a'dppt/ v.收养"
+   },
+   {
+    "y": 506.6,
+    "text": "The couple decided to adopt an orphan.这对夫妇决定收养一个孤儿。"
+   },
+   {
+    "y": 520.6,
+    "text": "词形拓展"
+   },
+   {
+    "y": 539.4,
+    "text": "adoption n.收养；采用"
+   },
+   {
+    "y": 556.4,
+    "text": "4.agent/'ed3ont/ n.代办；代理人"
+   },
+   {
+    "y": 574.1,
+    "text": "The agent helped me buy a house.中介协助我买了一幢房子。"
+   },
+   {
+    "y": 588.3,
+    "text": "常用词组"
+   },
+   {
+    "y": 607.9,
+    "text": "travel agent旅行社代理人"
+   },
+   {
+    "y": 625.1,
+    "text": "estate agent 房地产经纪人"
+   },
+   {
+    "y": 676.7,
+    "text": "①与考纲词汇、三级词汇重复的学科教学基本要求词汇不再列出。"
+   },
+   {
+    "y": 698.6,
+    "text": "327"
+   }
+  ]
+ },
+ {
+  "page": 350,
+  "text": "第四单元\n沪教版上海市初中英语新教材(六、七、八年级)\n单词、词组①\n六年级上\n1.a few有些；几个(用于可数名词之前)(U3)\nThere are a few apples on the table.桌子上有几个苹果。\n名师点拨 few, a few, little,a little的词义和用法区别，可参考考纲词汇919.little。\n2.ankle /?nkl/ n.踝；踝关节(U4)\nHe hurt his ankle while playing football.他踢足球时伤到了脚踝。\n3.balanced/'b?l?nst/ adj.保持(或显示)平衡的(U3)\nA balanced diet is good for our health.均衡的饮食对我们的健康有益。\n4.blog/bl?g/(=weblog/weblbg/) n.博客；网志(U3)\nHe writes a blog about his travel experiences.他写了一条关于旅行经历的博客。\n5.calf/ka:f/ n.小牛；牛犊(U5)\nThe calf is following its mother.小牛犊跟着它的妈妈。\n6.calligraphy/k?'ligr?fi/ n.书法(U1)\nShe is good at calligraphy.她擅长书法。\n7.celebration/seli'brer?n/ n.庆典；庆祝活动(U2)\nWe had a big celebration for his birthday.我们为他的生日举行了盛大的庆祝活动。\n8.comment/'koment/ n.议论；评论；解释(U1)\nv.表达意见\nHis comments on the movie were very interesting.他对这部电影的评论非常有意思。\nHe refused to comment on this matter.他拒绝就此事发表意见。\n微信扫码\n听音频，背单词\n343\n①与考纲词汇、三级词汇、学科教学基本要求词汇重复的新教材单词和词组不再列出。\n",
+  "lines": [
+   {
+    "y": 73.3,
+    "text": "第四单元"
+   },
+   {
+    "y": 189.6,
+    "text": "沪教版上海市初中英语新教材(六、七、八年级)"
+   },
+   {
+    "y": 214.6,
+    "text": "单词、词组①"
+   },
+   {
+    "y": 263.5,
+    "text": "微信扫码"
+   },
+   {
+    "y": 268.1,
+    "text": "六年级上"
+   },
+   {
+    "y": 273.5,
+    "text": "听音频，背单词"
+   },
+   {
+    "y": 303.5,
+    "text": "1.a few有些；几个(用于可数名词之前)(U3)"
+   },
+   {
+    "y": 321.4,
+    "text": "There are a few apples on the table.桌子上有几个苹果。"
+   },
+   {
+    "y": 351.2,
+    "text": "名师点拨 few, a few, little,a little的词义和用法区别，可参考考纲词汇919.little。"
+   },
+   {
+    "y": 380.7,
+    "text": "2.ankle /?nkl/ n.踝；踝关节(U4)"
+   },
+   {
+    "y": 398.3,
+    "text": "He hurt his ankle while playing football.他踢足球时伤到了脚踝。"
+   },
+   {
+    "y": 415.4,
+    "text": "3.balanced/'b?l?nst/ adj.保持(或显示)平衡的(U3)"
+   },
+   {
+    "y": 432.3,
+    "text": "A balanced diet is good for our health.均衡的饮食对我们的健康有益。"
+   },
+   {
+    "y": 448.5,
+    "text": "4.blog/bl?g/(=weblog/weblbg/) n.博客；网志(U3)"
+   },
+   {
+    "y": 467.3,
+    "text": "He writes a blog about his travel experiences.他写了一条关于旅行经历的博客。"
+   },
+   {
+    "y": 482.9,
+    "text": "5.calf/ka:f/ n.小牛；牛犊(U5)"
+   },
+   {
+    "y": 500.9,
+    "text": "The calf is following its mother.小牛犊跟着它的妈妈。"
+   },
+   {
+    "y": 518.2,
+    "text": "6.calligraphy/k?'ligr?fi/ n.书法(U1)"
+   },
+   {
+    "y": 535.4,
+    "text": "She is good at calligraphy.她擅长书法。"
+   },
+   {
+    "y": 551.0,
+    "text": "7.celebration/seli'brer?n/ n.庆典；庆祝活动(U2)"
+   },
+   {
+    "y": 569.2,
+    "text": "We had a big celebration for his birthday.我们为他的生日举行了盛大的庆祝活动。"
+   },
+   {
+    "y": 584.5,
+    "text": "8.comment/'koment/ n.议论；评论；解释(U1)"
+   },
+   {
+    "y": 601.5,
+    "text": "v.表达意见"
+   },
+   {
+    "y": 619.6,
+    "text": "His comments on the movie were very interesting.他对这部电影的评论非常有意思。"
+   },
+   {
+    "y": 636.7,
+    "text": "He refused to comment on this matter.他拒绝就此事发表意见。"
+   },
+   {
+    "y": 677.7,
+    "text": "①与考纲词汇、三级词汇、学科教学基本要求词汇重复的新教材单词和词组不再列出。"
+   },
+   {
+    "y": 700.6,
+    "text": "343"
+   }
+  ]
+ },
+ {
+  "page": 380,
+  "text": "名师点拨\na great deal of仅修饰不可数名词。\n例如：There is a great deal of water in the bottle.瓶子里有大量的水。\na number of仅修饰可数名词复数，后接谓语用复数。\n例如：A number of birds fly south in winter.许多鸟类在冬天飞往南方。\nmany仅修饰可数名词复数。\n例如：Many students like playing basketball.许多学生喜欢打篮球。\nmuch仅修饰不可数名词。\n例如：I don't have much time to rest.我没有太多时间休息。\n2.account for(数量上、比例上)占(U3)\nReading accounts for a large part of our daily English study.\n阅读在我们日常的英语学习中占很大一部分。\n3.acting /?kt??/ n.表演(U1)\nHer acting in the play won lots of praise.她在剧中的表演赢得了许多好评。\n常用词组\nacting skills表演技巧\n4.advertising /?dv?tarzin/n.广告活动；广告业；广告(U4)\nThe company will put more money into advertising\n这家公司会在广告宣传上投入更多资金。\n常用词组\nadvertising industry 广告业\n5.as if好像；仿佛(U6)\nHe talks as if he knew everything about the plan.\n他说话的样子好像对这个计划了如指掌。\n名师点拨当as if引导的从句表示与事实明显不符或纯粹是主观想象、夸大比喻时，\n使用虚拟语气。此时，如果主句是一般现在时，从句谓语动词通常用过去式\n(be 动词统一用were)。\n例如：She looks as if she were a princess.她看起来仿佛是一位公主。\n6.bad-tempered /b?d'tempad/ adj.易怒的；爱发脾气的(U6)\nMy father is a little bad-tempered when he is tired.我爸在累的时候会有点易怒。\n近义 irritable;cross\n反义 good-tempered;mild\n7. baggy /b?gi/ adj.宽松的(U4)\nHe likes to wear baggy jeans in his daily life.他日常生活中喜欢穿宽松的牛仔裤。\n373\n",
+  "lines": [
+   {
+    "y": 57.7,
+    "text": "名师点拨"
+   },
+   {
+    "y": 76.6,
+    "text": "a great deal of仅修饰不可数名词。"
+   },
+   {
+    "y": 92.9,
+    "text": "例如：There is a great deal of water in the bottle.瓶子里有大量的水。"
+   },
+   {
+    "y": 109.1,
+    "text": "a number of仅修饰可数名词复数，后接谓语用复数。"
+   },
+   {
+    "y": 127.7,
+    "text": "例如：A number of birds fly south in winter.许多鸟类在冬天飞往南方。"
+   },
+   {
+    "y": 143.5,
+    "text": "many仅修饰可数名词复数。"
+   },
+   {
+    "y": 161.1,
+    "text": "例如：Many students like playing basketball.许多学生喜欢打篮球。"
+   },
+   {
+    "y": 177.9,
+    "text": "much仅修饰不可数名词。"
+   },
+   {
+    "y": 196.2,
+    "text": "例如：I don't have much time to rest.我没有太多时间休息。"
+   },
+   {
+    "y": 224.5,
+    "text": "2.account for(数量上、比例上)占(U3)"
+   },
+   {
+    "y": 241.8,
+    "text": "Reading accounts for a large part of our daily English study."
+   },
+   {
+    "y": 258.7,
+    "text": "阅读在我们日常的英语学习中占很大一部分。"
+   },
+   {
+    "y": 276.9,
+    "text": "3.acting /?kt??/ n.表演(U1)"
+   },
+   {
+    "y": 294.7,
+    "text": "Her acting in the play won lots of praise.她在剧中的表演赢得了许多好评。"
+   },
+   {
+    "y": 308.7,
+    "text": "常用词组"
+   },
+   {
+    "y": 328.2,
+    "text": "acting skills表演技巧"
+   },
+   {
+    "y": 345.3,
+    "text": "4.advertising /?dv?tarzin/n.广告活动；广告业；广告(U4)"
+   },
+   {
+    "y": 361.3,
+    "text": "The company will put more money into advertising"
+   },
+   {
+    "y": 379.5,
+    "text": "这家公司会在广告宣传上投入更多资金。"
+   },
+   {
+    "y": 393.6,
+    "text": "常用词组"
+   },
+   {
+    "y": 413.4,
+    "text": "advertising industry 广告业"
+   },
+   {
+    "y": 430.2,
+    "text": "5.as if好像；仿佛(U6)"
+   },
+   {
+    "y": 447.9,
+    "text": "He talks as if he knew everything about the plan."
+   },
+   {
+    "y": 464.2,
+    "text": "他说话的样子好像对这个计划了如指掌。"
+   },
+   {
+    "y": 493.0,
+    "text": "名师点拨当as if引导的从句表示与事实明显不符或纯粹是主观想象、夸大比喻时，"
+   },
+   {
+    "y": 510.3,
+    "text": "使用虚拟语气。此时，如果主句是一般现在时，从句谓语动词通常用过去式"
+   },
+   {
+    "y": 527.8,
+    "text": "(be 动词统一用were)。"
+   },
+   {
+    "y": 545.3,
+    "text": "例如：She looks as if she were a princess.她看起来仿佛是一位公主。"
+   },
+   {
+    "y": 573.6,
+    "text": "6.bad-tempered /b?d'tempad/ adj.易怒的；爱发脾气的(U6)"
+   },
+   {
+    "y": 591.9,
+    "text": "My father is a little bad-tempered when he is tired.我爸在累的时候会有点易怒。"
+   },
+   {
+    "y": 608.8,
+    "text": "近义 irritable;cross"
+   },
+   {
+    "y": 625.1,
+    "text": "反义 good-tempered;mild"
+   },
+   {
+    "y": 643.0,
+    "text": "7. baggy /b?gi/ adj.宽松的(U4)"
+   },
+   {
+    "y": 660.8,
+    "text": "He likes to wear baggy jeans in his daily life.他日常生活中喜欢穿宽松的牛仔裤。"
+   },
+   {
+    "y": 697.6,
+    "text": "373"
+   }
+  ]
+ },
+ {
+  "page": 381,
+  "text": "近义 loose\n反义 tight\n8.BCE(=before the Common Era) abbr:公元前(U2)\nThis ancient building was built in 300 BCE.这座古老的建筑建于公元前300年。\n9.be mean to sb.对某人刻薄(U6)\nIt's not polite to be mean to your classmates.对同学刻薄是不礼貌的。\n名师点拨 mean此处为形容词，表“刻薄的”,区别于动词含义“意思是；打算”。\n例如：She apologised for her mean comments during the argument.\n她为自己在争吵中说的刻薄话道了歉。\nThis decision means a new start for her.\n这个决定对她来说意味着一个新的开始。\n10.by accident 偶然；意外地(U2)\nI met my primary school teacher by accident on the street.\n我在街上偶然遇到了我的小学老师。\n近义 by chance\n反义 on purpose\n11.caring/'ke?rin/adj.关心他人的；体贴的(U6)\nShe is a caring nurse and allpatients like her.\n她是一位体贴的护士，所有病人都喜欢她。\n近义 considerate;kind\n12.CE(=Common Era) abbr:公元(U2)\nThis important event happened in 200 CE.这个重要事件发生在公元200年。\n13.cheerful/'tfr?fl/ adj.开朗的；乐观的(U6)\nShe is always cheerful and brings joy to everyone around her.\n她总是很开朗，给身边的人带来快乐。\n近义 optimistic;lively\n义sad;gloomy\n14.cheerleader/'tfr?li:d?(r)/ n.拉拉队队员；支持者(U6)\nMy sister wants to be a cheerleader for the school basketball team.\n我妹妹想当校篮球队的拉拉队队员。\n词形拓展\ncheerleading n.拉拉队运动\n15.come across(偶然)遇见，碰见，发现(U1)\nI came across an old photo album while I was cleaning the closet.\n我打扫壁橱时偶然发现了一本旧相册。\n374\n",
+  "lines": [
+   {
+    "y": 57.9,
+    "text": "近义 loose"
+   },
+   {
+    "y": 75.6,
+    "text": "反义 tight"
+   },
+   {
+    "y": 92.3,
+    "text": "8.BCE(=before the Common Era) abbr:公元前(U2)"
+   },
+   {
+    "y": 110.6,
+    "text": "This ancient building was built in 300 BCE.这座古老的建筑建于公元前300年。"
+   },
+   {
+    "y": 126.6,
+    "text": "9.be mean to sb.对某人刻薄(U6)"
+   },
+   {
+    "y": 145.4,
+    "text": "It's not polite to be mean to your classmates.对同学刻薄是不礼貌的。"
+   },
+   {
+    "y": 173.6,
+    "text": "名师点拨 mean此处为形容词，表“刻薄的”,区别于动词含义“意思是；打算”。"
+   },
+   {
+    "y": 192.1,
+    "text": "例如：She apologised for her mean comments during the argument."
+   },
+   {
+    "y": 207.7,
+    "text": "她为自己在争吵中说的刻薄话道了歉。"
+   },
+   {
+    "y": 225.3,
+    "text": "This decision means a new start for her."
+   },
+   {
+    "y": 242.2,
+    "text": "这个决定对她来说意味着一个新的开始。"
+   },
+   {
+    "y": 271.8,
+    "text": "10.by accident 偶然；意外地(U2)"
+   },
+   {
+    "y": 289.2,
+    "text": "I met my primary school teacher by accident on the street."
+   },
+   {
+    "y": 306.8,
+    "text": "我在街上偶然遇到了我的小学老师。"
+   },
+   {
+    "y": 322.9,
+    "text": "近义 by chance"
+   },
+   {
+    "y": 341.1,
+    "text": "反义 on purpose"
+   },
+   {
+    "y": 357.8,
+    "text": "11.caring/'ke?rin/adj.关心他人的；体贴的(U6)"
+   },
+   {
+    "y": 374.9,
+    "text": "She is a caring nurse and allpatients like her."
+   },
+   {
+    "y": 392.2,
+    "text": "她是一位体贴的护士，所有病人都喜欢她。"
+   },
+   {
+    "y": 408.9,
+    "text": "近义 considerate;kind"
+   },
+   {
+    "y": 425.6,
+    "text": "12.CE(=Common Era) abbr:公元(U2)"
+   },
+   {
+    "y": 444.0,
+    "text": "This important event happened in 200 CE.这个重要事件发生在公元200年。"
+   },
+   {
+    "y": 460.0,
+    "text": "13.cheerful/'tfr?fl/ adj.开朗的；乐观的(U6)"
+   },
+   {
+    "y": 477.5,
+    "text": "She is always cheerful and brings joy to everyone around her."
+   },
+   {
+    "y": 493.7,
+    "text": "她总是很开朗，给身边的人带来快乐。"
+   },
+   {
+    "y": 511.4,
+    "text": "近义 optimistic;lively"
+   },
+   {
+    "y": 526.1,
+    "text": "义sad;gloomy"
+   },
+   {
+    "y": 546.1,
+    "text": "14.cheerleader/'tfr?li:d?(r)/ n.拉拉队队员；支持者(U6)"
+   },
+   {
+    "y": 562.3,
+    "text": "My sister wants to be a cheerleader for the school basketball team."
+   },
+   {
+    "y": 579.2,
+    "text": "我妹妹想当校篮球队的拉拉队队员。"
+   },
+   {
+    "y": 594.9,
+    "text": "词形拓展"
+   },
+   {
+    "y": 613.9,
+    "text": "cheerleading n.拉拉队运动"
+   },
+   {
+    "y": 630.5,
+    "text": "15.come across(偶然)遇见，碰见，发现(U1)"
+   },
+   {
+    "y": 647.8,
+    "text": "I came across an old photo album while I was cleaning the closet."
+   },
+   {
+    "y": 664.3,
+    "text": "我打扫壁橱时偶然发现了一本旧相册。"
+   },
+   {
+    "y": 699.9,
+    "text": "374"
+   }
+  ]
+ },
+ {
+  "page": 390,
+  "text": "附录\n一、不规则动词表\nInfinitive(不定式)\nPast Tense(过去式)\nPast Participle(过去分词)\nABC型(动词的不定式、过去式和过去分词各不相同)\nawake /'weik/\nawoke/?'w?uk/\nawoken/a'w?uk?n/\nbe/bi:/(am /?em/, is/iz/,are/a:/(r) was/wDz/,were /w3:(r)/\nbeen/bi:n/\nbear /be?(r)/\nbore /b?:(r)/\nborn/b?:n// borne /b?:n/\nbegin /bigin/\nbegan /br'ga?n/\nbegun /big?n/\n*bite /bart/\n*bit/brt/\n*bitten/'bitn/\nblow /bl?u/\nblew/blu:/\nblown/blaun/\nbreak /brerk/\nbroke /br?uk/\nbroken/br?uk?n/\nchoose /tfu:z/\nchose /t?uz\nchosen/'tfauzn/\ndo/du:/\ndid /did/\ndone/d?n/\ndraw/dr?:/\ndrew /dru:/\ndrawn/dr?:n/\ndrink /dri?k/\ndrank /dr??k/\ndrunk/dr?nk/\ndrive /drarv/\ndrove/drsuv/\ndriven/'drivn/\neat/i:t/\nate /et/\neaten/i:tn/\nfall/f?:l/\nfell/fel/\nfallen/f?:l?n/\nfly/flai/\nflew/flu:/\nflown/fl?un/\nforget /f?'get/\nforgot /f?'gpt/\nforgotten /f?'gptn/\nfreeze/fri:z/\nfroze /fr?uz/\nfrozen /fr?uzn/\ngive /grv/\ngave /gerv/\ngiven /'gIvn/\ngo/g?u/\nwent/went/\ngone/gpn/\ngrow/grou/\ngrew /gru:/\ngrown /gr?un/\n383\n*单词未出现在“英语课程标准”(2022年版)的“不规则动词表”中。\n",
+  "lines": [
+   {
+    "y": 74.3,
+    "text": "附录"
+   },
+   {
+    "y": 202.3,
+    "text": "一、不规则动词表"
+   },
+   {
+    "y": 242.9,
+    "text": "Past Participle(过去分词)"
+   },
+   {
+    "y": 243.1,
+    "text": "Past Tense(过去式)"
+   },
+   {
+    "y": 243.4,
+    "text": "Infinitive(不定式)"
+   },
+   {
+    "y": 261.0,
+    "text": "ABC型(动词的不定式、过去式和过去分词各不相同)"
+   },
+   {
+    "y": 277.9,
+    "text": "awoken/a'w?uk?n/"
+   },
+   {
+    "y": 278.6,
+    "text": "awoke/?'w?uk/"
+   },
+   {
+    "y": 279.7,
+    "text": "awake /'weik/"
+   },
+   {
+    "y": 296.7,
+    "text": "been/bi:n/"
+   },
+   {
+    "y": 297.7,
+    "text": "be/bi:/(am /?em/, is/iz/,are/a:/(r)was/wDz/,were /w3:(r)/"
+   },
+   {
+    "y": 314.8,
+    "text": "born/b?:n// borne /b?:n/"
+   },
+   {
+    "y": 316.0,
+    "text": "bore /b?:(r)/"
+   },
+   {
+    "y": 316.7,
+    "text": "bear /be?(r)/"
+   },
+   {
+    "y": 332.8,
+    "text": "begun /big?n/"
+   },
+   {
+    "y": 333.4,
+    "text": "began /br'ga?n/"
+   },
+   {
+    "y": 334.1,
+    "text": "begin /bigin/"
+   },
+   {
+    "y": 351.5,
+    "text": "*bit/brt/"
+   },
+   {
+    "y": 351.7,
+    "text": "*bitten/'bitn/"
+   },
+   {
+    "y": 351.8,
+    "text": "*bite /bart/"
+   },
+   {
+    "y": 367.7,
+    "text": "blown/blaun/"
+   },
+   {
+    "y": 369.1,
+    "text": "blow /bl?u/"
+   },
+   {
+    "y": 369.1,
+    "text": "blew/blu:/"
+   },
+   {
+    "y": 386.3,
+    "text": "broken/br?uk?n/"
+   },
+   {
+    "y": 387.3,
+    "text": "broke /br?uk/"
+   },
+   {
+    "y": 387.4,
+    "text": "break /brerk/"
+   },
+   {
+    "y": 405.0,
+    "text": "chosen/'tfauzn/"
+   },
+   {
+    "y": 405.5,
+    "text": "chose /t?uz"
+   },
+   {
+    "y": 406.4,
+    "text": "choose /tfu:z/"
+   },
+   {
+    "y": 421.5,
+    "text": "done/d?n/"
+   },
+   {
+    "y": 422.7,
+    "text": "do/du:/"
+   },
+   {
+    "y": 422.7,
+    "text": "did /did/"
+   },
+   {
+    "y": 440.9,
+    "text": "drew /dru:/"
+   },
+   {
+    "y": 440.9,
+    "text": "drawn/dr?:n/"
+   },
+   {
+    "y": 441.0,
+    "text": "draw/dr?:/"
+   },
+   {
+    "y": 458.0,
+    "text": "drunk/dr?nk/"
+   },
+   {
+    "y": 459.0,
+    "text": "drank /dr??k/"
+   },
+   {
+    "y": 459.4,
+    "text": "drink /dri?k/"
+   },
+   {
+    "y": 475.8,
+    "text": "drove/drsuv/"
+   },
+   {
+    "y": 476.0,
+    "text": "driven/'drivn/"
+   },
+   {
+    "y": 476.6,
+    "text": "drive /drarv/"
+   },
+   {
+    "y": 494.5,
+    "text": "eaten/i:tn/"
+   },
+   {
+    "y": 494.8,
+    "text": "eat/i:t/"
+   },
+   {
+    "y": 494.9,
+    "text": "ate /et/"
+   },
+   {
+    "y": 512.3,
+    "text": "fell/fel/"
+   },
+   {
+    "y": 512.5,
+    "text": "fall/f?:l/"
+   },
+   {
+    "y": 512.5,
+    "text": "fallen/f?:l?n/"
+   },
+   {
+    "y": 530.1,
+    "text": "flown/fl?un/"
+   },
+   {
+    "y": 530.5,
+    "text": "flew/flu:/"
+   },
+   {
+    "y": 531.1,
+    "text": "fly/flai/"
+   },
+   {
+    "y": 548.7,
+    "text": "forgot /f?'gpt/"
+   },
+   {
+    "y": 548.7,
+    "text": "forgotten /f?'gptn/"
+   },
+   {
+    "y": 548.8,
+    "text": "forget /f?'get/"
+   },
+   {
+    "y": 565.2,
+    "text": "frozen /fr?uzn/"
+   },
+   {
+    "y": 565.6,
+    "text": "freeze/fri:z/"
+   },
+   {
+    "y": 566.6,
+    "text": "froze /fr?uz/"
+   },
+   {
+    "y": 584.0,
+    "text": "given /'gIvn/"
+   },
+   {
+    "y": 584.1,
+    "text": "gave /gerv/"
+   },
+   {
+    "y": 584.9,
+    "text": "give /grv/"
+   },
+   {
+    "y": 601.0,
+    "text": "gone/gpn/"
+   },
+   {
+    "y": 601.3,
+    "text": "go/g?u/"
+   },
+   {
+    "y": 601.6,
+    "text": "went/went/"
+   },
+   {
+    "y": 619.4,
+    "text": "grow/grou/"
+   },
+   {
+    "y": 619.9,
+    "text": "grown /gr?un/"
+   },
+   {
+    "y": 620.2,
+    "text": "grew /gru:/"
+   },
+   {
+    "y": 673.6,
+    "text": "*单词未出现在“英语课程标准”(2022年版)的“不规则动词表”中。"
+   },
+   {
+    "y": 696.6,
+    "text": "383"
+   }
+  ]
+ },
+ {
+  "page": 401,
+  "text": "Tian'anmen Square\nNational flag on Tian'anmen Square is the symbol of People's\n天安门广场\nRepublic of China.天安门广场上飘扬的国旗是中华人民共和\n国的象征和标志。\n其他专有名词\nBeijing opera(Peking opera)\n京剧\nHe is a big fan of Beijing opera.他是京剧的铁杆粉丝。\nBeijing roast duck北京烤鸭\nBeijing roast duck is well-known and popular. It is agreeably fat.\n北京烤鸭非常有名且备受欢迎，它肥而不腻。\nhot pot 火锅\nWhenever it is cold, my friend invites me to have spicy hot pot\ntogether.只要天气一冷，我朋友就会找我去吃麻辣火锅。\nMany traditional Chinese festivals, such as the Spring Festival\nlunar calendar 阴历\nand the Mid-Autumn Festival, are determined by the Chinese\nlunar calendar.许多中国传统节日，如春节和中秋节，都是\n由中国农历决定的。\nmooncake月饼\nShe likes to eat the mooncake with nut in it.\n她喜欢吃那种带坚果的月饼。\npaper-cut剪纸\nEach paper-cut brings out the personal ideas of the author.\n每一幅剪纸都带着手艺人的创意。\nQipao,as an exquisite Chinese clothing, originates from China's\nqipao旗袍\nManchu Nationality.旗袍是一种雅致的中国服饰，源于中国\n满族。\nSpring Festival couplets\nChinese families often decorate their homes with Spring Festival\n春联\ncouplets to bring good luck and prosperity.中国家庭通常会用\n春联装饰他们的家，以带来好运和繁荣。\nspring roll 春卷\nI'm too fulland have no more room for spring rolls.\n我太撑了，吃不下春卷了。\nThe Silk Road 丝绸之路\nThe Silk Road has always been a two-way street of mutually\nbeneficial exchange.丝绸之路向来是互利互惠贸易的双向道。\nTradition Chinese Medicine is a vast treasure house that we\nTraditional Chinese Medicine\n(TCM)中国传统医学，中医really ought to fully explore and improve.中国传统医药学是\n一个伟大宝库，我们应当努力将其发扬光大。\n394\n",
+  "lines": [
+   {
+    "y": 61.6,
+    "text": "National flag on Tian'anmen Square is the symbol of People's"
+   },
+   {
+    "y": 68.4,
+    "text": "Tian'anmen Square"
+   },
+   {
+    "y": 77.5,
+    "text": "Republic of China.天安门广场上飘扬的国旗是中华人民共和"
+   },
+   {
+    "y": 85.5,
+    "text": "天安门广场"
+   },
+   {
+    "y": 93.6,
+    "text": "国的象征和标志。"
+   },
+   {
+    "y": 111.3,
+    "text": "其他专有名词"
+   },
+   {
+    "y": 130.3,
+    "text": "Beijing opera(Peking opera)"
+   },
+   {
+    "y": 138.1,
+    "text": "He is a big fan of Beijing opera.他是京剧的铁杆粉丝。"
+   },
+   {
+    "y": 144.0,
+    "text": "京剧"
+   },
+   {
+    "y": 164.4,
+    "text": "Beijing roast duck is well-known and popular. It is agreeably fat."
+   },
+   {
+    "y": 172.3,
+    "text": "Beijing roast duck北京烤鸭"
+   },
+   {
+    "y": 179.0,
+    "text": "北京烤鸭非常有名且备受欢迎，它肥而不腻。"
+   },
+   {
+    "y": 197.4,
+    "text": "Whenever it is cold, my friend invites me to have spicy hot pot"
+   },
+   {
+    "y": 206.4,
+    "text": "hot pot 火锅"
+   },
+   {
+    "y": 213.6,
+    "text": "together.只要天气一冷，我朋友就会找我去吃麻辣火锅。"
+   },
+   {
+    "y": 231.4,
+    "text": "Many traditional Chinese festivals, such as the Spring Festival"
+   },
+   {
+    "y": 247.5,
+    "text": "and the Mid-Autumn Festival, are determined by the Chinese"
+   },
+   {
+    "y": 256.0,
+    "text": "lunar calendar 阴历"
+   },
+   {
+    "y": 263.4,
+    "text": "lunar calendar.许多中国传统节日，如春节和中秋节，都是"
+   },
+   {
+    "y": 279.6,
+    "text": "由中国农历决定的。"
+   },
+   {
+    "y": 296.6,
+    "text": "She likes to eat the mooncake with nut in it."
+   },
+   {
+    "y": 305.2,
+    "text": "mooncake月饼"
+   },
+   {
+    "y": 313.0,
+    "text": "她喜欢吃那种带坚果的月饼。"
+   },
+   {
+    "y": 331.6,
+    "text": "Each paper-cut brings out the personal ideas of the author."
+   },
+   {
+    "y": 340.0,
+    "text": "paper-cut剪纸"
+   },
+   {
+    "y": 347.5,
+    "text": "每一幅剪纸都带着手艺人的创意。"
+   },
+   {
+    "y": 365.8,
+    "text": "Qipao,as an exquisite Chinese clothing, originates from China's"
+   },
+   {
+    "y": 380.8,
+    "text": "Manchu Nationality.旗袍是一种雅致的中国服饰，源于中国"
+   },
+   {
+    "y": 381.8,
+    "text": "qipao旗袍"
+   },
+   {
+    "y": 397.4,
+    "text": "满族。"
+   },
+   {
+    "y": 415.4,
+    "text": "Chinese families often decorate their homes with Spring Festival"
+   },
+   {
+    "y": 423.9,
+    "text": "Spring Festival couplets"
+   },
+   {
+    "y": 432.4,
+    "text": "couplets to bring good luck and prosperity.中国家庭通常会用"
+   },
+   {
+    "y": 439.0,
+    "text": "春联"
+   },
+   {
+    "y": 446.9,
+    "text": "春联装饰他们的家，以带来好运和繁荣。"
+   },
+   {
+    "y": 465.4,
+    "text": "I'm too fulland have no more room for spring rolls."
+   },
+   {
+    "y": 475.2,
+    "text": "spring roll 春卷"
+   },
+   {
+    "y": 481.7,
+    "text": "我太撑了，吃不下春卷了。"
+   },
+   {
+    "y": 497.9,
+    "text": "The Silk Road has always been a two-way street of mutually"
+   },
+   {
+    "y": 507.1,
+    "text": "The Silk Road 丝绸之路"
+   },
+   {
+    "y": 515.6,
+    "text": "beneficial exchange.丝绸之路向来是互利互惠贸易的双向道。"
+   },
+   {
+    "y": 531.6,
+    "text": "Tradition Chinese Medicine is a vast treasure house that we"
+   },
+   {
+    "y": 540.9,
+    "text": "Traditional Chinese Medicine"
+   },
+   {
+    "y": 549.8,
+    "text": "(TCM)中国传统医学，中医really ought to fully explore and improve.中国传统医药学是"
+   },
+   {
+    "y": 565.4,
+    "text": "一个伟大宝库，我们应当努力将其发扬光大。"
+   },
+   {
+    "y": 697.6,
+    "text": "394"
+   }
+  ]
+ },
+ {
+  "page": 402,
+  "text": "",
+  "lines": []
+ }
+]
