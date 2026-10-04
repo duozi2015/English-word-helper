@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "vocabulary.schema.v1.2",
+  "title": "上海初中英语AI学习产品 Vocabulary Schema V1.2",
+  "description": "机器可执行的数据格式约束；业务含义、取值逻辑、字段边界见 Vocabulary Data Specification V1.2。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "word",
+    "phonetic",
+    "meanings",
+    "word_forms",
+    "related_words",
+    "phrases",
+    "collocations",
+    "proverbs",
+    "examples",
+    "usage_notes",
+    "teaching_notes",
+    "tags",
+    "exam_level",
+    "textbook"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^V[0-9]{5}$"
+    },
+    "word": {
+      "type": "string"
+    },
+    "phonetic": {
+      "type": "string"
+    },
+    "meanings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "pos",
+          "meaning"
+        ],
+        "properties": {
+          "pos": {
+            "type": "string"
+          },
+          "meaning": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "word_forms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "type",
+          "form",
+          "source"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "plural",
+              "third_person",
+              "past",
+              "past_participle",
+              "present_participle",
+              "comparative",
+              "superlative"
+            ]
+          },
+          "form": {
+            "type": "string"
+          },
+          "source": {
+            "enum": [
+              "document",
+              "ai"
+            ]
+          }
+        }
+      }
+    },
+    "related_words": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "word",
+          "pos",
+          "meaning",
+          "relation"
+        ],
+        "properties": {
+          "word": {
+            "type": "string"
+          },
+          "pos": {
+            "type": "string"
+          },
+          "meaning": {
+            "type": "string"
+          },
+          "relation": {
+            "enum": [
+              "派生词",
+              "词形拓展",
+              "相关词"
+            ]
+          }
+        }
+      }
+    },
+    "phrases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "text",
+          "meaning"
+        ],
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "meaning": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "collocations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "text",
+          "meaning"
+        ],
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "meaning": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "proverbs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "text",
+          "meaning"
+        ],
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "meaning": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "en",
+          "zh",
+          "type"
+        ],
+        "properties": {
+          "en": {
+            "type": "string"
+          },
+          "zh": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "general",
+              "exam",
+              "textbook"
+            ]
+          }
+        }
+      }
+    },
+    "usage_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "teaching_notes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "type",
+          "title",
+          "content"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "comparison",
+              "usage",
+              "grammar",
+              "common_error",
+              "exam_tip"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "考纲",
+          "三级词汇",
+          "学科教学基本要求",
+          "教材"
+        ]
+      }
+    },
+    "exam_level": {
+      "type": "integer",
+      "enum": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "textbook": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "grade",
+          "semester",
+          "unit"
+        ],
+        "properties": {
+          "grade": {
+            "type": "string"
+          },
+          "semester": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

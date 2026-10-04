@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# 大文件与中间产物
+pdf/
+output/raw/
+output/parsed/
+
+# 系统
+.DS_Store
