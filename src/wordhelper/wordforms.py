@@ -172,7 +172,7 @@ _IRREGULAR_COMP = {
 # 长形容词后缀（more/most 型，不生成 -er/-est）
 _LONG_ADJ_SUFFIXES = (
     "ful", "ous", "ing", "ed", "al", "ive", "able", "ible", "ant",
-    "ent", "ess", "ish", "like", "less", "ous", "ward", "y",
+    "ent", "ess", "ish", "like", "less", "ward",
 
 )
 
