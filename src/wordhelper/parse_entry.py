@@ -33,14 +33,42 @@ def _strip_prefix(text: str) -> str:
     return stars.group(2), len(stars.group(1))
 
 
+def _effective_parens(rest: str) -> set[int]:
+    """返回「有效括号」的起始位置集合：含 CJK 且不含 '/' 的括号才算深度括号。
+
+    OCR 音标里的假括号（如 /'tat( skri:n/…）含 '/'，不参与深度计算；
+    词形括号组 (cast/ka:st/, cast) 等含 '/' 也不参与（内无词性链，无副作用）。
+    """
+    out = set()
+    i = 0
+    while i < len(rest):
+        if rest[i] in "(（[":
+            depth = 1
+            j = i + 1
+            while j < len(rest) and depth:
+                if rest[j] in "(（[":
+                    depth += 1
+                elif rest[j] in ")）]":
+                    depth -= 1
+                j += 1
+            content = rest[i + 1:j - 1]
+            if re.search("[" + _CJK + "复]", content) and "/" not in content:
+                out.add(i)
+            i = j
+        else:
+            i += 1
+    return out
+
+
 def _find_pos_start(rest: str, search_from: int) -> tuple[int, str] | None:
-    """找词形之后、括号深度为 0 的第一条词性链。"""
+    """找词形之后、有效括号深度为 0 的第一条词性链。"""
+    eff = _effective_parens(rest)
     depth = 0
     for i in range(search_from, len(rest)):
-        ch = rest[i]
-        if ch in "(（[":
+        if i in eff:
             depth += 1
-        elif ch in ")）]":
+        ch = rest[i]
+        if ch in ")）]":
             depth = max(0, depth - 1)
         elif depth == 0:
             m = _POS_CHAIN_RE.match(rest, i)
@@ -71,15 +99,30 @@ def parse_head(text: str) -> dict:
     # --- 音标 ---
     z = zone.lstrip()
     if z[:1] in ('/', '"'):
-        # 引号开音标为 OCR 把 / 误识为 "
-        content = z[1:]
-        end = content.find("/")
-        if end >= 0:
-            phon_text = content[:end]
+        unmatched = False
+        depth = 0
+        for ch in z:
+            if ch in "(（":
+                depth += 1
+            elif ch in ")）":
+                depth = max(0, depth - 1)
+        unmatched = depth > 0  # OCR 假括号未闭合（如 /'tat( skri:n/）
+        slashes = [i for i, c in enumerate(z) if c == "/"]
+        if unmatched and len(slashes) >= 2:
+            # 双斜杠之间是可信音标区（假括号是 OCR 把 ʃ 等误识为 '('），不截断
+            phon_text = z[1:slashes[-1]]
+            if phon_text.strip():
+                phonetic = "/" + phon_text.strip() + "/"
+        elif len(slashes) >= 2:
+            content = z[1:]
+            phon_text = content[:content.find("/")]
+            if phon_text.strip():
+                phonetic = "/" + _clean_phonetic(phon_text).strip("/") + "/"
         else:
+            content = z[1:]
             phon_text = content.split()[0] if content.split() else ""
-        if phon_text.strip():
-            phonetic = "/" + _clean_phonetic(phon_text).strip("/") + "/"
+            if phon_text.strip():
+                phonetic = "/" + _clean_phonetic(phon_text).strip("/") + "/"
     elif z[:1] in ("'", "ˈ", "`", "‘"):
         # 开斜杠丢失（如 'ha:dli）→ 保留重音符，补成 /.../
         content = z
@@ -151,15 +194,16 @@ def _parse_meanings(text: str, first_pos: str | None) -> list[dict]:
         if meaning:
             out.append({"pos": "", "meaning": meaning})
         return out
-    # 找出所有深度0的词性链位置
+    # 找出所有有效深度0的词性链位置
     spans = []
+    eff = _effective_parens(text)
     depth = 0
     i = 0
     while i < len(text):
-        ch = text[i]
-        if ch in "(（[":
+        if i in eff:
             depth += 1
-        elif ch in ")）]":
+        ch = text[i]
+        if ch in ")）]":
             depth = max(0, depth - 1)
         elif depth == 0:
             m = _POS_CHAIN_RE.match(text, i)
@@ -317,6 +361,17 @@ def parse_entry_text(text: str, section: str) -> dict:
                 flush_pair(examples)
                 head_extra.append(line)
                 continue
+            # 音标开头的续行（如 transport 的 /'trænspɔːt/ n.运输…）：
+            # 剥掉音标后按词义续行处理
+            if line.startswith("/"):
+                end = line.find("/", 1)
+                if end > 0:
+                    rest_line = line[end + 1:].lstrip()
+                    pm2 = _POS_CHAIN_RE.match(rest_line)
+                    if pm2 and re.search("[" + _CJK + "]", rest_line[pm2.end():]):
+                        flush_pair(examples)
+                        head_extra.append(rest_line)
+                        continue
             kind = _line_kind(line)
             if kind == "mixed":
                 en, zh = _split_mixed(line)

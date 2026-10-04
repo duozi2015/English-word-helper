@@ -141,3 +141,25 @@ class TestEmptyFields:
         for key in ("collocations", "usage_notes"):
             assert r[key] == []
         assert r["id"] == ""
+
+
+class TestOcrEdgeCases:
+    def test_touch_screen_fake_paren(self):
+        """OCR 音标内的假括号不破坏释义解析。"""
+        text = "74.touch screen/'tat( skri:n/n.(计算机)触摸屏(U2)\nThis computer has a touch screen.这台电脑有触摸屏。"
+        r = parse_entry_text(text, section="textbook")
+        assert r["word"] == "touch screen"
+        assert r["phonetic"] == "/'tat( skri:n/"
+        assert r["meanings"] == [{"pos": "n.", "meaning": "(计算机)触摸屏"}]
+        assert r["textbook"] == [{"grade": "", "semester": "", "unit": "2"}]
+
+    def test_phonetic_prefix_continuation(self):
+        """transport 型：续行以音标开头。"""
+        text = ("1634. transport/tr?n'sp?:t/ v.运输，运送；输送\n"
+                "/'tr?nsp?:t/ n.运输；输送；运送；交通车辆\n"
+                "A helicopter was used to transport the wounded. 一架直升飞机被用来运送伤员。")
+        r = parse_entry_text(text, section="words")
+        assert r["meanings"][0] == {"pos": "v.", "meaning": "运输，运送；输送"}
+        assert r["meanings"][1] == {"pos": "n.", "meaning": "运输；输送；运送；交通车辆"}
+        assert len(r["examples"]) == 1
+        assert r["usage_notes"] == []

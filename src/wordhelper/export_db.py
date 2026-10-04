@@ -60,6 +60,9 @@ CREATE TABLE meta (
 def export_db(jsonl_path: str, db_path: str, meta: list[dict] | None = None) -> None:
     import sqlite3
 
+    db = Path(db_path)
+    if db.exists():
+        db.unlink()  # 全量重建
     con = sqlite3.connect(db_path)
     con.executescript(_SCHEMA)
     with open(jsonl_path, encoding="utf-8") as f:
