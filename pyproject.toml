@@ -1,8 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "wordhelper"
-version = "0.1.0"
+version = "0.1.0a1"  # PEP 440 形式，对应 git 标签 v0.1.0-1alpha
 description = "上海初中英语考纲词汇提取工具（第一阶段：PDF → 数据库）"
 requires-python = ">=3.12"
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

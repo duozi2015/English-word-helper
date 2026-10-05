@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: wordhelper
+Version: 0.1.0a1
+Summary: 上海初中英语考纲词汇提取工具（第一阶段：PDF → 数据库）
+Requires-Python: >=3.12
