@@ -108,3 +108,10 @@ class TestPosHandling:
 
     def test_prep_no_forms(self):
         assert complete_word_forms("above", "prep.", []) == []
+
+
+class TestNoComparative:
+    def test_quite_no_comparative(self):
+        """quite 等副词无比较级。"""
+        assert complete_word_forms("quite", "adv.", []) == []
+        assert complete_word_forms("rather", "adv.", []) == []

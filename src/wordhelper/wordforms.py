@@ -169,6 +169,13 @@ _IRREGULAR_COMP = {
     "late": ("later/latter", "latest/last"),
 }
 
+# 无比较级的常用副词/形容词（受控原则：不生成）
+_NO_COMP = {
+    "quite", "rather", "almost", "nearly", "very", "too", "also",
+    "already", "always", "never", "often", "seldom", "usually",
+    "here", "there", "now", "then", "again", "ever", "once",
+}
+
 # 长形容词后缀（more/most 型，不生成 -er/-est）
 _LONG_ADJ_SUFFIXES = (
     "ful", "ous", "ing", "ed", "al", "ive", "able", "ible", "ant",
@@ -260,9 +267,11 @@ def _noun_forms(word: str) -> list[dict]:
 
 
 def _adj_forms(word: str) -> list[dict]:
-    if word in _IRREGULAR_COMP:
-        comp, sup = _IRREGULAR_COMP[word]
-        return [("comparative", comp), ("superlative", sup)]
+    if word in _IRREGULAR_COMP or word in _NO_COMP:
+        comp, sup = _IRREGULAR_COMP.get(word, (None, None))
+        if comp:
+            return [("comparative", comp), ("superlative", sup)]
+        return []
     # 以 -er 结尾（either/other/another 等虚指词）不生成比较级
     if word.endswith("er"):
         return []

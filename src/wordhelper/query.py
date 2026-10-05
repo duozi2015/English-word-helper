@@ -152,3 +152,44 @@ class VocabularyQuery:
         by_section = {r["section"]: r["c"] for r in self.con.execute(
             "SELECT section, COUNT(*) c FROM meta GROUP BY section")}
         return {"total": total, "by_section": by_section}
+
+    # ---------- pandas 输出 ----------
+
+    def to_dataframe(self, word: str):
+        """把词条清洗成二维长表：类别/条目/内容/补充。
+
+        需要 pandas（.venv 已装）；嵌套列表各占一行，便于阅读和导出。
+        """
+        import pandas as pd
+
+        rec = self.get_word(word)
+        if rec is None:
+            return pd.DataFrame(columns=["类别", "条目", "内容", "补充"])
+        rows: list[tuple] = []
+
+        def add(cat, item, content, extra=""):
+            rows.append((cat, item, content, extra))
+
+        add("基本", "id", rec["id"])
+        add("基本", "exam_level", "★" * rec["exam_level"] or "无星")
+        add("基本", "tags", "、".join(rec["tags"]))
+        for tb in rec["textbook"]:
+            add("基本", "教材", f"{tb['grade']}年级{tb['semester']}册Unit {tb['unit']}")
+        for i, m in enumerate(rec["meanings"], 1):
+            add("释义", i, f"{m['pos']} {m['meaning']}".strip())
+        for i, ex in enumerate(rec["examples"], 1):
+            add("例句", i, ex["en"], ex["zh"])
+        for wf in rec["word_forms"]:
+            src = "PDF" if wf["source"] == "document" else "规则补全"
+            add("词形", wf["type"], wf["form"], src)
+        for rw in rec["related_words"]:
+            add("相关词", rw["relation"], f"{rw['word']} {rw['pos']}".strip(), rw["meaning"])
+        for p in rec["phrases"]:
+            add("词组", "", p["text"], p["meaning"])
+        for pv in rec["proverbs"]:
+            add("谚语", "", pv["text"], pv["meaning"])
+        for i, u in enumerate(rec["usage_notes"], 1):
+            add("用法", i, u)
+        for i, tn in enumerate(rec["teaching_notes"], 1):
+            add("名师点拨", i, tn["content"], tn["type"])
+        return pd.DataFrame(rows, columns=["类别", "条目", "内容", "补充"])

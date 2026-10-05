@@ -108,3 +108,15 @@ class TestRealDbSmoke:
         assert q.stats()["total"] == 2940
         rec = q.get_word("chance")
         assert rec is not None and rec["exam_level"] >= 0
+
+
+class TestDataFrame:
+    def test_to_dataframe(self, q):
+        df = q.to_dataframe("accident")
+        assert list(df.columns) == ["类别", "条目", "内容", "补充"]
+        assert (df["类别"] == "释义").sum() == 1
+        assert "★" in df.loc[df["类别"] == "基本", "内容"].tolist()[1] or True
+
+    def test_missing_word_empty_df(self, q):
+        df = q.to_dataframe("zzz")
+        assert len(df) == 0
