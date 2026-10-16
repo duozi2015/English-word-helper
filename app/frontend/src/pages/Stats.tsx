@@ -1,0 +1,54 @@
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import { api } from '../lib/api'
+
+interface Stats {
+  total_words: number
+  learned: number
+  mastered: number
+  streak_days: number
+  due_today: number
+  weak_words: { word_id: string; word: string; lapses: number }[]
+}
+
+export default function Stats() {
+  const [s, setS] = useState<Stats | null>(null)
+  useEffect(() => {
+    api.get<Stats>('/stats').then((r) => setS(r.data))
+  }, [])
+  if (!s) return <div className="min-h-screen bg-slate-50 flex items-center justify-center">加载中…</div>
+  return (
+    <div className="min-h-screen bg-slate-50 p-6">
+      <div className="max-w-2xl mx-auto space-y-4">
+        <h1 className="text-xl font-bold text-slate-800">📊 学习统计</h1>
+        <div className="grid grid-cols-2 gap-3">
+          <Card label="已学" value={s.learned} sub={`/ ${s.total_words}`} />
+          <Card label="已掌握" value={s.mastered} sub="间隔≥7天" />
+          <Card label="连续天数" value={s.streak_days} sub="天" />
+          <Card label="今日待复习" value={s.due_today} sub="词" />
+        </div>
+        {s.weak_words.length > 0 && (
+          <div className="bg-white rounded-2xl shadow p-4">
+            <p className="font-semibold text-slate-700 mb-2">⚠️ 薄弱词 TOP</p>
+            {s.weak_words.map((w) => (
+              <p key={w.word_id} className="text-sm text-slate-600 py-1">
+                {w.word} <span className="text-red-400">错 {w.lapses} 次</span>
+              </p>
+            ))}
+          </div>
+        )}
+        <Link to="/today" className="block text-center text-blue-500">← 回到今日任务</Link>
+      </div>
+    </div>
+  )
+}
+
+function Card({ label, value, sub }: { label: string; value: number; sub: string }) {
+  return (
+    <div className="bg-white rounded-2xl shadow p-5">
+      <p className="text-sm text-slate-400">{label}</p>
+      <p className="text-3xl font-bold text-slate-800">{value}</p>
+      <p className="text-xs text-slate-400">{sub}</p>
+    </div>
+  )
+}

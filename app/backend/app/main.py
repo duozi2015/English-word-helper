@@ -1,9 +1,11 @@
+import re
 """背单词应用 FastAPI 入口。
 
 路由前缀 /words/api/*（错题本已占用裸 /api/）。
 """
 import httpx
 from fastapi import Depends, FastAPI, HTTPException, Request
+from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel
 
 from app.auth import get_current_user
@@ -12,6 +14,7 @@ from app.config import get_settings
 from app.database import get_db
 
 settings = get_settings()
+REPO_ROOT = __import__("pathlib").Path(__file__).resolve().parent.parent.parent.parent
 
 app = FastAPI(title="english-word-app", docs_url="/words/api/docs")
 
@@ -86,3 +89,32 @@ def unit_list():
 def unit_word_list(grade: str, semester: str, unit: str):
     from app import vocab_store
     return vocab_store.unit_words(grade, semester, unit)
+
+
+_TTS_CACHE = REPO_ROOT / "app" / "backend" / "tts_cache"
+_TTS_OK = re.compile(r"^[A-Za-z0-9 .,'&-]{1,60}$")  # 词形白名单，防注入
+
+
+@app.get("/words/api/tts/{word}.m4a")
+def tts(word: str):
+    """macOS say 合成发音，磁盘缓存。"""
+    import subprocess
+    if not _TTS_OK.fullmatch(word):
+        raise HTTPException(status_code=400, detail="非法词形")
+    _TTS_CACHE.mkdir(parents=True, exist_ok=True)
+    out = _TTS_CACHE / f"{word}.m4a"
+    if not out.exists():
+        tmp = out.with_suffix(".tmp.m4a")
+        r = subprocess.run(
+            ["say", "-v", "Samantha", "-o", str(tmp), word],
+            capture_output=True, timeout=10)
+        if r.returncode != 0:
+            raise HTTPException(status_code=500, detail="TTS 失败")
+        tmp.rename(out)
+    return FileResponse(out, media_type="audio/mp4")
+
+
+@app.get("/words/api/stats")
+def get_stats(user=Depends(get_current_user), db=Depends(get_db)):
+    from app import review_service
+    return review_service.stats(db, user["id"])

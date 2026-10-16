@@ -30,3 +30,21 @@ class TestProxyLogin:
         monkeypatch.setattr(main_mod.httpx, "post", fake_post)
         c = TestClient(app)
         assert c.post("/words/api/auth/login", json={"username": "dou", "password": "x"}).status_code == 401
+
+
+class TestTTS:
+    @pytest.mark.skipif(sys.platform != "darwin", reason="仅 macOS")
+    def test_tts_generates_audio(self, auth_env):
+        import pathlib
+        from fastapi.testclient import TestClient
+        from app.main import app
+        r = TestClient(app).get("/words/api/tts/chance.m4a")
+        assert r.status_code == 200
+        assert r.headers["content-type"] == "audio/mp4"
+        assert len(r.content) > 1000
+
+    def test_tts_rejects_injection(self, auth_env):
+        from fastapi.testclient import TestClient
+        from app.main import app
+        r = TestClient(app).get("/words/api/tts/%3B%20rm%20-rf.m4a")
+        assert r.status_code in (400, 404)  # 白名单拦截

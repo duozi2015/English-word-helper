@@ -1,122 +1,58 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { useEffect } from 'react'
+import { Navigate, Route, Routes, useNavigate } from 'react-router-dom'
+import { useAuth } from './stores/auth'
+import Login from './pages/Login'
+import Today from './pages/Today'
+import Browse from './pages/Browse'
+import Stats from './pages/Stats'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function Shell({ children }: { children: React.ReactNode }) {
+  const { user, logout } = useAuth()
+  const nav = useNavigate()
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div className="min-h-screen bg-slate-50">
+      <nav className="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-100">
+        <div className="max-w-2xl mx-auto flex items-center gap-1 px-4 h-12">
+          <span className="font-bold text-slate-700 mr-3">📚 背单词</span>
+          {[
+            ['今日', '/today'],
+            ['词表', '/browse'],
+            ['统计', '/stats'],
+          ].map(([label, to]) => (
+            <button key={to} onClick={() => nav(to)}
+              className="px-3 py-1 rounded-lg text-sm text-slate-600 hover:bg-slate-100">
+              {label}
+            </button>
+          ))}
+          <span className="flex-1" />
+          <span className="text-sm text-slate-400">{user?.display_name || user?.username}</span>
+          <button onClick={logout} className="text-sm text-slate-400 hover:text-red-400 px-2">退出</button>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      </nav>
+      {children}
+    </div>
   )
 }
 
-export default App
+function Protected({ children }: { children: React.ReactNode }) {
+  const { user, loading, fetchMe } = useAuth()
+  useEffect(() => {
+    fetchMe()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  if (loading) return <div className="min-h-screen flex items-center justify-center text-slate-400">…</div>
+  if (!user) return <Navigate to="/login" replace />
+  return <Shell>{children}</Shell>
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/today" element={<Protected><Today /></Protected>} />
+      <Route path="/browse" element={<Protected><Browse /></Protected>} />
+      <Route path="/stats" element={<Protected><Stats /></Protected>} />
+      <Route path="*" element={<Navigate to="/today" replace />} />
+    </Routes>
+  )
+}

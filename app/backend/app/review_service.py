@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from datetime import datetime, time
 
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from app import sm2, vocab_store
@@ -106,4 +106,42 @@ def submit_review(
         "new_interval": out["new_interval"],
         "new_rep_count": out["new_rep_count"],
         "next_review_date": out["next_review_date"].isoformat(),
+    }
+
+
+def stats(db: Session, user_id: int) -> dict:
+    """学习统计：已学/掌握/连续天数/今日待复习/薄弱词。"""
+    total = vocab_store.word_count()
+    states = db.execute(select(UserWordState).where(UserWordState.user_id == user_id)).scalars().all()
+    learned = len(states)
+    mastered = sum(1 for s in states if s.rep_count >= 1 and s.interval_days >= 7)
+    now = datetime.now()
+    due_today = sum(1 for s in states if s.next_review_date and s.next_review_date <= now)
+    # 连续天数：按学习流水的日期，从今天/昨天往前数
+    days = set(db.execute(
+        select(func.date(WordLearningRecord.created_at)).where(
+            WordLearningRecord.user_id == user_id)
+    ).scalars())
+    streak = 0
+    d = datetime.now().date()
+    from datetime import timedelta as _td
+    if d.isoformat() not in days:
+        d -= _td(days=1)
+    while d.isoformat() in days:
+        streak += 1
+        d -= _td(days=1)
+    weak = sorted(
+        (s for s in states if s.lapses > 0), key=lambda s: -s.lapses)[:5]
+    weak_words = []
+    for s in weak:
+        rec = vocab_store.get_by_id(s.word_id)
+        if rec:
+            weak_words.append({"word_id": s.word_id, "word": rec["word"], "lapses": s.lapses})
+    return {
+        "total_words": total,
+        "learned": learned,
+        "mastered": mastered,
+        "streak_days": streak,
+        "due_today": due_today,
+        "weak_words": weak_words,
     }
