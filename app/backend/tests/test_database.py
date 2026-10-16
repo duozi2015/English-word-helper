@@ -33,6 +33,7 @@ class TestVocabEngine:
 class TestUserEngineUrl:
     def test_mysql_url_composed(self, monkeypatch):
         """未显式给 DATABASE_URL 时按 DB_* 组装 pymysql URL。"""
+        monkeypatch.setenv("DATABASE_URL", "")  # 清掉 app/.env 里可能存在的显式 URL
         monkeypatch.setenv("DB_USER", "u")
         monkeypatch.setenv("DB_PASSWORD", "p")
         monkeypatch.setenv("DB_NAME", "mistake_test")

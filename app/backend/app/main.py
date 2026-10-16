@@ -2,6 +2,7 @@
 
 路由前缀 /words/api/*（错题本已占用裸 /api/）。
 """
+import httpx
 from fastapi import Depends, FastAPI, HTTPException, Request
 from pydantic import BaseModel
 
@@ -18,6 +19,15 @@ app = FastAPI(title="english-word-app", docs_url="/words/api/docs")
 @app.get("/health")
 def health():
     return {"status": "ok", "app": "english-word-app", "env": settings.APP_ENV}
+
+
+@app.post("/words/api/auth/login")
+def login(body: dict):
+    """透传错题本登录（零复制用户管理；返回其 TokenResponse）。"""
+    r = httpx.post(f"{settings.MISTAKEBOOK_API}/api/v1/auth/login",
+                   json={"username": body.get("username"), "password": body.get("password")},
+                   timeout=5)
+    return JSONResponse(status_code=r.status_code, content=r.json())
 
 
 @app.get("/words/api/auth/me")
