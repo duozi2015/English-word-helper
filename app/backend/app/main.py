@@ -27,10 +27,13 @@ def health():
 @app.post("/words/api/auth/login")
 def login(body: dict):
     """透传错题本登录（零复制用户管理；返回其 TokenResponse）。"""
-    r = httpx.post(f"{settings.MISTAKEBOOK_API}/api/v1/auth/login",
-                   json={"username": body.get("username"), "password": body.get("password")},
-                   timeout=5)
-    return JSONResponse(status_code=r.status_code, content=r.json())
+    try:
+        r = httpx.post(f"{settings.MISTAKEBOOK_API}/api/v1/auth/login",
+                       json={"username": body.get("username"), "password": body.get("password")},
+                       timeout=5)
+        return JSONResponse(status_code=r.status_code, content=r.json())
+    except (httpx.HTTPError, ValueError):
+        raise HTTPException(status_code=502, detail="认证服务不可用")
 
 
 @app.get("/words/api/auth/me")

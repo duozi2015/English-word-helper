@@ -48,3 +48,26 @@ class TestTTS:
         from app.main import app
         r = TestClient(app).get("/words/api/tts/%3B%20rm%20-rf.m4a")
         assert r.status_code in (400, 404)  # 白名单拦截
+
+
+class TestProxyLoginRobustness:
+    def test_non_json_upstream_502(self, monkeypatch):
+        from app import main as main_mod
+
+        def fake_post(url, json=None, timeout=None):
+            return httpx.Response(200, text="<html>nginx</html>",
+                                  request=httpx.Request("POST", url))
+
+        monkeypatch.setattr(main_mod.httpx, "post", fake_post)
+        c = TestClient(app)
+        assert c.post("/words/api/auth/login", json={"username": "dou", "password": "x"}).status_code == 502
+
+    def test_timeout_502(self, monkeypatch):
+        from app import main as main_mod
+
+        def fake_post(url, json=None, timeout=None):
+            raise httpx.ConnectTimeout("timeout", request=httpx.Request("POST", url))
+
+        monkeypatch.setattr(main_mod.httpx, "post", fake_post)
+        c = TestClient(app)
+        assert c.post("/words/api/auth/login", json={"username": "dou", "password": "x"}).status_code == 502
