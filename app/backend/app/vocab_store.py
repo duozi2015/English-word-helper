@@ -10,7 +10,7 @@ from app.config import get_settings
 
 @lru_cache
 def _connect() -> sqlite3.Connection:
-    con = sqlite3.connect(get_settings().VOCAB_DB)
+    con = sqlite3.connect(get_settings().VOCAB_DB, check_same_thread=False)
     con.row_factory = sqlite3.Row
     return con
 

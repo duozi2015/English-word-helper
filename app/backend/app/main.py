@@ -2,7 +2,8 @@
 
 路由前缀 /words/api/*（错题本已占用裸 /api/）。
 """
-from fastapi import Depends, FastAPI
+from fastapi import Depends, FastAPI, HTTPException, Request
+from pydantic import BaseModel
 
 from app.auth import get_current_user
 from app.config import get_settings
@@ -21,6 +22,37 @@ def health():
 @app.get("/words/api/auth/me")
 def auth_me(user=Depends(get_current_user)):
     return user
+
+
+class ReviewIn(BaseModel):
+    word_id: str
+    mode: str  # card/choice/spell
+    quality: int  # 1/2/3/5
+    wrong_answer: str | None = None
+    response_ms: int | None = None
+
+
+@app.get("/words/api/deck/today")
+def deck_today(new_limit: int = 10, user=Depends(get_current_user),
+               db=Depends(get_db)):
+    from app import review_service
+    return review_service.deck_today(db, user["id"], new_limit)
+
+
+@app.post("/words/api/review")
+def review(body: ReviewIn, request: Request,
+           user=Depends(get_current_user), db=Depends(get_db)):
+    from app import review_service
+    sender = mistake_client.make_sender(request.headers.get("authorization", ""))
+    try:
+        return review_service.submit_review(
+            db, user["id"], body.word_id, body.mode, body.quality,
+            wrong_answer=body.wrong_answer, response_ms=body.response_ms,
+            mistake_client=sender)
+    except review_service.WordNotFound:
+        raise HTTPException(status_code=404, detail="词条不存在")
+    except ValueError as e:
+        raise HTTPException(status_code=422, detail=str(e))
 
 
 @app.get("/words/api/words/{word_id}")
