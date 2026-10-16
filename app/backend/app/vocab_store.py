@@ -62,3 +62,11 @@ def unit_words(grade: str, semester: str, unit: str) -> list[dict]:
 
 def word_count() -> int:
     return _connect().execute("SELECT COUNT(*) FROM vocabulary").fetchone()[0]
+
+
+def iter_words_ordered() -> list[dict]:
+    """全部词条，★ 数降序（高频优先）、同星按 id。"""
+    rows = _connect().execute(
+        "SELECT json FROM vocabulary ORDER BY exam_level DESC, id"
+    ).fetchall()
+    return [json.loads(r["json"]) for r in rows]
