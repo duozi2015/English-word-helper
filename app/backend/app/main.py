@@ -6,6 +6,7 @@ from fastapi import Depends, FastAPI, HTTPException, Request
 from pydantic import BaseModel
 
 from app.auth import get_current_user
+from app import mistake_client
 from app.config import get_settings
 from app.database import get_db
 
