@@ -118,3 +118,20 @@ def tts(word: str):
 def get_stats(user=Depends(get_current_user), db=Depends(get_db)):
     from app import review_service
     return review_service.stats(db, user["id"])
+
+
+@app.get("/words/api/quiz/choice/{word_id}")
+def choice_quiz(word_id: str):
+    """四选一题组：正确释义 + 同词性干扰项（已打乱）。"""
+    import random
+    from app import vocab_store
+    rec = vocab_store.get_by_id(word_id)
+    if rec is None:
+        raise HTTPException(status_code=404, detail="词条不存在")
+    pos = rec["meanings"][0]["pos"] if rec["meanings"] else ""
+    distractors = vocab_store.choice_distractors(word_id, pos, 3)
+    options = [m["meaning"] for m in rec["meanings"][:1]] + distractors
+    random.shuffle(options)
+    return {"word_id": word_id, "word": rec["word"],
+            "correct": rec["meanings"][0]["meaning"] if rec["meanings"] else "",
+            "options": options}

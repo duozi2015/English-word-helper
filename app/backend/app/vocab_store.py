@@ -70,3 +70,31 @@ def iter_words_ordered() -> list[dict]:
         "SELECT json FROM vocabulary ORDER BY exam_level DESC, id"
     ).fetchall()
     return [json.loads(r["json"]) for r in rows]
+
+
+def choice_distractors(word_id: str, pos: str, n: int = 3) -> list[str]:
+    """同词性随机干扰释义（去重、去正确项；不足时放宽词性）。"""
+    import random as _random
+    con = _connect()
+    correct = get_by_id(word_id)
+    correct_meanings = {m["meaning"] for m in correct["meanings"]} if correct else set()
+    out: list[str] = []
+    for scope in (f"AND meanings LIKE ?", ""):
+        if scope:
+            rows = con.execute(
+                "SELECT json FROM vocabulary WHERE json LIKE ? AND id != ? ORDER BY RANDOM() LIMIT ?",
+                (f'%"{pos}"%', word_id, 50)).fetchall()
+        else:
+            rows = con.execute(
+                "SELECT json FROM vocabulary WHERE id != ? ORDER BY RANDOM() LIMIT ?",
+                (word_id, 50)).fetchall()
+        for r in rows:
+            rec = json.loads(r["json"])
+            for m in rec["meanings"]:
+                if m["meaning"] not in correct_meanings and m["meaning"] not in out:
+                    out.append(m["meaning"])
+            if len(out) >= n:
+                break
+        if len(out) >= n:
+            break
+    return out[:n]
