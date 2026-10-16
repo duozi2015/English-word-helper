@@ -1,15 +1,14 @@
 # 实施计划：背单词 Web 应用（第二阶段）
 
-> 设计依据：design2.md v1.0。TDD 开发；仓库：新独立仓库 `english-word-app`（方案C），
-> 与本仓库（English-word-helper，词库管道）分离，词库只读依赖。
+> 设计依据：design2.md v1.0。TDD 开发。**单仓库方案3**：应用代码在本仓库 `app/` 子目录，
+> 独立 FastAPI 进程(8001) + 独立前端构建，部署只取 `app/` 产物。词库 SQLite 直接引用 `output/vocabulary.db`。
 
 ## 任务清单
 
-### T0 仓库与骨架
-- `gh repo create duozi2015/english-word-app`（gh 已认证；失败则请用户手动建）
-- 目录：`backend/app/{main,config,database,auth,schemas}.py` + `backend/tests/` + `frontend/`（Vite react-ts 模板）
-- requirements：fastapi 0.111 / uvicorn / sqlalchemy 2.0 / pymysql / cryptography / httpx / python-jose / pytest（版本对齐错题本）
-- Python 3.12 venv；前端 `npm create vite`，装 tailwind/zustand/react-router/axios（版本对齐错题本 package.json）
+### T0 仓库骨架
+- `app/backend/`：`app/{main,config,database,auth,schemas}.py` + `tests/` + `requirements.txt`（fastapi 0.111 / uvicorn / sqlalchemy 2.0 / pymysql / cryptography / httpx / python-jose / pytest，版本对齐错题本）
+- Python 3.12 venv（`app/backend/venv`，与错题本生产一致）
+- `app/frontend/`：Vite react-ts 模板 + tailwind/zustand/react-router/axios（版本对齐错题本）
 - 验证：uvicorn 起服务 `/health` 200；vitest 空跑通过
 
 ### T1 配置与多数据库
