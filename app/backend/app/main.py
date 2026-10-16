@@ -21,3 +21,25 @@ def health():
 @app.get("/words/api/auth/me")
 def auth_me(user=Depends(get_current_user)):
     return user
+
+
+@app.get("/words/api/words/{word_id}")
+def word_detail(word_id: str):
+    from app import vocab_store
+    rec = vocab_store.get_by_id(word_id)
+    if rec is None:
+        from fastapi import HTTPException
+        raise HTTPException(status_code=404, detail="词条不存在")
+    return rec
+
+
+@app.get("/words/api/units")
+def unit_list():
+    from app import vocab_store
+    return vocab_store.units()
+
+
+@app.get("/words/api/units/{grade}/{semester}/{unit}")
+def unit_word_list(grade: str, semester: str, unit: str):
+    from app import vocab_store
+    return vocab_store.unit_words(grade, semester, unit)
