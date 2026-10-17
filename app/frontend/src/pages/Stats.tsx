@@ -21,12 +21,25 @@ export default function Stats() {
     <div className="min-h-screen bg-slate-50 p-6">
       <div className="max-w-2xl mx-auto space-y-4">
         <h1 className="text-xl font-bold text-slate-800">📊 学习统计</h1>
+
+        {/* 主行动区：今日任务入口 */}
+        <Link
+          to="/today"
+          className="block bg-blue-500 hover:bg-blue-600 text-white rounded-2xl px-6 py-4 text-center font-semibold shadow transition"
+        >
+          开始今日任务
+          {s.due_today > 0 && (
+            <span className="ml-2 inline-block bg-white/20 rounded-full px-2 text-sm">{s.due_today} 词待复习</span>
+          )}
+        </Link>
+
         <div className="grid grid-cols-2 gap-3">
-          <Card label="已学" value={s.learned} sub={`/ ${s.total_words}`} />
-          <Card label="已掌握" value={s.mastered} sub="间隔≥7天" />
+          <Card label="已学" value={s.learned} sub={`/ 全词库 ${s.total_words} 词`} />
+          <Card label="已掌握" value={s.mastered} sub="连续复习、间隔≥7天即算掌握" />
           <Card label="连续天数" value={s.streak_days} sub="天" />
           <Card label="今日待复习" value={s.due_today} sub="词" />
         </div>
+
         {s.weak_words.length > 0 && (
           <div className="bg-white rounded-2xl shadow p-4">
             <p className="font-semibold text-slate-700 mb-2">⚠️ 薄弱词 TOP</p>
@@ -37,7 +50,6 @@ export default function Stats() {
             ))}
           </div>
         )}
-        <Link to="/today" className="block text-center text-blue-500">← 回到今日任务</Link>
       </div>
     </div>
   )

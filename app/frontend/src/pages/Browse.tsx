@@ -1,17 +1,25 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { api, type WordRecord } from '../lib/api'
 
 interface Unit { grade: string; semester: string; unit: string }
 
+const GRADES = ['六', '七', '八']
+
 export default function Browse() {
   const [units, setUnits] = useState<Unit[]>([])
+  const [grade, setGrade] = useState('六')
   const [sel, setSel] = useState<Unit | null>(null)
   const [words, setWords] = useState<WordRecord[]>([])
 
   useEffect(() => {
     api.get<Unit[]>('/units').then((r) => setUnits(r.data))
   }, [])
+
+  const gradeUnits = useMemo(
+    () => units.filter((u) => u.grade === grade),
+    [units, grade],
+  )
 
   const open = async (u: Unit) => {
     setSel(u)
@@ -23,8 +31,25 @@ export default function Browse() {
     <div className="min-h-screen bg-slate-50 p-6">
       <div className="max-w-2xl mx-auto space-y-4">
         <h1 className="text-xl font-bold text-slate-800">📖 教材单元词表</h1>
+
+        {/* 年级分组（折叠：只展开当前年级） */}
+        <div className="flex gap-2">
+          {GRADES.map((g) => (
+            <button
+              key={g}
+              onClick={() => setGrade(g)}
+              className={`rounded-full px-5 py-2 text-sm font-medium transition ${
+                grade === g ? 'bg-slate-800 text-white' : 'bg-white text-slate-500 border border-slate-200'
+              }`}
+            >
+              {g}年级
+            </button>
+          ))}
+        </div>
+
+        {/* 当前年级的学期/单元 */}
         <div className="flex flex-wrap gap-2">
-          {units.map((u, i) => (
+          {gradeUnits.map((u, i) => (
             <button
               key={i}
               onClick={() => open(u)}
@@ -32,12 +57,14 @@ export default function Browse() {
                 sel === u ? 'bg-blue-500 text-white' : 'bg-white text-slate-600 border border-slate-200'
               }`}
             >
-              {u.grade}{u.semester} U{u.unit}
+              {u.semester} U{u.unit}
             </button>
           ))}
         </div>
+
         {sel && (
           <div className="bg-white rounded-2xl shadow p-4 divide-y divide-slate-100">
+            <p className="text-sm text-slate-400 pb-2">{sel.grade}年级{sel.semester}册 Unit {sel.unit} · {words.length} 词</p>
             {words.map((w) => (
               <div key={w.id} className="py-3">
                 <p className="font-semibold text-slate-800">
