@@ -104,7 +104,9 @@ GET  /words/stats              # 学习统计（连续天数/掌握数/薄弱词
 
 - error_type 用 `拼写错误`/`词义混淆`（错题本侧已交付：commit 37ba0bb0，AI-exam 分支，
   契约测试 `backend/tests/test_word_questions.py` 4 例钉住：body 往返/SM-2 初始化/error_type 筛选/用户隔离）
-- 联调测试账号（mistake_test 库）：dou / dou12345678（student）
+- 联调测试账号（mistake_test 库）：dou / dou12345678（student）；testdou / 12345678（id=6）
+- **双向跳转**（均已交付）：背单词导航「📝 错题本」→ 同域根路径（VITE_MISTAKE_URL 可覆盖）；
+  错题本学生端首页「📚 背单词」→ `/words/`（VITE_WORD_APP_URL 可覆盖，commit 3f846529）
 - 服务端自动初始化 SM-2 字段（ef=2.5 等）→ 错词自动进错题本复习队列
 - source 标记 `english-word-helper` 便于后续筛选；tags 用 `单词:{word}` 补充具体词
 - 注意：错题本删除为软删除（status→archived），任何查询需带 status=active
