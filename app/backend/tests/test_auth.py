@@ -4,6 +4,8 @@
 token 用测试密钥自签，覆盖：有效/类型错/黑名单/用户不存在/过期/无头。
 """
 import sys
+
+import httpx
 from datetime import datetime, timedelta, timezone
 from uuid import uuid4
 
@@ -176,3 +178,47 @@ class TestTTS:
         from app.main import app
         r = TestClient(app).get("/words/api/tts/%3B%20rm%20-rf.m4a")
         assert r.status_code in (400, 404)  # 白名单拦截
+
+
+class TestFallbackLogin:
+    def test_fallback_verify_and_issue_token(self, auth_env, monkeypatch):
+        """错题本不可达时：bcrypt 直验 users 表 + 自签 token。"""
+        from app import main as main_mod
+        from passlib.context import CryptContext
+
+        def unreachable(url, json=None, timeout=None):
+            raise httpx.ConnectTimeout("down", request=httpx.Request("POST", url))
+
+        monkeypatch.setattr(main_mod.httpx, "post", unreachable)
+        # 给 dou 一个已知密码的 bcrypt 哈希
+        from sqlalchemy import create_engine
+        from sqlalchemy.orm import sessionmaker
+        from sqlalchemy.pool import StaticPool
+        from fastapi.testclient import TestClient
+        from app.main import app
+        eng = create_engine("sqlite:///:memory:", connect_args={"check_same_thread": False}, poolclass=StaticPool)
+        ctx = CryptContext(schemes=["bcrypt"], deprecated="auto")
+        with eng.begin() as conn:
+            conn.execute(text("CREATE TABLE users (id INTEGER PRIMARY KEY, username VARCHAR(50), "
+                              "password_hash VARCHAR(255), display_name VARCHAR(100), role VARCHAR(20))"))
+            conn.execute(text("CREATE TABLE token_blacklist (id INTEGER PRIMARY KEY, jti VARCHAR(36) UNIQUE, expires_at DATETIME)"))
+            conn.execute(text("INSERT INTO users VALUES (2, 'dou', :h, '小豆', 'student')"), {"h": ctx.hash("dou12345678")})
+        from app import main as _m
+        TestSession = sessionmaker(bind=eng)
+        import app.database as _db
+        monkeypatch.setattr(_db, "UserSessionLocal", TestSession)
+        try:
+            c = TestClient(app)
+            r = c.post("/words/api/auth/login", json={"username": "dou", "password": "dou12345678"})
+            assert r.status_code == 200
+            assert r.json()["access_token"]
+            assert r.json().get("_fallback") is True
+            # 错误密码 → 401
+            r2 = c.post("/words/api/auth/login", json={"username": "dou", "password": "nope"})
+            assert r2.status_code == 401
+            # 用 fallback token 能过 /auth/me
+            r3 = c.get("/words/api/auth/me", headers={"Authorization": f"Bearer {r.json()['access_token']}"})
+            assert r3.status_code == 200
+            assert r3.json()["username"] == "dou"
+        finally:
+            app.dependency_overrides.clear()

@@ -26,14 +26,45 @@ def health():
 
 @app.post("/words/api/auth/login")
 def login(body: dict):
-    """透传错题本登录（零复制用户管理；返回其 TokenResponse）。"""
+    """登录：主路透传错题本（零复制用户管理）；错题本不可达时后备直验同库 bcrypt。"""
+    username = body.get("username", "")
+    password = body.get("password", "")
     try:
         r = httpx.post(f"{settings.MISTAKEBOOK_API}/api/v1/auth/login",
-                       json={"username": body.get("username"), "password": body.get("password")},
+                       json={"username": username, "password": password},
                        timeout=5)
         return JSONResponse(status_code=r.status_code, content=r.json())
     except (httpx.HTTPError, ValueError):
-        raise HTTPException(status_code=502, detail="认证服务不可用")
+        pass  # 上游不可达 → 后备登录
+    from datetime import datetime, timedelta, timezone
+    from uuid import uuid4
+    from jose import jwt as jose_jwt
+    from passlib.context import CryptContext
+    from sqlalchemy import text as _text
+
+    from app.database import UserSessionLocal
+
+    fresh = get_settings()  # 测试环境密钥可能被 monkeypatch，取新鲜配置
+    ctx = CryptContext(schemes=["bcrypt"], deprecated="auto")
+    with UserSessionLocal() as db:  # type: ignore[call-arg]
+        row = db.execute(
+            _text("SELECT id, username, password_hash FROM users WHERE username = :u"),
+            {"u": username},
+        ).mappings().first()
+    if not row or not ctx.verify(password, row["password_hash"]):
+        raise HTTPException(status_code=401, detail="用户名或密码不正确")
+    now = datetime.now(timezone.utc)
+    claims = lambda typ, mins: {  # noqa: E731
+        "sub": str(row["id"]), "username": row["username"], "jti": str(uuid4()),
+        "type": typ, "exp": now + timedelta(minutes=mins), "iat": now}
+    return {
+        "access_token": jose_jwt.encode(claims("access", 1440), fresh.JWT_SECRET,
+                                        algorithm=fresh.JWT_ALGORITHM),
+        "refresh_token": jose_jwt.encode(claims("refresh", 10080), fresh.JWT_SECRET,
+                                         algorithm=fresh.JWT_ALGORITHM),
+        "token_type": "bearer",
+        "_fallback": True,  # 标记：错题本不可达时的后备登录
+    }
 
 
 @app.get("/words/api/auth/me")
