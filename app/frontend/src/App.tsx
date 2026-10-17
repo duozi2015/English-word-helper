@@ -9,6 +9,8 @@ import Stats from './pages/Stats'
 function Shell({ children }: { children: React.ReactNode }) {
   const { user, logout } = useAuth()
   const nav = useNavigate()
+  // 生产：错题本在同域根路径；开发可用 VITE_MISTAKE_URL 覆盖
+  const mistakeUrl = import.meta.env.VITE_MISTAKE_URL ?? '/'
   return (
     <div className="min-h-screen bg-slate-50">
       <nav className="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-100">
@@ -25,7 +27,14 @@ function Shell({ children }: { children: React.ReactNode }) {
             </button>
           ))}
           <span className="flex-1" />
-          <span className="text-sm text-slate-400">{user?.display_name || user?.username}</span>
+          <a
+            href={mistakeUrl}
+            className="px-3 py-1.5 rounded-lg text-sm bg-slate-800 text-white hover:bg-slate-700 transition"
+            title="去错题本"
+          >
+            📝 错题本
+          </a>
+          <span className="text-sm text-slate-400 hidden sm:inline">{user?.display_name || user?.username}</span>
           <button onClick={logout} className="text-sm text-slate-400 hover:text-red-400 px-2">退出</button>
         </div>
       </nav>
