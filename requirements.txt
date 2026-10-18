@@ -1,3 +1,4 @@
+# 第一阶段词库管道依赖（背单词后端依赖见 app/backend/requirements.txt，两者勿混用）
 pymupdf>=1.24
 jsonschema>=4.20
 inflect>=7.0

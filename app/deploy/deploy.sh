@@ -41,6 +41,9 @@ echo "=== 3. 构建前端（npm ci 严格按 package-lock，保证可重复） =
 cd "$FRONTEND_DIR"
 npm ci --silent
 npm run build
+# 建 webroot/words → dist 符号链接（nginx 用 root 方案服务 SPA，避开 alias+try_files 循环坑）
+mkdir -p "$FRONTEND_DIR/webroot"
+ln -sfn "$FRONTEND_DIR/dist" "$FRONTEND_DIR/webroot/words"
 
 echo "=== 4. 重启后端（优先走 launchd 托管，与 plist 配置一致） ==="
 if launchctl print "gui/$(id -u)/$PLIST_LABEL" > /dev/null 2>&1; then
