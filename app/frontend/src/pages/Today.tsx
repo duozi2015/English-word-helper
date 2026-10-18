@@ -89,6 +89,7 @@ export default function Today() {
 
   const gotoNextStage = () => {
     const next = NEXT[stage]
+    setOver(null) // 先清遮罩，再切阶段
     setStage(next)
     setIdx(0)
     resetItemState()
