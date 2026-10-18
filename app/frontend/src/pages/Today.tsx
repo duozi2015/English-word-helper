@@ -2,36 +2,46 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { api, type WordRecord, type ReviewOut } from '../lib/api'
 import { sfxCombo, sfxCorrect, sfxDone, sfxFlip, sfxWrong, toggleMuted } from '../lib/sfx'
 
-type Mode = 'card' | 'choice' | 'spell'
-type Phase = 'loading' | 'done' | 'front' | 'back'
+type Stage = 'card' | 'choice' | 'spell'
 type WordBrief = { word_id: string; word: string }
+type SpellLevel = 'perfect' | 'hinted' | 'wrong'
+
+const STAGES: Stage[] = ['card', 'choice', 'spell']
+const STAGE_LABEL: Record<Stage, string> = { card: '🃏 翻卡', choice: '✅ 选择', spell: '⌨️ 拼写' }
+const NEXT: Record<Stage, Stage> = { card: 'choice', choice: 'spell', spell: 'card' }
 
 export default function Today() {
   const [queue, setQueue] = useState<WordBrief[]>([])
+  const [stage, setStage] = useState<Stage>('card')
   const [idx, setIdx] = useState(0)
-  const [mode, setMode] = useState<Mode>('card')
-  const [phase, setPhase] = useState<Phase>('loading')
+  const [over, setOver] = useState<null | 'stage' | 'all'>(null) // 阶段完成/全部完成遮罩
   const [detail, setDetail] = useState<WordRecord | null>(null)
+  const [flipped, setFlipped] = useState(false)
   const [combo, setCombo] = useState(0)
   const [maxCombo, setMaxCombo] = useState(0)
   const [muted, setMuted] = useState(false)
   const [answered, setAnswered] = useState<null | { ok: boolean; correct: string }>(null)
   const [spellInput, setSpellInput] = useState('')
   const [hintLevel, setHintLevel] = useState(0)
-  const [spellResult, setSpellResult] = useState<null | { level: 'perfect' | 'hinted' | 'wrong'; answer: string }>(null)
+  const [spellResult, setSpellResult] = useState<null | { level: SpellLevel; answer: string }>(null)
   const comboRef = useRef(0)
 
   const current = queue[idx]
 
   useEffect(() => {
-    api.get<{due: WordBrief[]; new: WordBrief[]}>('/deck/today').then((r) => {
+    api.get<{ due: WordBrief[]; new: WordBrief[] }>('/deck/today').then((r) => {
       const q = [...r.data.due, ...r.data.new]
       setQueue(q)
-      setPhase(q.length ? 'front' : 'done')
       if (q.length) loadDetail(q[0].word_id)
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  // 单词一出现立即朗读（每阶段每题）
+  useEffect(() => {
+    if (current && !over) speak(current.word)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [stage, idx])
 
   const loadDetail = (wid: string) => {
     setDetail(null)
@@ -47,11 +57,13 @@ export default function Today() {
     setSpellInput('')
     setHintLevel(0)
     setSpellResult(null)
+    setFlipped(false)
   }
 
-  const submit = async (quality: 1 | 2 | 3 | 5, wrong = '') => {
+  const advance = async (quality: 1 | 2 | 3 | 5, wrong = '') => {
+    if (!current) return
     await api.post<ReviewOut>('/review', {
-      word_id: current.word_id, mode, quality, wrong_answer: wrong || undefined,
+      word_id: current.word_id, mode: stage, quality, wrong_answer: wrong || undefined,
     })
     if (quality >= 3) {
       comboRef.current += 1
@@ -59,213 +71,271 @@ export default function Today() {
       setMaxCombo((m) => Math.max(m, comboRef.current))
       sfxCorrect()
       if (comboRef.current >= 3) sfxCombo(comboRef.current)
-      speak(current.word)
     } else {
       comboRef.current = 0
       setCombo(0)
       sfxWrong()
     }
     if (idx + 1 >= queue.length) {
+      // 本阶段完成；拼写是最后一关 → 烟花
       sfxDone()
-      setPhase('done')
+      setOver(stage === 'spell' ? 'all' : 'stage')
     } else {
       setIdx(idx + 1)
-      setPhase('front')
       resetItemState()
       loadDetail(queue[idx + 1].word_id)
     }
   }
 
+  const gotoNextStage = () => {
+    const next = NEXT[stage]
+    setStage(next)
+    setIdx(0)
+    resetItemState()
+    loadDetail(queue[0].word_id)
+  }
+
   const norm = (s: string) => s.trim().toLowerCase().replace(/\s+/g, ' ')
 
-  if (phase === 'loading')
-    return <Center><p className="text-slate-400">加载中…</p></Center>
+  const checkSpell = () => {
+    if (!current) return
+    const ok = norm(spellInput) === norm(current.word)
+    setSpellResult({ level: ok ? (hintLevel > 0 ? 'hinted' : 'perfect') : 'wrong', answer: spellInput })
+  }
 
-  if (phase === 'done')
+  // ---------- 遮罩视图 ----------
+  if (over === 'stage')
     return (
       <Center>
         <Confetti />
         <div className="bg-white rounded-2xl shadow p-10 text-center space-y-3 relative z-10">
-          <p className="text-6xl anim-bounce-in">🎉</p>
-          <p className="text-2xl font-bold text-slate-800 anim-slide-up">今日任务完成！</p>
+          <p className="text-6xl anim-bounce-in">{stage === 'card' ? '🃏' : stage === 'choice' ? '✅' : '⌨️'}</p>
+          <p className="text-2xl font-bold text-slate-800 anim-slide-up">{STAGE_LABEL[stage].slice(2)}阶段完成！</p>
+          <p className="text-slate-400 text-sm anim-slide-up">即将进入{STAGE_LABEL[NEXT[stage]].slice(2)}阶段…</p>
+        </div>
+        <AutoAdvance onDone={gotoNextStage} ms={2200} />
+      </Center>
+    )
+
+  if (over === 'all')
+    return (
+      <Center>
+        <Fireworks />
+        <div className="bg-white rounded-2xl shadow p-10 text-center space-y-3 relative z-10">
+          <p className="text-6xl anim-bounce-in">🎆</p>
+          <p className="text-2xl font-bold text-slate-800 anim-slide-up">三阶段全部完成！</p>
           <p className="text-slate-500 anim-slide-up">
             共 {queue.length} 词 · 最高连击 <span className="text-orange-500 font-bold">🔥×{maxCombo}</span>
           </p>
           <p className="text-slate-400 text-sm anim-slide-up">明天记得回来复习哦～</p>
         </div>
+        <AutoAdvance onDone={() => setOver(null)} ms={6000} />
       </Center>
     )
+
+  if (!queue.length)
+    return <Center><p className="text-slate-400">今天没有待学习的单词，休息一下吧 🌿</p></Center>
 
   const firstMeaning = detail?.meanings[0]?.meaning ?? ''
   const firstPos = detail?.meanings[0]?.pos ?? ''
 
   return (
     <div className="max-w-md mx-auto px-4 py-6">
-      {/* 顶栏：连击 + 静音 */}
+      {/* 顶栏：阶段指示 + 连击 + 静音 */}
       <div className="flex items-center justify-between mb-3">
-        <div className="h-6">
-          {combo >= 2 && (
-            <span className="anim-flame inline-block text-orange-500 font-bold">
-              🔥 连击 ×{combo}
-            </span>
-          )}
+        <div className="flex gap-1">
+          {STAGES.map((s) => {
+            const done = STAGES.indexOf(s) < STAGES.indexOf(stage)
+            const active = s === stage
+            return (
+              <span key={s}
+                className={`text-xs px-2 py-1 rounded-full ${
+                  active ? 'bg-blue-500 text-white' :
+                  done ? 'bg-emerald-100 text-emerald-600' : 'bg-slate-100 text-slate-400'}`}>
+                {done ? '✓ ' : ''}{STAGE_LABEL[s]}
+              </span>
+            )
+          })}
         </div>
-        <button
-          onClick={() => setMuted(toggleMuted())}
-          className="text-lg px-2 py-1 rounded-lg hover:bg-slate-100"
-          title="音效开关"
-        >
-          {muted ? '🔇' : '🔈'}
-        </button>
-      </div>
-
-      {/* 模式切换 */}
-      <div className="flex gap-2 mb-4">
-        {([['card', '🃏 认卡'], ['choice', '✅ 选择'], ['spell', '⌨️ 拼写']] as [Mode, string][]).map(([m, label]) => (
-          <button key={m} onClick={() => { setMode(m); setPhase('front'); resetItemState(); sfxFlip() }}
-            className={`flex-1 rounded-lg py-2 text-sm font-medium transition ${
-              mode === m ? 'bg-blue-500 text-white shadow' : 'bg-white text-slate-500 border border-slate-200'}`}>
-            {label}
+        <div className="flex items-center gap-2">
+          <div className="h-6">
+            {combo >= 2 && <span className="anim-flame inline-block text-orange-500 font-bold">🔥×{combo}</span>}
+          </div>
+          <button onClick={() => setMuted(toggleMuted())} className="text-lg px-1" title="音效开关">
+            {muted ? '🔇' : '🔈'}
           </button>
-        ))}
+        </div>
       </div>
 
-      {/* 进度 */}
+      {/* 阶段内进度 */}
       <div className="flex items-center gap-2 mb-6">
         <div className="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
-          <div className="h-full bg-gradient-to-r from-blue-400 to-blue-600 transition-all duration-300" style={{ width: `${(idx / queue.length) * 100}%` }} />
+          <div className="h-full bg-gradient-to-r from-blue-400 to-blue-600 transition-all duration-300"
+               style={{ width: `${(idx / queue.length) * 100}%` }} />
         </div>
         <span className="text-sm text-slate-400">{idx + 1}/{queue.length}</span>
       </div>
 
-      {/* ======== 认卡模式 ======== */}
-      {mode === 'card' && phase === 'front' && (
-        <>
-          <Card key={`f-${idx}`} className="anim-flip">
-            <p className="text-6xl font-bold text-slate-800 mb-4">{current.word}</p>
-            <button onClick={() => speak(current.word)} className="text-2xl anim-pop" title="发音">🔊</button>
-            <p className="mt-6 text-slate-400 text-sm">
-              {detail?.exam_level ? `★${detail.exam_level} 高频词` : '大纲词'}
-              {detail?.textbook[0] && ` · ${detail.textbook[0].grade}${detail.textbook[0].semester}U${detail.textbook[0].unit}`}
-            </p>
-          </Card>
-          <button onClick={() => { sfxFlip(); setPhase('back') }} className="mt-6 w-full rounded-lg border border-slate-300 bg-white px-6 py-2 text-slate-600 hover:bg-slate-50 transition">
-            翻转卡片
-          </button>
-        </>
-      )}
-      {mode === 'card' && phase === 'back' && detail && (
-        <>
-          <Card key={`b-${idx}`} className="anim-slide-up">
-            <BackDetail detail={detail} word={current.word} />
-          </Card>
-          <div className="mt-6 grid grid-cols-3 gap-3">
-            <GradeBtn color="red" label="😵 不认识" onClick={() => submit(1)} />
-            <GradeBtn color="amber" label="🤔 模糊" onClick={() => submit(3)} />
-            <GradeBtn color="emerald" label="😄 认识" onClick={() => submit(5)} />
-          </div>
-        </>
-      )}
-
-      {/* ======== 选择题模式 ======== */}
-      {mode === 'choice' && detail && (
+      {/* ======== 阶段一：翻卡 ======== */}
+      {stage === 'card' && (
         <>
           <Card key={`c-${idx}`} className="anim-slide-up">
-            <p className="text-5xl font-bold text-slate-800 mb-2">{current.word}</p>
-            <button onClick={() => speak(current.word)} className="text-xl mb-2">🔊</button>
-            <p className="text-slate-400 mb-4">选出正确释义</p>
-            <ChoiceOptions wordId={current.word_id} answered={answered} onPick={async (opt, correct) => {
-              setAnswered({ ok: opt === correct, correct })
-              await submit(opt === correct ? 5 : 2)
-            }} />
+            {!flipped ? (
+              <div className="text-center">
+                <p className="text-6xl font-bold text-slate-800 mb-4">{current.word}</p>
+                <button onClick={() => speak(current.word)} className="text-2xl anim-pop" title="再听一次">🔊</button>
+                <p className="mt-6 text-slate-400 text-sm">
+                  {(detail?.exam_level ?? 0) > 0 ? `★${detail?.exam_level} 高频词` : '大纲词'}
+                  {detail?.textbook[0] && ` · ${detail.textbook[0].grade}${detail.textbook[0].semester}U${detail.textbook[0].unit}`}
+                </p>
+              </div>
+            ) : (
+              <div className="text-left w-full anim-slide-up">
+                {detail && <BackDetail detail={detail} word={current.word} />}
+              </div>
+            )}
           </Card>
-          {answered && (
-            <p className={`mt-4 text-center text-sm anim-slide-up ${answered.ok ? 'text-emerald-600' : 'text-slate-600'}`}>
-              {answered.ok ? '✓ 答对了！' : <>正确答案：<b className="text-emerald-600">{answered.correct}</b></>}
-            </p>
+          {!flipped ? (
+            <button onClick={() => { sfxFlip(); setFlipped(true) }}
+              className="mt-6 w-full rounded-lg border border-slate-300 bg-white px-6 py-2 text-slate-600 hover:bg-slate-50 transition">
+              翻转卡片
+            </button>
+          ) : (
+            <div className="mt-6 grid grid-cols-3 gap-3">
+              <GradeBtn color="red" label="😵 不认识" onClick={() => advance(1)} />
+              <GradeBtn color="amber" label="🤔 模糊" onClick={() => advance(3)} />
+              <GradeBtn color="emerald" label="😄 认识" onClick={() => advance(5)} />
+            </div>
           )}
         </>
       )}
 
-      {/* ======== 拼写模式 ======== */}
-      {mode === 'spell' && detail && !spellResult && (
-        <>
-          <Card key={`s-${idx}`} className="anim-slide-up">
-            <p className="text-lg text-slate-700 mb-1">{firstMeaning}</p>
-            {firstPos && <p className="text-sm text-slate-400 mb-3">{firstPos}</p>}
-            {detail.examples[0] && (
-              <div className="bg-slate-50 rounded-lg p-3 text-sm mb-3">
-                <p className="text-slate-700">{blankWord(detail.examples[0].en, current.word)}</p>
-                <p className="text-slate-400">{detail.examples[0].zh}</p>
-              </div>
-            )}
-            {hintLevel > 0 && (
-              <p className="text-slate-500 font-mono anim-slide-up">{hintWord(current.word, hintLevel)}</p>
-            )}
-            <input
-              autoFocus
-              className={`w-full mt-3 rounded-lg border px-4 py-3 text-center text-xl tracking-widest focus:outline-none focus:ring-2 ${
-                'border-slate-200 focus:ring-blue-400'}`}
-              placeholder="拼写单词"
-              value={spellInput}
-              onChange={(e) => setSpellInput(e.target.value)}
-              onKeyDown={(e) => { if (e.key === 'Enter') checkSpell() }}
-            />
-          </Card>
-          <div className="mt-6 grid grid-cols-2 gap-3">
-            <button onClick={() => { sfxFlip(); setHintLevel((h) => Math.min(h + 1, 2)) }}
-              className="rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold py-4 transition">
-              💡 提示
-            </button>
-            <button onClick={checkSpell} disabled={!spellInput.trim()}
-              className="rounded-xl bg-blue-500 text-white font-semibold py-4 disabled:opacity-50 hover:bg-blue-600 transition">
-              提交
-            </button>
-          </div>
-        </>
+      {/* ======== 阶段二：选择 ======== */}
+      {stage === 'choice' && (
+        <Card key={`q-${idx}`} className="anim-slide-up">
+          <p className="text-5xl font-bold text-slate-800 mb-2">{current.word}</p>
+          <button onClick={() => speak(current.word)} className="text-xl mb-2" title="再听一次">🔊</button>
+          <p className="text-slate-400 mb-4">选出正确释义</p>
+          <ChoiceOptions wordId={current.word_id} answered={answered} onPick={(opt, correct) => {
+            setAnswered({ ok: opt === correct, correct })
+            setTimeout(() => advance(opt === correct ? 5 : 2), 700)
+          }} />
+          {answered && !answered.ok && (
+            <p className="mt-4 text-center text-sm text-slate-600 anim-slide-up">
+              正确答案：<b className="text-emerald-600">{answered.correct}</b>
+            </p>
+          )}
+        </Card>
       )}
-      {mode === 'spell' && spellResult && (
+
+      {/* ======== 阶段三：拼写 ======== */}
+      {stage === 'spell' && !spellResult && (
+        <Card key={`s-${idx}`} className="anim-slide-up">
+          <p className="text-lg text-slate-700 mb-1">{firstMeaning}</p>
+          {firstPos && <p className="text-sm text-slate-400 mb-3">{firstPos}</p>}
+          {detail?.examples[0] && (
+            <div className="bg-slate-50 rounded-lg p-3 text-sm mb-3">
+              <p className="text-slate-700">{blankWord(detail.examples[0].en, current.word)}</p>
+              <p className="text-slate-400">{detail.examples[0].zh}</p>
+            </div>
+          )}
+          {hintLevel > 0 && <p className="text-slate-500 font-mono anim-slide-up">{hintWord(current.word, hintLevel)}</p>}
+          <input
+            autoFocus
+            className="w-full mt-3 rounded-lg border border-slate-200 px-4 py-3 text-center text-xl tracking-widest focus:outline-none focus:ring-2 focus:ring-blue-400"
+            placeholder="拼写单词"
+            value={spellInput}
+            onChange={(e) => setSpellInput(e.target.value)}
+            onKeyDown={(e) => { if (e.key === 'Enter') checkSpell() }}
+          />
+        </Card>
+      )}
+      {stage === 'spell' && spellResult && (
         <>
           <Card key={`sr-${idx}`} className={`anim-slide-up ${spellResult.level === 'wrong' ? 'anim-shake' : ''}`}>
-            {spellResult.level === 'wrong' && (
-              <p className="text-red-500 mb-2">你拼的：<s>{spellResult.answer}</s></p>
-            )}
+            {spellResult.level === 'wrong' && <p className="text-red-500 mb-2">你拼的：<s>{spellResult.answer}</s></p>}
             <p className={`text-4xl font-bold mb-2 ${spellResult.level === 'wrong' ? 'text-slate-700' : 'text-emerald-600 anim-bounce-in'}`}>
               {current.word}
             </p>
             {detail && <BackDetail detail={detail} word={current.word} />}
           </Card>
-          <button onClick={() => submit(spellResult!.level === 'perfect' ? 5 : spellResult!.level === 'hinted' ? 3 : 1, spellResult!.level === 'wrong' ? spellResult!.answer : '')}
+          <button onClick={() => advance(spellResult!.level === 'perfect' ? 5 : spellResult!.level === 'hinted' ? 3 : 1,
+                   spellResult!.level === 'wrong' ? spellResult!.answer : '')}
             className="mt-6 w-full rounded-xl bg-blue-500 text-white font-semibold py-4 hover:bg-blue-600 transition">
             下一个 →
           </button>
         </>
       )}
+
+      {/* ======== 拼写操作 ======== */}
+      {stage === 'spell' && !spellResult && (
+        <div className="mt-6 grid grid-cols-2 gap-3">
+          <button onClick={() => { sfxFlip(); setHintLevel((h) => Math.min(h + 1, 2)) }}
+            className="rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold py-4 transition">
+            💡 提示
+          </button>
+          <button onClick={checkSpell} disabled={!spellInput.trim()}
+            className="rounded-xl bg-blue-500 text-white font-semibold py-4 disabled:opacity-50 hover:bg-blue-600 transition">
+            提交
+          </button>
+        </div>
+      )}
     </div>
   )
-
-  function checkSpell() {
-    const ok = norm(spellInput) === norm(current.word)
-    setSpellResult({ level: ok ? (hintLevel > 0 ? 'hinted' : 'perfect') : 'wrong', answer: spellInput })
-  }
 }
 
+/** 阶段遮罩自动跳转 */
+function AutoAdvance({ onDone, ms }: { onDone: () => void; ms: number }) {
+  useEffect(() => {
+    const t = setTimeout(onDone, ms)
+    return () => clearTimeout(t)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  return null
+}
+
+/** 彩带雨（阶段完成） */
 function Confetti() {
   const pieces = useMemo(
     () => Array.from({ length: 24 }, (_, i) => ({
       left: `${(i * 37) % 100}%`,
-      delay: `${(i % 8) * 0.15}s`,
-      dur: `${1.6 + (i % 5) * 0.3}s`,
+      delay: `${(i % 8) * 0.12}s`,
+      dur: `${1.4 + (i % 5) * 0.25}s`,
       emoji: ['🎉', '⭐', '✨', '🎊', '🌟'][i % 5],
       size: `${16 + (i % 3) * 8}px`,
     })),
     [],
   )
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden">
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
       {pieces.map((p, i) => (
-        <span key={i} className="absolute anim-fall" style={{ left: p.left, animationDelay: p.delay, animationDuration: p.dur, fontSize: p.size }}>
+        <span key={i} className="absolute anim-fall"
+              style={{ left: p.left, animationDelay: p.delay, animationDuration: p.dur, fontSize: p.size }}>
           {p.emoji}
+        </span>
+      ))}
+    </div>
+  )
+}
+
+/** 烟花（全部完成）：多点径向绽放，循环 */
+function Fireworks() {
+  const bursts = useMemo(
+    () => Array.from({ length: 10 }, (_, i) => ({
+      left: `${8 + ((i * 23) % 84)}%`,
+      top: `${10 + ((i * 37) % 55)}%`,
+      delay: `${(i % 5) * 0.45}s`,
+      emoji: ['🎆', '💥', '✨', '🎇'][i % 4],
+      size: `${30 + (i % 4) * 12}px`,
+    })),
+    [],
+  )
+  return (
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+      {bursts.map((b, i) => (
+        <span key={i} className="absolute anim-burst"
+              style={{ left: b.left, top: b.top, animationDelay: b.delay, fontSize: b.size }}>
+          {b.emoji}
         </span>
       ))}
     </div>
@@ -305,7 +375,7 @@ function ChoiceOptions({ wordId, answered, onPick }: {
 
 function BackDetail({ detail, word }: { detail: WordRecord; word: string }) {
   return (
-    <div className="text-left w-full space-y-3 max-h-[50vh] overflow-y-auto">
+    <div className="space-y-3 max-h-[50vh] overflow-y-auto">
       <p className="text-3xl font-bold text-slate-800">{word}</p>
       {detail.meanings.map((m, i) => (
         <p key={i} className="text-lg text-slate-700">
