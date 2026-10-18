@@ -62,13 +62,15 @@ word_error_records (id, user_id, word_id, mode, wrong_answer, created_at)
 
 users 表复用：`role` 字段（student/parent）直接沿用；家庭绑定用错题本 `family_bindings`（parent_id+student_id，pending/active 两步确认）。
 
-## 4. SM-2 映射
+## 4. 记忆算法：百词斩式阶梯表（2026-10-18 决策，替代 SM-2）
 
-错题本用六档评分(0-5)；背单词三模式自动映射：
-- 认卡：认识=5，模糊=3，不认识=1
-- 选择题：正确=5，错误=2（首次见错=1）
-- 拼写：一次对=5，经提示对=3，错误=1
-SM-2 公式直接复用错题本实现（ef/interval/rep_count/next_review_date 四字段，逻辑一致便于未来合并维护）。
+固定台阶 **1→2→4→7→15→30→60 天**：
+- 答对（quality≥5）升一级；模糊（=3）原地踏步；答错（≤2）回 1 天
+- 首次作答落在 1 天台阶；历史 SM-2 间隔（6/17/49 天）自动向下映射最近台阶
+- 三模式映射不变：认卡 5/3/1、选择 5/2、拼写 5/3/1
+- `user_word_state` 字段结构不变（ef 闲置保留），`sm2.py` 内部改查表，review_service 零改动
+- **单词错题复习权归背单词**：错题本仅归档展示（source 过滤），复习调度排除 —— 错题本侧改造由错题本会话负责
+- 「听音选义」模式：暂缓（本期不做）
 
 ## 5. API 设计（/words/api 前缀；⚠️ 错题本已占用 /api/，不可用裸 /api/）
 

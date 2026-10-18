@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  背单词应用后端 launchd 配置（仿错题本 com.mistake-notebook.backend）
+
+  首次安装：
+    mkdir -p app/backend/logs
+    cp app/deploy/com.english-word-app.backend.plist ~/Library/LaunchAgents/
+    launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.english-word-app.backend.plist
+
+  卸载：
+    launchctl bootout gui/$(id -u)/com.english-word-app.backend
+
+  说明：
+  - KeepAlive=true：进程退出/崩溃后 launchd 自动拉起，deploy.sh 的 kickstart -k 依赖这一点
+  - RunAtLoad=true：加载即启动
+  - 与错题本不同：本服务监听 127.0.0.1（仅本机），对外统一走 nginx 2530 的 /words/ 前缀
+  - 错题本 plist 里有 DYLD_LIBRARY_PATH(expat) hack，本应用未发现需要，故未加；
+    若启动时报 expat/MySQL 相关 dylib 错误再补
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.english-word-app.backend</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/doudou_files/claude/English-word-helper/app/backend/venv/bin/python</string>
+        <string>-m</string>
+        <string>uvicorn</string>
+        <string>app.main:app</string>
+        <string>--host</string>
+        <string>127.0.0.1</string>
+        <string>--port</string>
+        <string>8001</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/doudou_files/claude/English-word-helper/app/backend</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/doudou_files/claude/English-word-helper/app/backend/logs/access.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/doudou_files/claude/English-word-helper/app/backend/logs/error.log</string>
+</dict>
+</plist>
