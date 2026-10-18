@@ -64,9 +64,9 @@ class TestSubmitReview:
     @requires_vocab
     def test_first_review_creates_state_and_record(self, db):
         out = review_service.submit_review(db, 1, "V00520", "card", 5)
-        assert out["new_interval"] == 1 and out["new_rep_count"] == 1
+        assert out["new_interval"] == 1 and out["new_rep_count"] == 1  # 首答 1 天台阶
         st = db.query(UserWordState).filter_by(user_id=1, word_id="V00520").one()
-        assert st.ef == 2.6 and st.last_mode == "card"
+        assert st.ef == 2.5 and st.last_mode == "card"  # 阶梯算法不再改 EF
         assert db.query(WordLearningRecord).filter_by(user_id=1).count() == 1
 
     @requires_vocab
@@ -96,5 +96,5 @@ class TestSubmitReview:
     def test_upsert_repeats(self, db):
         review_service.submit_review(db, 1, "V00520", "card", 5)
         out2 = review_service.submit_review(db, 1, "V00520", "choice", 5)
-        assert out2["new_interval"] == 6  # rep=1 → 6
+        assert out2["new_interval"] == 2  # 阶梯表：1→2
         assert db.query(UserWordState).filter_by(user_id=1).count() == 1

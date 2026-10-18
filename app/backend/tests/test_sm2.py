@@ -1,61 +1,59 @@
-"""T5: SM-2 状态机测试（含与错题本实现对拍的手算基准）。"""
+"""T5: 阶梯表记忆算法测试（百词斩式，替代原 SM-2）。"""
 from datetime import date, timedelta
 
 import pytest
 
-from app.sm2 import QUALITY_BY_CARD, QUALITY_BY_CHOICE, QUALITY_BY_SPELL, calculate
+from app.sm2 import LADDER, QUALITY_BY_CARD, QUALITY_BY_CHOICE, QUALITY_BY_SPELL, calculate
 
 
-class TestFormula:
+class TestLadder:
     def test_invalid_quality_raises(self):
         for q in (-1, 6):
             with pytest.raises(ValueError):
                 calculate(q, 2.5, 0, 0)
 
-    def test_first_correct_interval_1(self):
+    def test_first_correct_1_day(self):
         r = calculate(5, 2.5, 0, 0)
-        assert (r["new_ef"], r["new_interval"], r["new_rep_count"]) == (2.6, 1, 1)
+        assert r["new_interval"] == 1 and r["new_rep_count"] == 1
 
-    def test_second_correct_interval_6(self):
-        r = calculate(5, 2.6, 1, 1)
-        assert (r["new_ef"], r["new_interval"], r["new_rep_count"]) == (2.7, 6, 2)
+    def test_consecutive_correct_climb(self):
+        """连续答对：1→2→4→7→15→30→60→60（封顶）。"""
+        intervals = []
+        interval, rep = 0, 0
+        for _ in range(8):
+            r = calculate(5, 2.5, interval, rep)
+            interval, rep = r["new_interval"], r["new_rep_count"]
+            intervals.append(interval)
+        assert intervals == [1, 2, 4, 7, 15, 30, 60, 60]
 
-    def test_third_multiplies_by_ef(self):
-        # 6 * 2.8 = 16.8 → 17
-        r = calculate(5, 2.8, 6, 2)
-        assert r["new_interval"] == 17
+    def test_wrong_resets_to_1(self):
+        r = calculate(1, 2.5, 30, 5)
+        assert r["new_interval"] == 1
 
-    def test_wrong_resets(self):
-        # q=1: EF 2.5 + (0.1 - 4*(0.08+4*0.02)) = 2.5 + (0.1 - 0.64) = 1.96
-        r = calculate(1, 2.5, 15, 5)
-        assert (r["new_ef"], r["new_interval"], r["new_rep_count"]) == (1.96, 1, 0)
+    def test_fuzzy_stays(self):
+        """模糊原地踏步（间隔不变）。"""
+        r = calculate(3, 2.5, 7, 3)
+        assert r["new_interval"] == 7
 
-    def test_ef_floor_13(self):
-        r = calculate(0, 1.3, 0, 0)
-        assert r["new_ef"] == 1.3
+    def test_choice_wrong_also_resets(self):
+        r = calculate(2, 2.5, 15, 4)
+        assert r["new_interval"] == 1
 
-    def test_quality3_ef_formula(self):
-        # q=3: 0.1 - 2*(0.08+2*0.02) = -0.14 → 2.36
-        assert calculate(3, 2.5, 0, 0)["new_ef"] == 2.36
+    def test_legacy_sm2_interval_maps_down(self):
+        """历史 SM-2 数据（6/17/49 天）映射到最近台阶。"""
+        assert calculate(5, 2.5, 6, 2)["new_interval"] == 7    # 6→level2(4)→升→7
+        assert calculate(5, 2.5, 17, 2)["new_interval"] == 30  # 17→level3(15)→升→30
+        assert calculate(5, 2.5, 49, 2)["new_interval"] == 60  # 49→level4(30)→升→60
+
+    def test_fuzzy_on_legacy_interval_stays(self):
+        assert calculate(3, 2.5, 17, 2)["new_interval"] == 15
 
     def test_next_review_date(self):
         r = calculate(5, 2.5, 0, 0)
         assert r["next_review_date"] == date.today() + timedelta(days=1)
 
-    def test_interval_never_below_1(self):
-        assert calculate(5, 2.5, 0, 0)["new_interval"] >= 1
-
-
-class TestSequence:
-    def test_remembering_word_streak(self):
-        """连续认识：1 → 6 → 17 → 49 天（手算：6*2.8=16.8→17, 17*2.9=49.3→49）。"""
-        ef, interval, rep = 2.5, 0, 0
-        intervals = []
-        for _ in range(4):
-            r = calculate(5, ef, interval, rep)
-            ef, interval, rep = r["new_ef"], r["new_interval"], r["new_rep_count"]
-            intervals.append(interval)
-        assert intervals == [1, 6, 17, 49]
+    def test_ladder_definition(self):
+        assert LADDER == [1, 2, 4, 7, 15, 30, 60]
 
 
 class TestMappings:
