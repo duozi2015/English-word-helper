@@ -11,3 +11,4 @@ output/parsed/
 
 # 系统
 .DS_Store
+app/backend/tts_cache/
