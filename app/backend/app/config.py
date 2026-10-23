@@ -20,7 +20,7 @@ class Settings(BaseSettings):
 
     APP_ENV: str = "development"
     HOST: str = "127.0.0.1"
-    PORT: int = 8001
+    PORT: int = 2532
 
     # JWT：与错题本同 secret、同算法
     JWT_SECRET: str = "dev-secret-change-in-production"
@@ -38,7 +38,7 @@ class Settings(BaseSettings):
     VOCAB_DB: str = str(REPO_ROOT / "output" / "vocabulary.db")
 
     # 错题本联动
-    MISTAKEBOOK_API: str = "http://127.0.0.1:8000"
+    MISTAKEBOOK_API: str = "http://127.0.0.1:2531"
     LINK_MISTAKEBOOK: bool = True
 
 

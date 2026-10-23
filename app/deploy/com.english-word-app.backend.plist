@@ -32,7 +32,7 @@
         <string>--host</string>
         <string>127.0.0.1</string>
         <string>--port</string>
-        <string>8001</string>
+        <string>2532</string>
     </array>
     <key>WorkingDirectory</key>
     <string>/Users/doudou_files/claude/English-word-helper/app/backend</string>

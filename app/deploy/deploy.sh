@@ -11,7 +11,7 @@ PROJECT_DIR="${ENGLISH_WORD_APP_DIR:-/Users/doudou_files/claude/English-word-hel
 BACKEND_DIR="$PROJECT_DIR/app/backend"
 FRONTEND_DIR="$PROJECT_DIR/app/frontend"
 BACKUP_DIR="$PROJECT_DIR/app/deploy/backups"
-HOST_PORT=8001
+HOST_PORT=2532
 PLIST_LABEL="com.english-word-app.backend"
 
 echo "=== 0. 创建目录 ==="
@@ -58,7 +58,7 @@ else
     echo "后端 PID: $!"
 fi
 
-echo "=== 5. 后端健康检查（curl 127.0.0.1:8001/health） ==="
+echo "=== 5. 后端健康检查（curl 127.0.0.1:2532/health） ==="
 HEALTH_OK=""
 for i in $(seq 1 20); do
     sleep 1
