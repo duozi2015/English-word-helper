@@ -37,7 +37,7 @@ class TestDeckToday:
         assert len(deck["new"]) == 5
         assert deck["due"] == []
         item = deck["new"][0]
-        assert set(item) == {"word_id", "word"}
+        assert set(item) == {"word_id", "word", "phonetic"}
 
     @requires_vocab
     def test_due_words_appear(self, db):

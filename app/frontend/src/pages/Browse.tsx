@@ -68,7 +68,9 @@ export default function Browse() {
             {words.map((w) => (
               <div key={w.id} className="py-3">
                 <p className="font-semibold text-slate-800">
-                  {w.word} <span className="text-amber-500">{"★".repeat(w.exam_level)}</span>
+                  {w.word}
+                  {w.phonetic && <span className="ml-2 font-normal text-slate-400">/{w.phonetic}/</span>}
+                  <span className="text-amber-500">{"★".repeat(w.exam_level)}</span>
                 </p>
                 <p className="text-sm text-slate-500">
                   {w.meanings.map((m) => `${m.pos} ${m.meaning}`).join('；')}

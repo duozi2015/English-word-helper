@@ -37,7 +37,7 @@ api.interceptors.response.use(
 )
 
 // ---- 类型 ----
-export interface WordBrief { word_id: string; word: string }
+export interface WordBrief { word_id: string; word: string; phonetic: string }
 export interface Deck { due: WordBrief[]; new: WordBrief[] }
 export interface Meaning { pos: string; meaning: string }
 export interface Example { en: string; zh: string; type: string }

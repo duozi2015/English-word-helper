@@ -26,7 +26,9 @@ def deck_today(db: Session, user_id: int, new_limit: int = 10) -> dict:
             ).order_by(UserWordState.next_review_date).limit(100)
         ).scalars().all()
     )
-    due = [{"word_id": s.word_id, "word": vocab_store.get_by_id(s.word_id)["word"]}
+    due = [{"word_id": s.word_id,
+            "word": vocab_store.get_by_id(s.word_id)["word"],
+            "phonetic": vocab_store.get_by_id(s.word_id).get("phonetic", "")}
            for s in due_rows if vocab_store.get_by_id(s.word_id)]
 
     learned_ids = set(db.execute(
@@ -36,7 +38,8 @@ def deck_today(db: Session, user_id: int, new_limit: int = 10) -> dict:
     new = []
     for wj in vocab_store.iter_words_ordered():
         if wj["id"] not in learned_ids:
-            new.append({"word_id": wj["id"], "word": wj["word"]})
+            new.append({"word_id": wj["id"], "word": wj["word"],
+                        "phonetic": wj.get("phonetic", "")})
             if len(new) >= new_limit:
                 break
 

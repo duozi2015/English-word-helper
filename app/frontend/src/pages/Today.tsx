@@ -3,7 +3,7 @@ import { api, type WordRecord, type ReviewOut } from '../lib/api'
 import { sfxCombo, sfxCorrect, sfxDone, sfxFlip, sfxWrong, toggleMuted } from '../lib/sfx'
 
 type Stage = 'card' | 'choice' | 'spell'
-type WordBrief = { word_id: string; word: string }
+type WordBrief = { word_id: string; word: string; phonetic: string }
 type SpellLevel = 'perfect' | 'hinted' | 'wrong'
 
 const STAGES: Stage[] = ['card', 'choice', 'spell']
@@ -214,7 +214,8 @@ export default function Today() {
           <Card key={`c-${idx}`} className="anim-slide-up">
             {!flipped ? (
               <div className="text-center">
-                <p className="text-6xl font-bold text-slate-800 mb-4">{current.word}</p>
+                <p className="text-6xl font-bold text-slate-800 mb-1">{current.word}</p>
+                {current.phonetic && <p className="text-slate-400 mb-3">/{current.phonetic}/</p>}
                 <button onClick={() => speak(current.word)} className="text-2xl anim-pop" title="再听一次">🔊</button>
                 <p className="mt-6 text-slate-400 text-sm">
                   {(detail?.exam_level ?? 0) > 0 ? `★${detail?.exam_level} 高频词` : '大纲词'}
@@ -245,7 +246,8 @@ export default function Today() {
       {/* ======== 阶段二：选择 ======== */}
       {stage === 'choice' && (
         <Card key={`q-${idx}`} className="anim-slide-up">
-          <p className="text-5xl font-bold text-slate-800 mb-2">{current.word}</p>
+          <p className="text-5xl font-bold text-slate-800 mb-1">{current.word}</p>
+          {current.phonetic && <p className="text-slate-400 mb-2">/{current.phonetic}/</p>}
           <button onClick={() => speak(current.word)} className="text-xl mb-2" title="再听一次">🔊</button>
           <p className="text-slate-400 mb-4">选出正确释义</p>
           <ChoiceOptions wordId={current.word_id} answered={answered} onPick={(opt, correct) => {
@@ -433,6 +435,7 @@ function BackDetail({ detail, word }: { detail: WordRecord; word: string }) {
   return (
     <div className="space-y-3 max-h-[50vh] overflow-y-auto">
       <p className="text-3xl font-bold text-slate-800">{word}</p>
+      {detail.phonetic && <p className="text-slate-400 mb-2">/{detail.phonetic}/</p>}
       {detail.meanings.map((m, i) => (
         <p key={i} className="text-lg text-slate-700">
           <span className="text-slate-400 mr-2">{m.pos}</span>{m.meaning}
